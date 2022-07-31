@@ -3,10 +3,28 @@
  * Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
-article.page {
-    float: left;
-    width: 100%;
-}
+
+.wide2 {
+    .page {
+      float: left;
+      width: 100%;
+      @include breakpoint($large) {
+        padding-left: 0;
+      }
+      @include breakpoint($x-large) {
+        padding-left: 0;
+      }
+    }
+    .page__related {
+      @include breakpoint($large) {
+        padding-left: 0;
+      }
+      @include breakpoint($x-large) {
+        padding-left: 0;
+      }
+    }
+  }
+
 /* Variables */
 @import "minimal-mistakes/variables";
 
