@@ -62,9 +62,6 @@ author:
   bio    : "PhD student in the Cooper Lab at the University of Pittsburgh."
   location: "Pittsburgh, PA"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:nak177@pitt.edu"
 #    - label: "Website"
 #      icon: "fas fa-fw fa-link"
 #      url: "https://"
