@@ -18,8 +18,8 @@ email: nak177@pitt.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Private website under construction.
 # Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-twitter_username: NanamiKubota
-github_username: NanamiKubota
+twitter_username: "@NanamiKubota"
+github_username: "NanamiKubota"
 minimal_mistakes_skin: "contrast" # default
 search: true
 
@@ -60,7 +60,12 @@ author:
   name   : "Nanami Kubota"
   avatar : "/assets/images/bio-photo.jpeg"
   bio    : "PhD student in the Cooper Lab at the University of Pittsburgh."
+  location: "Pittsburgh, PA"
+  email: nak177@pitt.edu
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:nak177@pitt.edu"
 #    - label: "Website"
 #      icon: "fas fa-fw fa-link"
 #      url: "https://"
@@ -78,10 +83,10 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/NanamiKubota"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/NanamiKubota"
 #    - label: "Instagram"
 #      icon: "fab fa-fw fa-instagram"
 #      url: "https://instagram.com/"
@@ -94,8 +99,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
+      read_time: false
+      comments: false
       share: true
       related: true
   # _pages
