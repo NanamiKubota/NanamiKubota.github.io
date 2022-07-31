@@ -58,12 +58,12 @@ plugins:
 
 author:
   name   : "Nanami Kubota"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-photo.jpeg"
   bio    : "PhD student in the Cooper Lab at the University of Pittsburgh."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
+#    - label: "Website"
+#      icon: "fas fa-fw fa-link"
+#      url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/NanamiKubota"
