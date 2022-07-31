@@ -61,7 +61,6 @@ author:
   avatar : "/assets/images/bio-photo.jpeg"
   bio    : "PhD student in the Cooper Lab at the University of Pittsburgh."
   location: "Pittsburgh, PA"
-  email: nak177@pitt.edu
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
