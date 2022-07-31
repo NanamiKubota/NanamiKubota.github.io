@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Nanami Kubota
-email: nak177@pitt.edu
+# email: nak177@pitt.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Private website under construction.
 # Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
@@ -59,9 +59,12 @@ plugins:
 author:
   name   : "Nanami Kubota"
   avatar : "/assets/images/bio-photo.jpeg"
-  bio    : "PhD student in the Cooper Lab at the University of Pittsburgh."
+  bio    : "PhD student in the Cooper Lab at the University of Pittsburgh. Research on bacteria and phage coevolution."
   location: "Pittsburgh, PA"
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:nak177@pitt.edu"
 #    - label: "Website"
 #      icon: "fas fa-fw fa-link"
 #      url: "https://"
@@ -77,6 +80,9 @@ author:
 
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:nak177@pitt.edu"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/NanamiKubota"
@@ -116,3 +122,9 @@ tag_archive:
 
 atom_feed:
   hide: true
+
+github: [metadata]
+
+collections:
+  tutorials:
+    output: true
