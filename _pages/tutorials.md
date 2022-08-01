@@ -17,10 +17,12 @@ The list of available tutorials are below:
 
 ## Graphing
 
-to be updated
+> [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps.
 
 ## breseq
 
-to be updated
+> [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
 ## Other
+
+> [Defense Finder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
