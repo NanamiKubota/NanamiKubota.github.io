@@ -11,16 +11,16 @@ collection: tutorial
 The list of available tutorials are below:
 
 <br>
-# Getting started
+## Getting started
 
-[Basics in R](../_tutorials/basics_in_R.md)
+> [Basics in R](/tutorials/basics_in_R): Goes over how to install R and RStudio, as well as some basic functions.
 
-# Graphing
-
-to be updated
-
-# breseq
+## Graphing
 
 to be updated
 
-# Other
+## breseq
+
+to be updated
+
+## Other
