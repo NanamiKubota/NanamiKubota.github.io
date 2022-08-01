@@ -108,7 +108,7 @@
 .splash .sidebar__right {
   @include breakpoint($large) {
     position: relative;
-    float: left;
+    float: right;
     margin-right: 0;
   }
 
@@ -341,7 +341,7 @@
     z-index: initial;
 
     &.sticky {
-      float: left;
+      float: none;
     }
   }
 
