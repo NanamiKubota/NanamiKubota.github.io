@@ -1,5 +1,5 @@
 ---
-title: "Defense Finder"
+title: "DefenseFinder"
 layout: single
 permalink: /tutorials/defense_finder
 toc: true
@@ -14,6 +14,8 @@ last_modified_at: 2022-05-14
 > Note: This is a tutorial was made for the purposes of running on the Cooper Lab's beagle server. This is also still a working draft so please reach out if you get stuck or if anything is unclear.
 
 <br>
+
+Source:  
 
 The Nature publication on DefenseFinder by Tesson and colleagues can be found [here](https://doi.org/10.1038/s41467-022-30269-9).
 

@@ -14,15 +14,13 @@ last_modified_at: 2021-07-01
 Disclaimer:  
 I never took a formal CS course so my terminology and explanations of concepts may be questionable at times. Also, my code is usually messy so don't hesitate to email/message me with questions, especially if I don't explain something clearly. (But hey, if everything works, it works!)
 </i>
-
-<br>
   
 >Tip:  
 Google is your friend. 99% of coding relies on if you can Google the right question into the search bar. I recommend going to statexchange and other forums to look for answers. The other 1% relies on whether you can interpret the answer and modify it to fit your needs.
 
 <br>
 
-#  Before you start
+#  Installation
 
 1. Install R by going to CRAN which you can access by clicking  [here](https://cran.r-project.org/mirrors.html). Find a URL which is closest to you (for Pittsburgh people, this will be [Statlib, Carnegie Mellon University](http://lib.stat.cmu.edu/R/CRAN/)). Click on the Download link to whichever operating system you're working in (Linux, macOS, or Windows) and follow the directions.  
     
@@ -131,7 +129,7 @@ Always begin by setting your working directory. The directory is the location of
 Your life will be easier if you copy/paste the line of code that is generated in the console after this and incorporate it into your script for future reference. That way you can just press *Cmd*+*Enter* to set your working directory everytime you need to run some code, instead of manually entering it each time via the dropdown menu. The below is my working directory and <u>this will be different for every person</u>:
 
 ```r
-setwd("~/Documents/PMI/2021 Summer/R tutorial")
+setwd("~/Documents/PMI/Cooper Lab/CS tutorial/tutorial")
 ```
 <br>
 
@@ -165,10 +163,6 @@ An alternative to this (which I prefer since it's faster to type out) is:
 ?plot
 ```
 
-
-***
-
-#  Notations
 ##  Adding comments
 
 In an R script, anything after the # mark in a line of code will be considered a comment (a string of characters that R ignores). Not adding the # when you write a comment can give you an error since R will think it's part of the code and try to run it.  
@@ -185,4 +179,367 @@ If you are using R markdown, you do not need to use # to write comments unless y
 
 <br>
 
+#  Calculations
 
+##  Arithmetic
+
+You can use R as a calculator. Notations to enter your calculations are as follows:
+
+```r
+1+2 #should give you 3
+1-2 #should give you -1
+2*3 #should give you 6
+100/25 #should give you 4
+```
+  
+<br>
+
+##  Log, square root, power
+
+R can also do more complex calculations:
+
+```r
+log(2) #log of 2 equals 0.6931472
+sqrt(9) #square root of 9 equals 3
+10^1 #power of 10 to the 1 is 10
+```
+
+<br>
+
+#  Variable names and values
+
+You can assign values (numbers, characters, logical values, etc.) to variables. Make sure the variable name does not contain any spaces. The only acceptable special symbols are the underscore (_) and period (.). Also, try to make sure your variable name doesn't start with a number, and that the name doesn't consist of just number(s):
+
+```r
+hours_slept <- 3 #this assigns the value 3 onto "hours_slept"
+student_name <- "Nanami" #you can also assign characters but characters must be in quotation marks
+is.awake.in.class <- FALSE #can do TRUE or FALSE. Must be all caps and no quotation marks.
+is.awake.in.class <- F #using T or F also works too. Don't use quotation marks.
+is.awake.in.class #should return FALSE
+```
+
+Variables can have multiple values too. Use c( ) to bind together multiple values:
+
+```r
+bad_at <- c("staying awake", "paying attention", "time management")
+time_awake <- c(5,7,6,9,7)
+```
+<br>
+
+#  Asking true or false
+## Logical operators
+You can ask R to determine whether a condition is true or false:
+
+```r
+student_name == "Nanami" #ask if student_name is "Nanami"
+is.awake.in.class == TRUE #ask if is.awake.in.class equals TRUE. Should return FALSE.
+hours_slept > 3 #ask if hours_slept is greater than 3
+hours_slept < 3 #ask if hours_slept is less than 3
+hours_slept >= 3 #ask if hours_slept is greater than or equal to 3
+hours_slept <= 3 #ask if hours_slept is less than or equal to 3
+```
+
+## Dealing with a list or larger variable
+
+Let's say you have a list of variables (e.g. *time_awake* variable from a previous section), and you want to see if a certain number or character is included within the list (e.g. the number *9*). There are two ways to go about this, and they are slightly different from each other.  
+
+The first way is to check each element in a list and return a TRUE or FALSE for EVERY element in a list:
+
+```r
+time_awake == 9 #asks if each element in time_awake (i.e. 5, 7, 6, 9, 7) is the number 9; it should check each number return a TRUE or FALSE for EVERY number in the list
+```
+
+```
+## [1] FALSE FALSE FALSE  TRUE FALSE
+```
+
+
+```r
+time_awake != 9 #asks if each element is NOT the number 9 and returns TRUE or FALSE for EVERY number in the list
+```
+
+```
+## [1]  TRUE  TRUE  TRUE FALSE  TRUE
+```
+<br>
+
+The second way is to check the list as a whole and return a TRUE or FALSE just once to tell you if the list includes what you are looking for:
+
+```r
+9 %in% time_awake #ask if 9 is even present in time_awake AT ALL; should return just TRUE since it is check a list as a whole
+```
+
+```
+## [1] TRUE
+```
+
+```r
+!(9 %in% time_awake) #ask if 9 is NOT in time_awake; should return just FALSE
+```
+
+```
+## [1] FALSE
+```
+<br>
+
+Although at first glance both methods seem to do the same things, this nuance will become important once you start using larger datasets. For example, if you have 1000 numbers in a list and you want to see if the number 99 appears even once in the list, you don't want to do the first method since it will give you a TRUE or FALSE for every number in the list. Instead, you will go with the second method.
+<br>
+
+***
+
+
+# Working with data
+
+R has many datasets that come with the program so that you can have mock data to play around with. The type of data we will be working with is called data frame. A <b>data frame</b> is a 2-dimensional table-like structure with columns and rows. Let's try loading a data frame on flower measurements:
+
+
+```r
+library(datasets) #load dataset package
+data(iris) #load dataset called "iris"
+head(iris) #shows only the first few rows of the "iris" data.frame
+```
+
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+```
+<br>
+
+You can see that the data frame contains 5 columns. Since we used the head( ) function, we only see the first few rows. It is always a good idea to use head( ) when viewing large data frames since data frames can potentially have many rows and columns.  
+
+See how the computer will try to show you everything if you just enter *iris*:
+
+```r
+iris
+```
+
+<br>
+
+## Checking dataset dimensions and summary of data
+
+
+To check the dimensions of the data frame without having to look at the whole data frame use:
+
+```r
+nrow(iris) #shows number of rows. It should say 150.
+```
+
+```
+## [1] 150
+```
+
+```r
+ncol(iris) #shows number of columns. It should say 5.
+```
+
+```
+## [1] 5
+```
+
+```r
+dim(iris) #shows dimension. 150 rows by 5 columns.
+```
+
+```
+## [1] 150   5
+```
+
+<br>
+
+To see a general summary of your data, you can do:
+
+```r
+summary(iris)
+```
+
+```
+##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50  
+##                 
+##                 
+## 
+```
+
+<br>
+
+## Subgroups/Columns in datasets
+
+To look at subgroups within your data, you can do:
+
+```r
+ls(iris) #ls() lists subgroups alphabetically and NOT by column order.
+```
+
+```
+## [1] "Petal.Length" "Petal.Width"  "Sepal.Length" "Sepal.Width"  "Species"
+```
+
+<br>
+
+Then to look at just the values within a subgroup, you can do:
+
+```r
+iris$Sepal.Length
+```
+
+```
+##   [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1
+##  [19] 5.7 5.1 5.4 5.1 4.6 5.1 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0
+##  [37] 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6 5.3 5.0 7.0 6.4 6.9 5.5
+##  [55] 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1
+##  [73] 6.3 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5
+##  [91] 5.5 6.1 5.8 5.0 5.6 5.7 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3
+## [109] 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0 6.9 5.6 7.7 6.3 6.7 7.2
+## [127] 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8
+## [145] 6.7 6.7 6.3 6.5 6.2 5.9
+```
+
+<br>
+
+There are other ways to look at the values within a subgroup. If your dataset is a table format, you can enter the row number to get information on specific cell(s) within a table:
+
+```r
+iris[2,] #get all the values in row #2 from all subgroups; the first number in [ ] denotes the row number; don't forget the comma
+```
+
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 2          4.9           3          1.4         0.2  setosa
+```
+<br>
+
+For columns, it is the same concept as the above but can be a bit tricky to wrap your head around. You will first want to know which column number (first, second, third, etc.) your subgroup of interest is. To do this use colnames( ) which is DIFFERENT from the ls( ) function since it will list column name by column order and not alphabetically:
+
+```r
+colnames(iris) #get the list of column names in iris by column order and not alphabetically
+```
+
+```
+## [1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"
+```
+<br>
+
+Let's say we are interested in the subgroup, Petal.Length. You can use *iris$Petal.Length* to do the following but you can also call this by column number/order. This is useful when you don't want to type out the column name to call your subgroup of interest.  
+
+Since Petal.Length is listed third in the previous colnames( ) function, we can do the following to get the values within Petal.Length:
+
+```r
+iris[,3] #get the values under the Petal.Length subgroup; equivalent of iris$Petal.Length; the second number in [ ] denotes the column number; don't forget the comma
+```
+
+```
+##   [1] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 1.6 1.4 1.1 1.2 1.5 1.3 1.4
+##  [19] 1.7 1.5 1.7 1.5 1.0 1.7 1.9 1.6 1.6 1.5 1.4 1.6 1.6 1.5 1.5 1.4 1.5 1.2
+##  [37] 1.3 1.4 1.3 1.5 1.3 1.3 1.3 1.6 1.9 1.4 1.6 1.4 1.5 1.4 4.7 4.5 4.9 4.0
+##  [55] 4.6 4.5 4.7 3.3 4.6 3.9 3.5 4.2 4.0 4.7 3.6 4.4 4.5 4.1 4.5 3.9 4.8 4.0
+##  [73] 4.9 4.7 4.3 4.4 4.8 5.0 4.5 3.5 3.8 3.7 3.9 5.1 4.5 4.5 4.7 4.4 4.1 4.0
+##  [91] 4.4 4.6 4.0 3.3 4.2 4.2 4.2 4.3 3.0 4.1 6.0 5.1 5.9 5.6 5.8 6.6 4.5 6.3
+## [109] 5.8 6.1 5.1 5.3 5.5 5.0 5.1 5.3 5.5 6.7 6.9 5.0 5.7 4.9 6.7 4.9 5.7 6.0
+## [127] 4.8 4.9 5.6 5.8 6.1 6.4 5.6 5.1 5.6 6.1 5.6 5.5 4.8 5.4 5.6 5.1 5.1 5.9
+## [145] 5.7 5.2 5.0 5.2 5.4 5.1
+```
+
+
+<br>
+
+## Character variables within subgroups
+
+Sometimes, the variable contains names or characters instead of numerical data (like the list of *Species* in *iris*). Instead of looking at each plant sample's species name (since there are some plant samples that are from the same species), you can just get a list of all the species names present in the list by using the function, levels( ):
+
+```r
+levels(iris$Species)
+```
+
+```
+## [1] "setosa"     "versicolor" "virginica"
+```
+<br>
+
+See how much more cleaner levels( ) is rather than doing iris$Species:
+
+```r
+iris$Species
+```
+
+
+<br>
+
+## Dealing with missing data (NAs)
+
+Some data can have NA in the dataset, which means there is a missing value or no value assigned there. Let's make an example dataset with NA by replacing a value in *iris$Sepal.Length* with NA:
+
+```r
+mock <- iris #it is always a good idea to make a new variable which is a duplicate of your data in order to avoid overwriting it by accident
+mock$Sepal.Length[3] <- NA #replace the 3rd element with NA
+mock$Sepal.Length #you can see that the 3rd element is now NA
+```
+
+```
+##   [1] 5.1 4.9  NA 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1
+##  [19] 5.7 5.1 5.4 5.1 4.6 5.1 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0
+##  [37] 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6 5.3 5.0 7.0 6.4 6.9 5.5
+##  [55] 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1
+##  [73] 6.3 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5
+##  [91] 5.5 6.1 5.8 5.0 5.6 5.7 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3
+## [109] 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0 6.9 5.6 7.7 6.3 6.7 7.2
+## [127] 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8
+## [145] 6.7 6.7 6.3 6.5 6.2 5.9
+```
+
+<br>
+
+Sometimes you do not want NA in your dataset when doing calculations, or when plotting. To get rid of NA, you can:
+
+```r
+clean <- na.omit(mock$Sepal.Length) #omit NA from mock$Sepal.Length
+clean
+```
+
+```
+##   [1] 5.1 4.9 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1 5.7
+##  [19] 5.1 5.4 5.1 4.6 5.1 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0 5.5
+##  [37] 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6 5.3 5.0 7.0 6.4 6.9 5.5 6.5
+##  [55] 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1 6.3
+##  [73] 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5 5.5
+##  [91] 6.1 5.8 5.0 5.6 5.7 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3 6.7
+## [109] 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0 6.9 5.6 7.7 6.3 6.7 7.2 6.2
+## [127] 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8 6.7
+## [145] 6.7 6.3 6.5 6.2 5.9
+## attr(,"na.action")
+## [1] 3
+## attr(,"class")
+## [1] "omit"
+```
+<br>
+
+Note: We assigned a new variable, *clean*, which is the same as *mock$Sepal.length* but has NA omitted. This does not mean the original variable *mock* and its subgroup, *Sepal.Length*, has NA omitted:
+
+```r
+mock$Sepal.Length
+```
+
+```
+##   [1] 5.1 4.9  NA 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1
+##  [19] 5.7 5.1 5.4 5.1 4.6 5.1 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0
+##  [37] 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6 5.3 5.0 7.0 6.4 6.9 5.5
+##  [55] 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1
+##  [73] 6.3 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5
+##  [91] 5.5 6.1 5.8 5.0 5.6 5.7 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3
+## [109] 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0 6.9 5.6 7.7 6.3 6.7 7.2
+## [127] 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8
+## [145] 6.7 6.7 6.3 6.5 6.2 5.9
+```
