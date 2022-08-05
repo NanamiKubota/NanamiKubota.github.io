@@ -151,3 +151,7 @@ collections:
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# #Allow kramdown to parse inside html blocks
+# kramdown:
+#   parse_block_html: true

@@ -5,3 +5,5 @@ permalink: /misc/
 author_profile: true
 classes: wide
 ---
+
+To be updated with content?

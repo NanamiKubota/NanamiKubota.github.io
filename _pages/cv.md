@@ -1,0 +1,319 @@
+---
+title: "Curriculum Vitae"
+permalink: /cv/
+# layout: tags
+author_profile: true
+# classes: wide
+---
+<aside class="cv-sidebar sticky" style="color:#006D77;">
+    <div id="toc_container">
+        <header style="font-weight:bold;text-align:center;"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> Sections</header>
+        <div id="cv_sidebar_format"><ol style="font-size:medium;">
+            <li><a href="#edu">Education</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#honors">Honors and Awards</a></li>
+            <li><a href="#pubs">Publications</a></li>
+            <li><a href="#presentation">Presentations</a></li>
+            <li><a href="#teach">Teaching, Mentoring, and Leadership</a></li>
+        </ol></div>
+    </div>
+</aside>
+
+<a name="edu"></a>
+<div class="cv-hr" style="margin-top:0;"></div>
+<div class="cv-section"><img align="left" src="/assets/images/graduation-cap-solid.svg" class="filter-icon" />EDUCATION</div>
+
+***
+
+<div class="cv-subheading">Ph.D. in Microbiology and Immunology
+    <div class="cv-year">August 2020 – Present
+    </div>
+</div>
+<div class="cv-p">
+    <i>University of Pittsburgh, School of Medicine, Program in Microbiology and Immunology</i>
+    <br>
+    <div class="cv-p">
+    Advisor: Dr. Vaughn S. Cooper
+    </div>
+</div>  
+
+<div class="cv-subheading">B.A. in Biology
+    <div class="cv-year">August 2016 – June 2020
+    </div>
+</div>
+<div class="cv-p">
+    <i>Macaulay Honors College at Queens College, City University of New York (CUNY)</i>
+    <br>
+    <div class="cv-p">
+        Advisor: Dr. John J. Dennehy (Queens College, CUNY)
+        <br>
+        Thesis: Mutations and Selection in <i>Erwinia amylovora</i> Phages Adapting to Host's Codon Usage Patterns
+        </div>
+</div>
+
+<div class="cv-subheading">High School Diploma
+    <div class="cv-year">September 2012 – June 2016
+    </div>
+</div>
+<div class="cv-p">
+    <i>The Bronx High School of Science</i>
+    <br>
+    <div class="cv-p">
+        Advisor: Dr. José D. Anadón (Queens College, CUNY)
+        <br>
+        Thesis: Global Drivers of Beta Diversity in Birds
+        </div>
+</div>
+
+<a name="research"></a>
+<div class="cv-hr"></div>
+<div class="cv-section"><img align="left" src="/assets/images/flask-solid.svg" class="filter-icon" />RESEARCH EXPERIENCE</div>
+
+***
+
+<div class="cv-subheading">Ph.D. Student
+    <div class="cv-year">August 2020 – Present
+    </div>
+</div>
+<div class="cv-p">
+    <i>Program in Microbiology and Immunology, School of Medicine, University of Pittsburgh</i>
+    <br>
+    <div class="cv-list">
+        (Supervised by Dr. Vaughn S. Cooper)
+        <ul>
+            <li>Applying evolutionary game theory to understand fitness dynamics of <i>Pseudomonas aeruginosa</i> that carry Pf prophage.</li>
+            <li>Investigating role of defective interfering Pf phages in Pseudomonas aeruginosa population composition.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cv-subheading">Research Technician
+    <div class="cv-year">June 2020 – July 2020
+    </div>
+</div>
+<div class="cv-p">
+    <i>Biology Department, Queens College, CUNY</i>
+    <br>
+    <div class="cv-list">
+        (Supervised by Dr. John J. Dennehy)
+        <ul>
+            <li>Aided in deactivating and extracting RNA from sewage samples for SARS-CoV-2 detection.</li>
+            <li>Generated maps of sewage drainage areas in R.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cv-subheading">Undergraduate Researcher
+    <div class="cv-year">February 2017 – June 2020
+    </div>
+</div>
+<div class="cv-p">
+    <i>Biology Department, Queens College, CUNY</i>
+    <br>
+    <div class="cv-list">
+        (Supervised by Dr. John J. Dennehy)
+        <ul>
+            <li>Conducted independent research on the drivers of <i>Erwinia amylovora</i> phages adapting to their host’s codon usage bias via experimental evolution.</li>
+            <li>Trained new lab recruits on basic lab skills such as aseptic techniques, bacteria and phage propagation, and other maintenance skills (i.e. autoclaving, preparation of media, etc.).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cv-subheading">Undergraduate Researcher
+    <div class="cv-year">August 2016 – June 2020
+    </div>
+</div>
+<div class="cv-p">
+    <i>Biology Department, Queens College, CUNY</i>
+    <br>
+    <div class="cv-list">
+        (Supervised by Dr. José D. Anadón)
+        <ul>
+            <li>Writing a manuscript for publication on an independent research project regarding the global drivers of taxonomic and phylogenetic beta diversity in approximately 10,000 bird species.</li>
+            <li>Assisted undergraduate student in the research on global patterns of evolutionary endemism in birds by generating raster maps and phylogenetic trees.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cv-subheading">High School Researcher
+    <div class="cv-year">September 2014 – June 2016
+    </div>
+</div>
+<div class="cv-p">
+    <i>Biology Department, Queens College, CUNY</i>
+    <br>
+    <div class="cv-list">
+        (Supervised by Dr. José D. Anadón)
+        <ul>
+            <li>Conducted independent research on global drivers of taxonomic beta diversity in approximately 10,000 bird species.</li>
+            <li>Competed in Intel Science Talent Search (Intel STS), Junior Science and Humanities Symposium (JSHS), and New York City Science and Engineering Fair (NYCSEF).</li>
+        </ul>
+    </div>
+</div>
+
+<a name="honors"></a>
+<div class="cv-hr"></div>
+<div class="cv-section"><img align="left" src="/assets/images/award-solid.svg" class="filter-icon" />HONORS AND AWARDS</div>
+
+***
+
+<div class="cv-pub-year">
+    2020
+    <div class="cv-pub">
+        <b>Colwin Award</b> (awarded to a graduating senior for outstanding research in biology), Biology Department at Queens College, CUNY
+        <br><br>
+        <b>Provost’s Award</b> (awarded to 2 graduating seniors selected by the Chief Academic Officer for remarkable academic achievement and postgraduate potential), Macaulay Honors College, CUNY
+        <br><br>
+        <b>Honors in Mathematics and Natural Sciences</b>, Queens College, CUNY
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2019
+    <div class="cv-pub">
+        <b>Student Travel Award</b>, 38th Annual Meeting of the American Society for Virology at the University of Minnesota, Twin Cities.
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2018
+    <div class="cv-pub">
+        <b>Second Place Poster Award</b>, NYC Regional SEA-PHAGES Symposium at Mount Saint Mary College
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2016
+    <div class="cv-pub">
+        <b>University Scholar</b> (full tuition merit scholarship for undergraduate studies), Macaulay Honors College at Queens College, CUNY
+    </div>
+</div>
+
+<a name="pubs"></a>
+<div class="cv-hr"></div>
+<div class="cv-section"><img align="left" src="/assets/images/book-solid.svg" class="filter-icon" />PUBLICATIONS</div>
+
+***
+
+<ol style="font-size:large;">
+    <li>Smyth DS, Trujillo M, Gregory DA, Cheung K, Gao A, Graham M, Guan Y, Guldenpfennig C, Hoxie I, Kannoly S, <b>Kubota N</b>, Lyddon TD, Markman M, Rushford C, San KM, Sompanya G, Spagnolo F, Suarez R, Teixeiro E, Daniels M, Johnson MC, & Dennehy JJ. (2022). Tracking cryptic SARS-CoV-2 lineages detected in NYC wastewater. <a href="https://www.nature.com/articles/s41467-022-28246-3"><i>Nature Communications</i></a>, 13(1), 635.</li>
+    <li>Trujillo M, Cheung K, Gao A, Hoxie I, Kannoly S, <b>Kubota N</b>, San KM, Smyth DS, Dennehy JJ. (2021) Protocol for safe, affordable, and reproducible isolation and quantitation of SARS-CoV- 2 RNA from wastewater. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0257454"><i>PLoS One</i></a> 16, e0257454.</li>
+    <li>Smyth DS, Trujillo M, Cheung K, Gao A, Hoxie I, Kannoly S, <b>Kubota N</b>, Markman M, San KM, Sompanya G, & Dennehy JJ. (2021) Detection of Mutations Associated with Variants of Concern Via High Throughput Sequencing of SARS-CoV-2 Isolated from NYC Wastewater. <a href="https://www.medrxiv.org/content/10.1101/2021.03.21.21253978v1"><i>medRxiv</i></a>.</li>
+</ol>
+
+<a name="presentation"></a>
+<div class="cv-hr"></div>
+<div class="cv-section"><img align="left" src="/assets/images/message-solid.svg" class="filter-icon" />PRESENTATIONS</div>
+
+***
+
+<span style="font-size:large;">(*presenting author)</span>
+<div class="cv-pub-year">
+    2022
+    <div class="cv-pub">
+        *<b>Kubota N</b>, Scribner MR, & Cooper VS. Impact of Pf prophage on the evolution of <i>Pseudomonas aeruginosa</i>. Pittsburgh Phage Project (P3) Symposium at the University of Pittsburgh.
+        <br><br>
+        *<b>Kubota N</b>, Scribner MR, & Cooper VS. Impact of Pf prophage on the evolution of <i>Pseudomonas aeruginosa</i>. Meetings in Microbial Ecology & Evolution at the Max Planck Institute for Evolutionary Biology in Plön, Germany.
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2021
+    <div class="cv-pub">
+        *Scribner MR, <b>Kubota N</b>, Stephens AC, Huong JL, Richardson AR, & Cooper VS. Adaptation to the Nutritional Environment of the Cystic Fibrosis Airway Promotes Rapid Ecological Diversification and Prophage Induction. World Microbe Forum. Remote.
+        <br><br>
+        *Dennehy JJ, Smyth D, Trujillo M, Cheung K, Gao A, Hoxie I, Kannoly S, <b>Kubota N</b>, Markman M, & San K; Isolating and Sequencing SARS-CoV-2 from Wastewater to Monitor Variants of Concern. World Microbe Forum. Remote.
+        <br><br>
+        *Trujillo M, Cheung K, Gao A, Hoxie I, Kannoly S, <b>Kubota N</b>, San K, Smyth D, & Dennehy JJ. Protocol for Safe, Affordable, and Reproducible Isolation and Quantitation of SARS-CoV-2 RNA from Wastewater. World Microbe Forum. Remote.
+        <br><br>
+        *Smyth D, M. Trujillo M, Cheung K, Gao A, Hoxie I, Kannoly S, <b>Kubota N</b>, Markman M, San K, Sompanya G, & Dennehy JJ. Detection of Mutations Associated with Variants of Concern via Targeted High Throughput Sequencing of SARS-CoV-2 Isolated from Wastewater. World Microbe Forum. Remote.
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2019
+    <div class="cv-pub">
+        *<b>Kubota N</b>, Rosario E, Stoyanova G, & Dennehy JJ. Mutations and Selection in <i>Erwinia amylovora</i> Phages Adapting to Host's Codon Usage Patterns. American Society for Virology 38th Annual Meeting at the University of Minnesota, Minneapolis.
+        <br><br>
+        Rodriguez DA, *Abellán P, <b>Kubota N</b>, & Anadón JD. Global-scale spatial patterns of phylogenetic endemism in birds. 9th Biennial Conference International Biogeography Society in Málaga, Spain.
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2018
+    <div class="cv-pub">
+        *<b>Kubota N</b>, Rosario E, & Dennehy JJ. Mutations and Selection in <i>Erwinia amylovora</i> Phages Adapting to Host's Codon Usage Patterns. NYC Regional SEA-PHAGES Symposium at Mount Saint Mary College (Second Place Poster Award)
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2017
+    <div class="cv-pub">
+        *San KM, <b>Kubota N</b>, Anadón JD, Bird J, Joyner J, Muth T, & Dennehy J. The Impact of Urbanization on Soil Microbiome in Long Island, New York. 31st Annual Sigma Xi Research Day at Queens College, City University of New York.
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2016
+    <div class="cv-pub">
+        <b>*Kubota N</b>, Abellán P, & Anadón JD. Global Drivers of Beta Diversity in Birds. Senior Research Students Poster Presentation at The Bronx High School of Science.
+    </div>
+</div>
+
+<div class="cv-pub-year">
+    2015
+    <div class="cv-pub">
+        <b>*Kubota N</b>, Abellán P, & Anadón JD. Global Drivers of Beta Diversity in Birds. Science Expo at The Bronx High School of Science.
+    </div>
+</div>
+
+<a name="teach"></a>
+<div class="cv-hr"></div>
+<div class="cv-section"><img align="left" src="/assets/images/person-chalkboard-solid.svg" class="filter-icon" />TEACHING, MENTORING, AND LEADERSHIP</div>
+
+***
+
+<div class="cv-subheading">Vice President of Finance
+    <div class="cv-year">July 2022 – Present
+    </div>
+</div>
+<div class="cv-p">
+    <i>University of Pittsburgh, School of Medicine, Biomedical Graduate Student Association</i>
+    <br>
+    <div class="cv-list">
+        <ul>
+            <li>Manages financial accounts for the Biomedical Graduate Student Association (BGSA).</li>
+            <li>Organizes and operates the BGSA Travel Awards and Travel Awards Committee.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cv-subheading">Big Buddy
+    <div class="cv-year">April 2022 – Present
+    </div>
+</div>
+<div class="cv-p">
+    <i>University of Pittsburgh, School of Medicine, Biomedical Graduate Student Association</i>
+    <br>
+    <div class="cv-list">
+        <ul>
+            <li>Mentors incoming first year PhD students on adjusting to and navigating through graduate school.</li>
+            <li>Coordinates with other older students to create events that will allow first year students to get to know other members of their cohort and program.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cv-subheading">Lab Mentor
+    <div class="cv-year">February 2022 – April 2022
+    </div>
+</div>
+<div class="cv-p">
+    <i>University of Pittsburgh, School of Medicine, Cooper Lab</i>
+    <br>
+    <div class="cv-list">
+        <ul>
+            <li>Taught rotation student and visiting researchers on how to script in R and Bash to do analyses and data visualization of DNA sequencing data.</li>
+            <li>Built dry lab tutorials for bench scientists who are beginners in R and Bash.</li>
+        </ul>
+    </div>
+</div>

@@ -8,11 +8,9 @@ classes: wide
 collection: tutorial
 ---
 
-My initial motivation for creating this website was so that all of my up-to-date tutorials for the lab were in one place, instead of having them all scattered throughout different channels and private messages in the lab Slack workspace.
+This page contains a compilation of dry lab tutorials that I have written over the years. It is still under construction as I am taking a crash course on website building with Jekyll. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a relatively functioning website that may (or may not) be useful to other lab members while learning a few things about coding in the process.
 
-This website is still under construction as I am in the midst of learning how to navigate GitHub, Jekyll, etc. I do not have a background in computer science, unfortunately. Hopefully by the end of this, I will have a relatively functioning website that may (or may not) be useful to other lab members while learning a few things about coding in the process.
-
-The list of available tutorials are below:
+The list of currently available tutorials are below:
 
 ## Getting started
 

@@ -8,6 +8,72 @@ article.page {
     // width: 100%;
     padding-right: 0;
 }
+
+/* CV layout */
+.cv-section {
+    color: #006D77;
+    font-size: 125%;
+    font-weight: bold;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+.filter-icon {
+    filter: invert(30%) sepia(17%) saturate(5345%) hue-rotate(155deg) brightness(93%) contrast(101%);
+    margin-right: 20px;
+    max-height: 40px;
+    width: 40px;
+}
+
+.cv-subheading {
+    text-align: left;
+    font-weight: bold;
+    font-size: 100%;
+    
+}
+
+.cv-p {
+    text-align: left;
+    font-size: large;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.cv-list {
+    text-align: left;
+    font-size: large;
+    margin-left: 40px;
+    line-height: 1;
+}
+
+.cv-year {
+    float: right;
+    color: grey;
+    font-weight: normal;
+    font-size: 80%;
+}
+
+.cv-hr {
+    border-top: 4px solid gray;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.cv-pub-year {
+    text-align: left;
+    display: flex;
+    font-size: large;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.cv-pub {
+    display: inline;
+    font-size: large;
+    padding-left: 40px;
+}
+
 /* Variables */
 @import "minimal-mistakes/variables";
 
@@ -42,3 +108,70 @@ article.page {
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+
+.cv-sidebar {
+    margin-bottom: 1em;
+    color: #006D77;
+  @include breakpoint($large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $right-sidebar-width-narrow;
+    margin-right: -1 * $right-sidebar-width-narrow;
+    padding-right: 1em;
+    z-index: 10;
+
+    &.sticky {
+      @include clearfix();
+      position: -webkit-sticky;
+      position: sticky;
+      top: 2em;
+      float: right;
+
+      .toc {
+        .toc__menu {
+          overflow-y: auto;
+          max-height: calc(100vh - 7em);
+        }
+      }
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: $right-sidebar-width;
+    margin-right: -1 * $right-sidebar-width;
+  }
+}
+
+#cv_sidebar_format {
+    color:#006D77;
+    font-family: $sans-serif-narrow;
+    font-size: 150%;
+    line-height: 1.5;
+    // font-weight: bold;
+}
+
+#cv_sidebar_format a:link, #cv_sidebar_format a:visited, #cv_sidebar_format a:hover {
+    text-decoration: none;
+    color:#006D77;
+}
+
+#cv_sidebar_format a:hover {
+    text-decoration: underline;
+    color:#006D77;
+}
+
+#toc_container {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-left: 1em;
+    margin-right: 0em;
+    margin-top: 1em;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 20px;
+    width: auto;
+}
