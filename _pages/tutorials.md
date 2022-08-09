@@ -26,4 +26,6 @@ The list of currently available tutorials are below:
 
 ## Other
 
+> [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
+
 > [Defense Finder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.

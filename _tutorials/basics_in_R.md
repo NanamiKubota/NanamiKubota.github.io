@@ -31,26 +31,27 @@ Google is your friend. 99% of coding relies on if you can Google the right quest
     For macOS users, you need to check which version of macOS you're running on and also which processor (i.e. Intel or Apple silicon). You can check this by clicking on the apple icon on the top left of your screen, and selecting *About This Mac* from the dropdown menu.  
     
     If you are using an older version of the macOS (i.e. Intel based), then next to *Processor*, it should say Intel:  
+
       
-    ![](/images/macos_version.png)
+    ![](/images/macos_version.png){: .image-resize .image-center}
     
     If you are using the newer Apple M1 macbooks which uses Apple silicon, then next to *Chip*, it should say Apple M1 instead of Intel:  
       
-    ![](/images/macos_m1.jpeg)
+    ![](/images/macos_m1.jpeg){: .image-resize .image-center}
     
     If you are using <b>Intel</b> on a macOS version that is 10.9 (i.e. Mavericks) or later, then you need to also install [XQuartz](https://www.xquartz.org/). Then you will <b>install R-4.1.0.pkg</b> and NOT the R-4.1.0-arm64.pkg.
     
     If you are using <b>Apple M1</b> on a macOS version that is 11.0 (i.e. Big Sur) or later, then you need to <b>install R-4.1.0-arm64.pkg</b>. You may still need to install [XQuartz](https://www.xquartz.org/). <b><u>Important: This package will not work if your processor is Intel based!!!</u></b>  
       
-    ![](/images/R_download_page.png)
+    ![](/images/R_download_page.png){: .image-center}
   
 2. Download the free version of [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/). This is an Integrated Development Environment (IDE) where you will write your code. You can technically write directly in R instead of RStudio but for the sake of making your life easier, please don't do this. The free version works fine for our purpose.  
 
-![](/images/rstudio_download.png)
+![](/images/rstudio_download.png){: .image-center}
 
 After you get to the Download page, scroll down until you see the free download version and click *DOWNLOAD*. Or alternatively, go [here](https://www.rstudio.com/products/rstudio/download/#download).
 
-![](/images/rstudio_free.png)
+![](/images/rstudio_free.png){: .image-center}
   
 3. Run line-by-line by pressing *Cmd+Enter* or *Ctrl+Enter*.  
 
@@ -68,7 +69,7 @@ After you get to the Download page, scroll down until you see the free download 
   
 When you first open RStudio, you will get 4 panels and each panel will have a different purpose. Don't worry if you only see 3 panels--you may just need to open an R script file which will be covered later.  
 
-![](/images/RStudio_overview.png)
+![](/images/RStudio_overview.png){: .image-center}
 
 <br>
 
@@ -86,9 +87,7 @@ There are two types of documents that will be of useful for you. For the sake of
 
 Open a new R Script document by going to *File* -> *New File* -> *R Script*, or you can press on the top right button with the green plus sign and click *R Script* from the dropdown menu (as seen in the picture below).
 
-<br>
-
-![](/images/new_doc.png)
+![](/images/new_doc.png){: .image-align}
 
 ## Installing and loading packages
 
@@ -98,17 +97,11 @@ This step is for users installing the package, *car*, for the first time and thi
   
 Go to *Tools* located at the top and click *Install Packages*. Then under the *Packages* search bar search for "car" and select car once it comes up. Then check off *Install dependencies* and click *Install*.  
 
-![](/images/install_package.png)
+![](/images/install_package.png){: .image-center}
 
-<br>
+![](/images/car_package.png){: .image-center}
 
-![](/images/car_package.png)
-
-<br>
-
-![](/images/dependencies.png)
-
-<br>
+![](/images/dependencies.png){: .image-center}
 
 You only need to install a particular package once. Once you do, every time you have a new R session, you must load that package so that R can access it by using the following function:  
 
