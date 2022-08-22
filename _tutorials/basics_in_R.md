@@ -12,11 +12,11 @@ last_modified_at: 2021-07-01
 <br>
 <i>
 Disclaimer:  
-I never took a formal CS course so my terminology and explanations of concepts may be questionable at times. Also, my code is usually messy so don't hesitate to email/message me with questions, especially if I don't explain something clearly. (But hey, if everything works, it works!)
+I never took a formal CS course so my terminology and explanations of concepts may be questionable at times.
 </i>
   
 >Tip:  
-Google is your friend. 99% of coding relies on if you can Google the right question into the search bar. I recommend going to statexchange and other forums to look for answers. The other 1% relies on whether you can interpret the answer and modify it to fit your needs.
+Google is your friend. 99% of coding relies on if you can Google the right question into the search bar. I recommend going to Stack Overflow and other forums to look for answers. The other 1% relies on whether you can interpret the answer and modify it to fit your needs.
 
 <br>
 
@@ -87,7 +87,7 @@ There are two types of documents that will be of useful for you. For the sake of
 
 Open a new R Script document by going to *File* -> *New File* -> *R Script*, or you can press on the top right button with the green plus sign and click *R Script* from the dropdown menu (as seen in the picture below).
 
-![](/images/new_doc.png){: .image-align}
+![](/images/new_doc.png){: .image-center}
 
 ## Installing and loading packages
 
@@ -114,10 +114,7 @@ library(car)
 
 Always begin by setting your working directory. The directory is the location of the folder where you would like to work from. Generally, you will have you data, plots, and R script within this folder to work from. You can do this manually by going to the top menu bar and click *Session* -> *Set Working Directory* -> *Choose Directory...*. 
 
-<br>
-
-![*Session* -> *Set Working Directory* -> *Choose Directory...*](/images/working_directory.png)
-<br><br>
+![](/images/working_directory.png){: .image-center}
 
 Your life will be easier if you copy/paste the line of code that is generated in the console after this and incorporate it into your script for future reference. That way you can just press *Cmd*+*Enter* to set your working directory everytime you need to run some code, instead of manually entering it each time via the dropdown menu. The below is my working directory and <u>this will be different for every person</u>:
 
@@ -128,7 +125,7 @@ setwd("~/Documents/PMI/Cooper Lab/CS tutorial/tutorial")
 
 ## Functions
 
-A function is a command that you write and run so that R can do that command on another object. For example, in the previous section we manually set the working directory, which produced a line of code using the setwd( ) function. Using the setwd( ) function, we are able to set the working directory to our folder of choice by writing the file path to that folder. In my example, my file path is "~/Documents/PMI/2021 Summer/R tutorial".  
+A function is a command that you write and run so that R can do that command on another object. For example, in the previous section we manually set the working directory, which produced a line of code using the setwd( ) function. Using the setwd( ) function, we are able to set the working directory to our folder of choice by writing the file path to that folder. In my example, my file path is "~/Documents/PMI/Cooper Lab/CS tutorial/tutorial".  
 
 Usually, functions are written in the following format:  
 

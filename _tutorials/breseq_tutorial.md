@@ -9,16 +9,11 @@ last_modified_at: 2021-03-06
 #classes: wide
 ---
 
-<br>
-
 > Note: This is a tutorial was made for the purposes of running breseq on the Cooper Lab's beagle server. This is also still a working draft so please reach out if you get stuck or if anything is unclear.
 
-
-<br>
+***
 
 # Getting started
-
-<br>
 
 In order to access the Cooper Lab servers, you must have permission to access them. To do so, make sure to email JV to receive permission prior to getting started.
 
@@ -27,8 +22,6 @@ You will also need Pulse Secure installed into your computer. You can receive a 
 After you install Pulse Secure, follow the PowerPoint from JV to set up Pulse Secure. The first password is your Pitt ID password and the second password is "*push*". This should send a push notification to your Duo app for your two-factor authentication. Make sure to save your settings to make connecting to the server easier in the future.
 
 If you are having trouble, make sure to check [here](https://www.technology.pitt.edu/services/pittnet-vpn-pulse-secure) as Pitt has listed the requirements needed to connect through Pulse Secure as well as a step-by-step guide for different devices.
-
-<br>
 
 ## Connect to beagle
 
@@ -40,31 +33,21 @@ To connect to the server, use *ssh* followed by your own Pitt username @beagle.m
 ssh nak177@beagle.mmg.pitt.edu
 ```
 
-<br>
-
 The format should be *ssh yourPittID@<span>beagle.mmg.pitt.edu* . After you hit enter, you will be asked for your password. Type in your password and hit enter.
 
 Your screen should look something like this:
 
 ![](/images/beagle_home_screen.png)
 
-<br>
-
 Now you are ready to use Beagle!
 
-<br>
-
 ## Access sequence data
-
-<br>
 
 First check your working directory:
 
 ```bash
 pwd 
 ```
-
-<br>
 
 This should tell you where you are located within Beagle. When you first connect to Beagle, you should be within your own home directory.
 
@@ -74,8 +57,6 @@ In my case, I am located at:
 /home/nak177
 ```
 
-<br>
-
 Your working directory will be different from mine and will most likely be within your own directory.
 
 Now we will access the directory which contains the burk+pa experiment that Chris Marshall did.
@@ -84,22 +65,12 @@ The data for the burk/pa experiments are found in Chris Marshall's directory. We
 ```bash
 ls /home/cwm47/burk_pa/chris_exp
 ```
-<br> 
 
 When you get your reads back from a sequencing machine or company, you want to check the quality of your reads to make sure they are good enough to work with. It looks like the reads saved here are already trimmed. This means we can skip the step of "cleaning" the raw sequence reads. 
 
 I will update this tutorial at a later date to include how to do quality control and trimming but for the purposes of this tutorial, we will skip this for now.
 
-<!-- For the purposes of learning how to clean reads, which is important if you ever receive raw sequencing data, we will walk through each step from quality control to trimming. 
-
-The raw sequences are stored elsewhere and can be accessed using: 
-
-```bash
-
-``` -->
-
-
-<br>
+***
 
 # Quality control
 
@@ -107,15 +78,17 @@ To be updated.
 
 <br>
 
+***
+
 # Trim reads
 
 To be updated.
 
 <br>
 
-# Run breseq
+***
 
-<br>
+# Run breseq
 
 ## Download reference sequences
 

@@ -11,7 +11,7 @@ article.page {
 
 /* CV layout */
 .cv-section {
-    color: #006D77;
+    color: #218380;
     font-size: 125%;
     font-weight: bold;
     vertical-align: middle;
@@ -119,7 +119,7 @@ article.page {
 
 .cv-sidebar {
     margin-bottom: 1em;
-    color: #006D77;
+    color: #218380;
   @include breakpoint($large) {
     position: absolute;
     top: 0;
@@ -152,7 +152,7 @@ article.page {
 }
 
 #cv_sidebar_format {
-    color:#006D77;
+    color:#218380;
     font-family: $sans-serif-narrow;
     font-size: 150%;
     line-height: 1.5;
@@ -161,12 +161,12 @@ article.page {
 
 #cv_sidebar_format a:link, #cv_sidebar_format a:visited, #cv_sidebar_format a:hover {
     text-decoration: none;
-    color:#006D77;
+    color:#218380;
 }
 
 #cv_sidebar_format a:hover {
     text-decoration: underline;
-    color:#006D77;
+    color:#218380;
 }
 
 #toc_container {
@@ -192,4 +192,34 @@ article.page {
 
 .image-resize {
     width: 50%;
+}
+
+table {
+    display: flex;
+    justify-content:center;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #218380;
+    color: white;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }

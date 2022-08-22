@@ -23,15 +23,11 @@ Sources:
 
 # Converting .gbk to .csv
 
-<br>
-
 We will be working with a Genbank file (.gbk) so make sure you have that ready with you. If you want the same test file that I will be working with, you can download the file for *Pseudomonas aeruginosa* PA14 at [Pseudomonas.com](https://www.pseudomonas.com/strain/show/109) and clicking "GBK" under **Download Gene Annotations**, or by clicking [here](https://www.pseudomonas.com/downloads/pseudomonas/pgd_r_20_2/Pseudomonas_aeruginosa_UCBPP-PA14_109/Pseudomonas_aeruginosa_UCBPP-PA14_109.gbk.gz) (you'll get a pop up asking you where you want to save the file).
 
 <br>
 
 ## Downloading gbk-to-csv converter
-
-<br>
 
 Once you have your gbk file, we will need to first convert it to csv. Technically, there are R packages that can read gbk files directly but they tend to be slow (and last time I tried it, it crashed my RStudio) so we're going to bypass this method by doing this on beagle and running my custom python script that converts gbk to csv (extract_gbk_to_csv.py).  
 
@@ -39,7 +35,7 @@ If you don't have it, you can download it through my Google Drive link [here](ht
 
 Upload extract_gbk_to_csv.py, to your desired location in beagle. The filepath below reflects where I have the python script saved on my computer so this filepath will be different for everyone:  
 
-```bash
+```shell
 scp -r /Users/kubotan/Documents/PMI/Cooper\ Lab/CS\ tutorial/script/extract_gbk_to_csv.py nak177@beagle.mmg.pitt.edu://home/nak177/scripts
 ```
 
@@ -49,15 +45,15 @@ I've saved the python script onto beagle in my home directory under the *scripts
 
 Once that is uploaded, you'll also want to upload your gbk file onto beagle if you haven't already.  
 
+<mark>IMPORTANT: Your gbk file should only contain one chromosome or one plasmid. Some sequence files may contain multiple chromosomes and plasmids, in which case you will need to isolate into one in your gbk file.</mark>
+
 <br>
 
 ## Run python script
 
-<br>
-
 Make sure you load miniconda3 before running the script:  
 
-```bash
+```shell
 module load miniconda/miniconda-3
 ```
 
@@ -65,7 +61,7 @@ module load miniconda/miniconda-3
 
 Now you can run the gbk-to-csv converter by doing:  
 
-```bash
+```shell
 python3 /home/nak177/scripts/extract_gbk_to_csv.py -i /home/nak177/ref_seq/Pseudomonas_aeruginosa_UCBPP-PA14_109.gbk -o /home/nak177/ref_seq/PA14_gbk_to_csv
 ```
 
@@ -90,8 +86,6 @@ The arguments for the gbk-to-csv converter are as follows:
 
 # Plotting in R with gggenes
 
-<br>
-
 Once you have your csv file, download it to your local computer and read it in R.  
 
 ```r
@@ -106,6 +100,16 @@ If you use the head( ) function then the first few rows of your table should loo
 head(gm)
 ```
 
+```
+##    locus_tag gene                                    product start  end strand
+## 0 PA14_00010 dnaA chromosomal replication initiation protein   482 2027      1
+## 1 PA14_00020 dnaN            DNA polymerase III subunit beta  2055 3159      1
+## 2 PA14_00030 recF                    recombination protein F  3168 4278      1
+## 3 PA14_00050 gyrB                       DNA gyrase subunit B  4274 6695      1
+## 4 PA14_00060 None                            acyltransferase  7017 7791     -1
+## 5 PA14_00070 None   D,D-heptose 1,7-bisphosphate phosphatase  7802 8339     -1
+```
+
 <br>
 
 - locus_tag: locus tag id for each unique gene
@@ -114,8 +118,6 @@ head(gm)
 - start: start position of gene
 - end: end position of gene
 - strand: denotes whether gene is on base (1) or complementary (-1) strand
-
-<br>
 
 The strand column indicates whether the gene is on the base strand or the complementary strand. If it is in the base strand, then a value of 1 (i.e. TRUE) is assigned. If it is on the complementary strand, then a value of -1 (i.e. FALSE) is assigned. Although the gggenes documentation says that -1 will be interpreted as the complement (i.e. FALSE), this is not the case so we will convert -1 into 0 (i.e. FALSE) so that R knows that -1 is the NOT on the base strand.  
 
@@ -127,8 +129,6 @@ gm$strand[gm$strand==-1] <- 0
 
 ## Subset dataframe
 
-<br>
-
 Lets say that I want to view the genome map of PA14 between locus PA14_48880 to PA14_49030 (this is a prophage region).  
 
 Since this is a big dataframe, it is best to subset it into a smaller dataframe that contains only the region that I am interested in.  
@@ -139,8 +139,15 @@ First, find which row the locus is located in the dataframe:
 which(gm$locus_tag=="PA14_48880") #find row number of first locus
 ```
 
+```
+## [1] 3941
+```
+
 ```r
 which(gm$locus_tag=="PA14_49030") #find row number of second locus
+```
+```
+## [1] 3956
 ```
 
 <br>
@@ -154,8 +161,6 @@ phage <- gm[3941:3956,]
 <br>
 
 ## Map single genome in gggenes
-
-<br>
 
 We will need to following R packages to plot:  
 
@@ -219,6 +224,11 @@ for (i in 1:nrow(phage)) {
 }
 head(phage$label)
 ```
+```
+## [1] "bacteriophage integrase"             NA                                   
+## [3] NA                                    NA                                   
+## [5] "bacteriophage protein"               "coat protein A of bacteriophage Pf1"
+```
 
 <br>
 
@@ -235,11 +245,11 @@ phage_map2 <- ggplot()+
 phage_map2
 ```
 
+![](/images/Pf_genome_2.png)
+
 <br>
 
 ## Map multiple genomes on gggenes
-
-<br>
 
 gggenes also has the option to plot multiple genomes on the same plot. To do this, we will plot the Pf5 prophage genome alongside with its relative, the Pf4 prophage in PAO1.  
 
@@ -251,6 +261,23 @@ After you have downloaded the file, do the same as the previous section and conv
 pao1 <- read.csv("/Users/kubotan/Documents/PMI/Cooper Lab/CS tutorial/data/PAO1_gbk_to_csv.csv", row.names = 1)
 head(pao1)
 ```
+```
+##   locus_tag gene                                        product start  end
+## 0    PA0001 dnaA chromosomal replication initiator protein DnaA   482 2027
+## 1    PA0002 dnaN                 DNA polymerase III, beta chain  2055 3159
+## 2    PA0003 recF                                   RecF protein  3168 4278
+## 3    PA0004 gyrB                           DNA gyrase subunit B  4274 6695
+## 4    PA0005 lptA    lysophosphatidic acid acyltransferase, LptA  7017 7791
+## 5    PA0006 None                 conserved hypothetical protein  7802 8339
+##   strand
+## 0      1
+## 1      1
+## 2      1
+## 3      1
+## 4     -1
+## 5     -1
+```
+
 <br>
 
 Make sure to remember and convert the reverse strand (-1) in the strand column to 0.  
@@ -259,6 +286,23 @@ Make sure to remember and convert the reverse strand (-1) in the strand column t
 pao1$strand[pao1$strand==-1] <- 0
 head(pao1)
 ```
+```
+##   locus_tag gene                                        product start  end
+## 0    PA0001 dnaA chromosomal replication initiator protein DnaA   482 2027
+## 1    PA0002 dnaN                 DNA polymerase III, beta chain  2055 3159
+## 2    PA0003 recF                                   RecF protein  3168 4278
+## 3    PA0004 gyrB                           DNA gyrase subunit B  4274 6695
+## 4    PA0005 lptA    lysophosphatidic acid acyltransferase, LptA  7017 7791
+## 5    PA0006 None                 conserved hypothetical protein  7802 8339
+##   strand
+## 0      1
+## 1      1
+## 2      1
+## 3      1
+## 4      0
+## 5      0
+```
+
 <br>
 
 The Pf4 prophage is located between the locus tags PA0715 and PA0729.1 so we will find the rows for both:  
@@ -266,9 +310,14 @@ The Pf4 prophage is located between the locus tags PA0715 and PA0729.1 so we wil
 ```r
 which(pao1$locus_tag=="PA0715") #find row number of first locus
 ```
-
+```
+## [1] 726
+```
 ```r
 which(pao1$locus_tag=="PA0729.1") #find row number of second locus
+```
+```
+## [1] 744
 ```
 
 <br>
@@ -299,6 +348,14 @@ for (i in 1:nrow(phage2)) {
   }
 }
 head(phage2$label)
+```
+```
+## [1] NA                                         
+## [2] NA                                         
+## [3] "Pf4 repressor C"                          
+## [4] "Pf4 prophage excisionase, XisF4"          
+## [5] "hypothetical protein of bacteriophage Pf1"
+## [6] "hypothetical protein of bacteriophage Pf1"
 ```
 
 <br>
@@ -332,6 +389,8 @@ phage_map3 <- ggplot()+
 phage_map3
 ```
 
+![](/images/Pf_genome_3.png)
+
 <br>
 
 The Pf4 and Pf5 prophage within the PAO1 and PA14 genomes, respectively, are similar but this is hard to visualize since the prophages are in the reverse direction. Lets flip the Pf4 (PAO1) prophage so that it is facing the same orientation as Pf5 (PA14).  
@@ -358,11 +417,11 @@ phage_map3 <- ggplot()+
 
 phage_map3
 ```
-
+![](/images/Pf_genome_4.png)
 
 <br>
 
-Both genomes have the "helix destabilizing protein of bacteriophage Pf1" so we will aligned both tracks around that gene. To do so, we will use the make_alignment_dummies( ) function. However, this function contains a bug so I have fixed it which can be found in my lab Google Drive folder [here](https://drive.google.com/file/d/1ElZhoyqeAamm_7qoz9V8-vQgrteM7DPx/view?usp=sharing). Be sure to run this updated function before proceeding.  
+Both genomes have the "helix destabilizing protein of bacteriophage Pf1" so we will aligned both tracks around that gene. To do so, we will use the make_alignment_dummies( ) function. However, this function contained a bug that has been fixed on the GitHub repository, but may not be reflected in the R packages, so the fixed function can be found in my lab Google Drive folder [here](https://drive.google.com/file/d/1ElZhoyqeAamm_7qoz9V8-vQgrteM7DPx/view?usp=sharing). Be sure to run this updated function before proceeding.  
 
 After running the updated function, run the following code:  
 
@@ -390,3 +449,4 @@ phage_map4 <- ggplot()+
 
 phage_map4
 ```
+![](/images/Pf_genome_5.png)

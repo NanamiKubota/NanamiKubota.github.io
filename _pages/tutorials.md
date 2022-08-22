@@ -2,7 +2,7 @@
 title: "Tutorials"
 # layout: categories
 permalink: /tutorials/
-layout: collection
+layout: single
 author_profile: true
 classes: wide
 collection: tutorial
@@ -18,7 +18,9 @@ The list of currently available tutorials are below:
 
 ## Graphing
 
-> [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps.
+> [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps using the gggenes package in R.
+
+>[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
 
 ## breseq
 
@@ -28,4 +30,18 @@ The list of currently available tutorials are below:
 
 > [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
 
-> [Defense Finder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
+> [DefenseFinder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
+
+<br>
+
+***
+
+## Resources for learning a new programming language
+
+Below are a list of websites that may be useful for learning a new programming language. 
+
+> [freeCodeCamp](https://www.freecodecamp.org/): free, project-based learning module. I recommend their html and CSS course for those who want to knit R markdown to nice html files. Also a great foundation if you ever want to build a website on GitHub Pages.
+
+> [Exercism](https://exercism.org/): free and has over 60 different languages available.
+
+> [Codecademy](https://www.codecademy.com/): 7-day free trial for different learning modules. I recommend their "Learn the Command Line" course for Cooper Lab users who want to use beagle. Their "Learn Bash Scripting" is okay and goes over basic syntax but not as well-built as the command line tutorial. The modules is shorter though so if you have time during your free trial, go for it.
