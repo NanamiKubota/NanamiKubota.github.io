@@ -13,6 +13,8 @@ last_modified_at: 2022-08-22
 
 This tutorial will cover how to graph multiple sequence alignments on R. I used to use the msa package on R, but the package is no longer compatible with the new Apple M1 because Bioconductor is not compatible with the M1 version of R (i.e. arm64 version). To circumvent this, I will use multiple softwares including Geneious Prime to get our multiple sequence alignments. Alternatively, you can switch to the intel version of R and use Rosetta in order to use the msa package but we will not go over that in this tutorial.
 
+<br>
+
 # FASTA file preparation (Geneious)
 
 I am interested in the *pf5r* gene in *Pseudomonas aeruginosa* PA14. I have compiled a fasta-style text file with the amino acid sequence of *pf5r* as well as genes from other *P. aeruginosa* strains that produced a hit when I blasted the gene against the Pseudomonas Genome Database. You can see a sample of my fasta file by clicking (here)["sample_data/ortholog_pf5r.fasta"] (clicking the hyperlink will prompt a download).
@@ -47,6 +49,7 @@ Then it will ask you about *FASTA sequences/alignment Export*. Make sure to sele
 
 Your fasta file should look something like [this](../sample_data/ortholog_pf5r_alignment.fasta) (click the hyperlink to download multiple alignment fasta file output).
 
+<br>
 # Visualize multiple alignment using ggmsa (R)
 
 Open RStudio and install the [ggmsa package](http://yulab-smu.top/ggmsa/).

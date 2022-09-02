@@ -92,7 +92,7 @@ To be updated.
 
 ## Download reference sequences
 
-Before we run breseq, we must first download our reference sequence for *Burkholderia cenocepacia* HI2424 from the [Burkholderia Genome Database](https://burkholderia.com/strain/show?id=130) and *Pseudomonas aeruginosa* PA14 from the [Pseudomonas Genome Database](https://pseudomonas.com/strain/show?id=109).
+Before we run breseq, we must first download our reference sequence. For this example, I will be using the publicly available *Pseudomonas aeruginosa* PA14 from the [Pseudomonas Genome Database](https://pseudomonas.com/strain/show?id=109).
 
 Download the gene annotation files by scrolling down to "Download Gene Annotations" and clicking on "GBK" (this means the file is in GenBank format).
 
@@ -111,12 +111,19 @@ instead of
 
 This will be different for your own local environment. As long as it does not say @beagle, then you should be good.
 
-First, lets check where your downloaded files are located. In my case, I downloaded my .gbk files in my Downloads folder so I can see them using the ls function within my Downloads folder:
+First, lets check where your downloaded files are located. In my case, I downloaded my .gbk files in my Downloads folder so I can see all .gbk files in my Downloads folder using the ls function:
 ```bash
 ls /Users/kubotan/Downloads/*.gbk.gz
 ```
 
+This is useful if you're interested in locating multiple .gbk.gz files in a particular folder.
+
 The wildcard (*) is used to indicate that I want to list all the files within my Downloads folder with any file name as long as it ends with .gbk.gz. The .gz just indicates that the file is zipped 
+
+If you're only interested in looking at a single file, and you already know its filepath and filename, then you can do:
+```bash
+ls /Users/kubotan/Downloads/Pseudomonas_aeruginosa_UCBPP-PA14_109.gbk.gz
+```
 
 For Mac users, the easiest way to get your file path (i.e. the direction to a particular folder) is by going to Finder and right clicking on your folder, hold down the Options key, and select "Copy Downloads as Pathname".
 
@@ -127,10 +134,9 @@ Then in your new terminal window, type in ls and paste in your file path by doin
 ```bash
 ls /Users/kubotan/Downloads/*gbk.gz
 ```
-Check to make sure that the output shows your downloaded files only.
 
+Check to make sure that the output shows your downloaded files only like so:
 ```bash
-/Users/kubotan/Downloads/Burkholderia_cenocepacia_B1_130.gbk.gz
 /Users/kubotan/Downloads/Pseudomonas_aeruginosa_UCBPP-PA14_109.gbk.gz
 ```
 
@@ -161,22 +167,6 @@ Check that your files are unzipped by doing:
 ```bash
 ls
 ```
-
-<br>
-
-## Combine reference sequences
-
-Now you should have .gbk files downloaded and unzipped. We will now need to combine these reference sequences into one big reference sequence.
-
-To do this, first edit the python script combine_sequences.py in a text editor so that you change my directory to your own home directory. Then run the python script combine_sequences.py by:
-
-```bash
-python combine_sequences.py
-```
-
-This should create two files. One of them is burk_merged.gbk, which is just a merged files of all the Burkholderia content, since the Burkholderia .gbk contained 4 "chromosomes". See https://www.ncbi.nlm.nih.gov/assembly/GCA_000203955.1 for more info. I separated each "chromosome" by 50 N bases so that we can see where each start and end. We can ignore this particular file for now.
-
-We are interested in the hi2424_pa14_2022.gbk file which contains both Burkholderia and PA14 genomes. I separated the Burkholderia and PA14 genome by 100 N bases. We will use this to run our breseq on the co-cultured sequences.
 
 <br>
 

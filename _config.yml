@@ -67,7 +67,7 @@ plugins:
 author:
   name   : "Nanami Kubota"
   avatar : "/assets/images/bio-photo.jpeg"
-  bio    : "PhD student in the Cooper Lab at the University of Pittsburgh. Research on bacteria and phage coevolution."
+  bio    : "PhD student in the Cooper Lab at the University of Pittsburgh. Research on bacteria and phage coevolution. Lightly dabbles in game theory."
   location: "Pittsburgh, PA"
   links:
     - label: "Email"

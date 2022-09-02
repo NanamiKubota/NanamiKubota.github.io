@@ -7,7 +7,7 @@ search: false
 
 $primary-color: #20A39E !default; //78c2ad
 $link-color: #E3655B !default;
-$footer-background-color: #218380 !default;
+// $footer-background-color: #218380 !default;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 
