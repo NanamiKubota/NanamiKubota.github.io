@@ -17,7 +17,7 @@ This tutorial will cover how to graph multiple sequence alignments on R. I used 
 
 # FASTA file preparation (Geneious)
 
-I am interested in the *pf5r* gene in *Pseudomonas aeruginosa* PA14. I have compiled a fasta-style text file with the amino acid sequence of *pf5r* as well as genes from other *P. aeruginosa* strains that produced a hit when I blasted the gene against the Pseudomonas Genome Database. You can see a sample of my fasta file by clicking (here)["/sample_data/ortholog_pf5r.fasta"] (clicking the hyperlink will prompt a download).
+I am interested in the *pf5r* gene in *Pseudomonas aeruginosa* PA14. I have compiled a fasta-style text file with the amino acid sequence of *pf5r* as well as genes from other *P. aeruginosa* strains that produced a hit when I blasted the gene against the Pseudomonas Genome Database. You can see a sample of my fasta file by clicking [here]("/sample_data/ortholog_pf5r.fasta" ) (clicking the hyperlink will prompt a download).
 
 After you have your fasta file, import it into Geneious by clicking on the *Add* button and selecting *New Sequence...* as seen below: 
 
