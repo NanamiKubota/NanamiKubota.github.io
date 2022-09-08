@@ -41,7 +41,7 @@ Your screen should look something like this:
 
 Now you are ready to use Beagle!
 
-## Access sequence data
+## Upload reference sequence data to beagle
 
 First check your working directory:
 
@@ -58,39 +58,6 @@ In my case, I am located at:
 ```
 
 Your working directory will be different from mine and will most likely be within your own directory.
-
-Now we will access the directory which contains the burk+pa experiment that Chris Marshall did.
-
-The data for the burk/pa experiments are found in Chris Marshall's directory. We can see this by entering:
-```bash
-ls /home/cwm47/burk_pa/chris_exp
-```
-
-When you get your reads back from a sequencing machine or company, you want to check the quality of your reads to make sure they are good enough to work with. It looks like the reads saved here are already trimmed. This means we can skip the step of "cleaning" the raw sequence reads. 
-
-I will update this tutorial at a later date to include how to do quality control and trimming but for the purposes of this tutorial, we will skip this for now.
-
-***
-
-# Quality control
-
-To be updated.
-
-<br>
-
-***
-
-# Trim reads
-
-To be updated.
-
-<br>
-
-***
-
-# Run breseq
-
-## Download reference sequences
 
 Before we run breseq, we must first download our reference sequence. For this example, I will be using the publicly available *Pseudomonas aeruginosa* PA14 from the [Pseudomonas Genome Database](https://pseudomonas.com/strain/show?id=109).
 
@@ -167,6 +134,32 @@ Check that your files are unzipped by doing:
 ```bash
 ls
 ```
+
+Using the same method, upload your whole genome sequence data onto beagle. For the purposes of this tutorial, we will be using raw sequence data which you can download from here.
+
+***
+
+# Quality control
+
+To be updated.
+
+When you get your reads back from a sequencing machine or company, you want to check the quality of your reads to make sure they are good enough to work with. 
+
+I will update this tutorial at a later date to include how to do quality control and trimming but for the purposes of this tutorial, we will skip this for now.
+
+<br>
+
+***
+
+# Trim reads
+
+To be updated.
+
+<br>
+
+***
+
+# Run breseq
 
 <br>
 
