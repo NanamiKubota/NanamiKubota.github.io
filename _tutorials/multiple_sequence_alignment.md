@@ -27,7 +27,7 @@ Once your fasta file is imported, we will align the sequences. To do so, go to *
 
 ![](/images/geneious_multiple_align.png.png){: .image-resize .image-center}
 
-Then choose your desired alignment algorithm. If you are unsure which one to use, [see this Geneious article which goes over each algorithm.]("https://help.geneious.com/hc/en-us/articles/360044627712-Which-multiple-alignment-algorithm-should-I-use-")
+Then choose your desired alignment algorithm. If you are unsure which one to use, [see this Geneious article which goes over each algorithm.](https://help.geneious.com/hc/en-us/articles/360044627712-Which-multiple-alignment-algorithm-should-I-use-)
 
 ![](/images/geneious_alignment.png){: .image-resize .image-center}
 
