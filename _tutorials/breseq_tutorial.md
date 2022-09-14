@@ -5,7 +5,7 @@ permalink: /tutorials/breseq
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2021-03-06
+last_modified_at: 2022-09-14
 #classes: wide
 ---
 
@@ -15,17 +15,18 @@ last_modified_at: 2021-03-06
 
 # Getting started
 
+
 In order to access the Cooper Lab servers, you must have permission to access them. To do so, make sure to email JV to receive permission prior to getting started.
 
-You will also need Pulse Secure installed into your computer. You can receive a free copy of Pulse Secure through Pitt by going to [software.pitt.edu](https://software.pitt.edu/). You will need you Pitt ID to log in and download the software. Make sure to also select the appropriate version for your computer.
+<mark>UPDATE (09/14/2022): We no longer use Pulse Secure. Please switch to GlobalProtect.</mark>
 
-After you install Pulse Secure, follow the PowerPoint from JV to set up Pulse Secure. The first password is your Pitt ID password and the second password is "*push*". This should send a push notification to your Duo app for your two-factor authentication. Make sure to save your settings to make connecting to the server easier in the future.
+You will also need ~~Pulse Secure~~ GlobalProtect installed into your computer. You can receive a free copy of it through Pitt by going to [software.pitt.edu](https://software.pitt.edu/). You may need your Pitt ID to log in and download the software. Make sure to also select the appropriate version for your computer.
 
-If you are having trouble, make sure to check [here](https://www.technology.pitt.edu/services/pittnet-vpn-pulse-secure) as Pitt has listed the requirements needed to connect through Pulse Secure as well as a step-by-step guide for different devices.
+If you are having trouble, make sure to check [here](https://www.technology.pitt.edu/services/pittnet-vpn-globalprotect) as Pitt has information on how to connect through GlobalProtect as well as a step-by-step guide for different devices.
 
 ## Connect to beagle
 
-We will be working with the server, Beagle, to run our breseq analysis.
+We will be working with the server, beagle, to run our breseq analysis.
 
 To connect to the server, use *ssh* followed by your own Pitt username @beagle.mmg.pitt.edu. In my case, since my Pitt ID is nak177, my line of code will be:
 
@@ -135,7 +136,7 @@ Check that your files are unzipped by doing:
 ls
 ```
 
-Using the same method, upload your whole genome sequence data onto beagle. For the purposes of this tutorial, we will be using raw sequence data which you can download from here.
+Using the same method, upload your whole genome sequence data onto beagle. For the purposes of this tutorial, we will be using my raw sequence data which you can download from my Google Drive [here (R1)](https://drive.google.com/file/d/1RV1amXwEjlXWqtLbNGIwYDRJM-Oso7Kq/view?usp=sharing) and [here (R2)](https://drive.google.com/file/d/1jBLgchll0ahgUOQMmVL-2g5Za-jymBBK/view?usp=sharing). You will need both R1 and R2 files to properly align reads against the reference genome.
 
 ***
 
@@ -147,6 +148,23 @@ When you get your reads back from a sequencing machine or company, you want to c
 
 I will update this tutorial at a later date to include how to do quality control and trimming but for the purposes of this tutorial, we will skip this for now.
 
+
+```bash
+#!/bin/bash
+
+#SBATCH --job-name=fqc
+#SBATCH -w node01
+#SBATCH --mail-user=nak177@pitt.edu
+#SBATCH --mail-type=ALL
+
+module purge
+module load fastqc/fastqc-0.11.5
+
+fastqc Pf5_cap_del_1_forward_paired.fq.gz Pf5_cap_del_1_forward_unpaired.fq.gz Pf5_cap_del_1_reverse_paired.fq.gz Pf5_cap_del_1_reverse_unpaired.fq.gz -o fastqc_output_directory -t 4
+
+module purge
+```
+
 <br>
 
 ***
@@ -154,6 +172,22 @@ I will update this tutorial at a later date to include how to do quality control
 # Trim reads
 
 To be updated.
+
+```bash
+#!/bin/bash
+
+#SBATCH --job-name=CapDelPA14trim
+#SBATCH -w node01
+#SBATCH --mail-user=nak177@pitt.edu
+#SBATCH --mail-type=ALL
+
+module purge
+module load trimmomatic/trimmomatic-0.36
+
+trimmomatic PE -phred33 -threads 4 -trimlog trim.log /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_S184_R1_001.fastq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_S184_R2_001.fastq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_forward_paired.fq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_forward_unpaired.fq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_reverse_paired.fq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_reverse_unpaired.fq.gz ILLUMINACLIP:/opt/trimmomatic/Trimmomatic-0.36/adapters/NexteraPE-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+
+module purge
+```
 
 <br>
 
@@ -165,11 +199,24 @@ To be updated.
 
 ## Run breseq
 
-We will be modifying Chris Marshall's script a little for our breseq run.
+This is my script for running breseq in order to align my reads to the reference sequence:
+```bash
+#!/bin/bash
 
-Take a look at cwm_burk_pa.sh (i.e. Chris's script) and burk_pa_breseq_2022.sh (my modified one) as reference.
+#SBATCH --job-name=breseq
+#SBATCH -w node02
+#SBATCH --mail-user=nak177@pitt.edu
+#SBATCH --mail-type=ALL
 
-Modify burk_pa_breseq_2022.sh in a text editor so that the computer will know where your files are located. Hint: replace any file path that has "nak177" in it with your own file path.
+module purge
+module load breseq
+
+breseq -r /home/nak177/ref_seq/Pseudomonas_aeruginosa_UCBPP-PA14_109.gbk /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_forward_paired.fq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_reverse_paired.fq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_forward_unpaired.fq.gz /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_reverse_unpaired.fq.gz -o /home/nak177/wgs/pa14/2022-01-19/Pf5_cap_del_1_breseq -j 2
+
+module purge
+```
+
+Open a text editor and replace any file path that has "nak177" in it with your own file path.
 
 Additionally, there are #SBATCH at the top of the bash script. These are optional but I recommend having the first one in your bash script:
  - #SBATCH --job-name=your_job_name indicates what you want to name the job as once you send the bash script for computing (it is recommended that you name your job since everyone can see what jobs are running on the server)
@@ -177,34 +224,14 @@ Additionally, there are #SBATCH at the top of the bash script. These are optiona
  - #SBATCH --mail-type=ALL indicates that the server will mail you when your job starts and when it ends. This may be useful especially for jobs that can take a long time to run.
 
 
-This is an example of the script I modified from Chris Marshall:
-```bash
-#!/bin/bash
-
-#SBATCH --job-name=breseq
-#SBATCH --mail-user=nak177@pitt.edu
-#SBATCH --mail-type=ALL
-
-
-#run breseq
-module load breseq
-for i in {01..24}; do time breseq -p -r /home/nak177/ref_seq/hi2424_pa14_2022.gbk /home/cwm47/burk_pa/chris_exp/trim/"$i"_forward_paired.fq.gz /home/cwm47/burk_pa/chris_exp/trim/"$i"_forward_unpaired.fq.gz /home/cwm47/burk_pa/chris_exp/trim/"$i"_reverse_paired.fq.gz /home/cwm47/burk_pa/chris_exp/trim/"$i"_reverse_unpaired.fq.gz -o /home/nak177/burk_pa/breseq_pop/breseq_"$i" -j 16; done 
-
-#run parser to get all into one file
-module load miniconda/miniconda-3
-python3 /home/cwm47/build/gscripts/breseq_parser.py -d /home/nak177/burk_pa/breseq_pop/ -f csv -o /home/nak177/burk_pa/breseq_pop/burk_pa_bre_out
-
-module purge
-```
-
 To upload your modified script from your local environment to the server, you can use scp:
 ```bash
-scp -r /Users/kubotan/Downloads/burk_pa_breseq_2022.sh nak177@beagle.mmg.pitt.edu://home/nak177/burk_pa
+scp -r /Users/kubotan/Downloads/breseq.sh nak177@beagle.mmg.pitt.edu://home/nak177/scripts
 ```
 
 Make sure to modify the file path of the above code to suit your needs.
 
-Once your modified script is ready and uploaded to your home directory on Beagle, it is good practice to use tmux (i.e. a terminal multiplexer). Tmux is useful because it can keep your job running even if you disconnect from the server. This means that if you run a job within a tmux session, then you can log off from the server and do other tasks on your computer but your job will keep running in the server.
+Once your modified script is ready and uploaded to your home directory on beagle, it is good practice to use tmux (i.e. a terminal multiplexer). Tmux is useful because it can keep your job running even if you disconnect from the server. This means that if you run a job within a tmux session, then you can log off from the server and do other tasks on your computer but your job will keep running in the server.
 
 To make a new tmux session, do:
 ```bash
@@ -218,7 +245,7 @@ tmux new -s breseq
 
 Once you have your tmux session active, you can run your script by doing:
 ```bash
-sbatch /home/nak177/burk_pa/burk_pa_breseq_2022.sh
+sbatch /home/nak177/scripts/breseq.sh
 ```
 You can check if your job was successfully submitted by typing:
 ```bash
@@ -227,15 +254,6 @@ squeue
 
 Congrats! You have now successfully ran your first breseq run!
 
-Since there are a lot of sequences to go through, the breseq may take a while to run. While this is happening, I recommend preparing your breseq script for the sequenced Day 7 co-cultures.
+## Convert breseq output into csv
 
-The concept is the same. You will just need to modify the script so that you are using the right file path names for the mono cultures. You can see a list of the sequences at:
-```bash
-ls /home/cwm47/burk_pa/chris_exp/trim_d7/
-```
-
-Note that there are only 23 sequences here while the other folder has 24. This means that you will also need to modify the loop in the script and change the number from 24 to 23.
-
-Also make sure to make a new file path for your Day 7 sequences so that you don't accidentally overwrite your Day 16 breseq run.
-
-Once you are done with this, we will learn how to extract the old locus tags for Burkholderia.
+To be updated

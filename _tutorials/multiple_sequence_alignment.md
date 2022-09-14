@@ -13,6 +13,8 @@ last_modified_at: 2022-08-22
 
 This tutorial will cover how to graph multiple sequence alignments on R. I used to use the msa package on R, but the package is no longer compatible with the new Apple M1 because Bioconductor is not compatible with the M1 version of R (i.e. arm64 version). To circumvent this, I will use multiple softwares including Geneious Prime to get our multiple sequence alignments. Alternatively, you can switch to the intel version of R and use Rosetta in order to use the msa package but we will not go over that in this tutorial.
 
+<mark>IMPORTANT: This tutorial is for making a nice multiple sequence alignment figure of a short region. It is not for viewing alignments that are thousands of base pairs long.</mark>
+
 <br>
 
 # FASTA file preparation (Geneious)
