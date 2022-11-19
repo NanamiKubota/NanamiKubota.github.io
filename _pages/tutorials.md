@@ -42,8 +42,8 @@ The list of currently available tutorials are below:
 
 Below are a list of websites that may be useful for learning a new programming language. 
 
-> [freeCodeCamp](https://www.freecodecamp.org/): free, project-based learning module. I recommend their html and CSS course for those who want to knit R markdown to nice html files. Also a great foundation if you ever want to build a website on GitHub Pages.
+> [freeCodeCamp](https://www.freecodecamp.org/): free, project-based learning module. I recommend their html and CSS course for those who want to knit R markdown to nice html files. Also a great foundation if you ever want to build a website on GitHub Pages. This is a concept-based approach rather than a language-based approach so it might be good if you are interested in learning terminology and new skills rather than learning a new coding language. Great for people who never took a formal computer science course like me, as it helps fill in some of the gaps in knowledge that you would otherwise cover if you took a course in computer science.
 
-> [Exercism](https://exercism.org/): free and has over 60 different languages available. I haven't tried it myself but I heard it was good.
+> [Exercism](https://exercism.org/): free and has over 60 different languages available. Good if you are looking to learn a new language like Python. However, I don't recommend the R tutorial for true beginners as it dives right into writing functions without much of an introduction. You might want to use Google as you complete each exercise, and this may help with your Googling skills (very important for writing code).
 
 > [Codecademy](https://www.codecademy.com/): 7-day free trial for different learning modules. I recommend their "Learn the Command Line" course for Cooper Lab users who want to use beagle. Their "Learn Bash Scripting" is okay and goes over basic syntax but not as well-built as the command line tutorial. The modules is shorter though so if you have time during your free trial, go for it.

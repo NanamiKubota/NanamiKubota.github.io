@@ -5,7 +5,7 @@ permalink: /tutorials/breseq
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2022-09-14
+last_modified_at: 2022-10-12
 #classes: wide
 ---
 
@@ -138,40 +138,13 @@ ls
 
 Using the same method, upload your whole genome sequence data onto beagle. For the purposes of this tutorial, we will be using my raw sequence data which you can download from my Google Drive [here (R1)](https://drive.google.com/file/d/1RV1amXwEjlXWqtLbNGIwYDRJM-Oso7Kq/view?usp=sharing) and [here (R2)](https://drive.google.com/file/d/1jBLgchll0ahgUOQMmVL-2g5Za-jymBBK/view?usp=sharing). You will need both R1 and R2 files to properly align reads against the reference genome.
 
-***
-
-# Quality control
-
-To be updated.
-
-When you get your reads back from a sequencing machine or company, you want to check the quality of your reads to make sure they are good enough to work with. 
-
-I will update this tutorial at a later date to include how to do quality control and trimming but for the purposes of this tutorial, we will skip this for now.
-
-
-```bash
-#!/bin/bash
-
-#SBATCH --job-name=fqc
-#SBATCH -w node01
-#SBATCH --mail-user=nak177@pitt.edu
-#SBATCH --mail-type=ALL
-
-module purge
-module load fastqc/fastqc-0.11.5
-
-fastqc Pf5_cap_del_1_forward_paired.fq.gz Pf5_cap_del_1_forward_unpaired.fq.gz Pf5_cap_del_1_reverse_paired.fq.gz Pf5_cap_del_1_reverse_unpaired.fq.gz -o fastqc_output_directory -t 4
-
-module purge
-```
-
 <br>
 
 ***
 
 # Trim reads
 
-To be updated.
+Trimming the reads is important, especially if your reads still have the adapters attached to them. Use the following script to trim your reads, making sure to change the filepath to your appropriate filepath:
 
 ```bash
 #!/bin/bash
@@ -188,6 +161,38 @@ trimmomatic PE -phred33 -threads 4 -trimlog trim.log /home/nak177/wgs/pa14/2022-
 
 module purge
 ```
+
+<br>
+
+***
+# Quality control
+
+When you get your reads back from a sequencing machine or company, you want to check the quality of your reads to make sure they are good enough to work with. This is also a good step to do after you trim your reads.
+
+I will be using the trimmed reads from the previous section to do the quality control (QC). Use the following script to trim your reads, making sure to change the filepath to your appropriate filepath:
+
+
+```bash
+#!/bin/bash
+
+#SBATCH --job-name=fqc
+#SBATCH -w node01
+#SBATCH --mail-user=nak177@pitt.edu
+#SBATCH --mail-type=ALL
+
+module purge
+module load fastqc/fastqc-0.11.5
+
+fastqc Pf5_cap_del_1_forward_paired.fq.gz Pf5_cap_del_1_forward_unpaired.fq.gz Pf5_cap_del_1_reverse_paired.fq.gz Pf5_cap_del_1_reverse_unpaired.fq.gz -t 4
+
+module purge
+```
+
+This should give you html files with information on the quality of your reads. Download this to your local computer and open the html files onto your preferred browser (like Chrome). Your FastQC report html file should look something like this:
+
+![](/images/fastqc_output_html.png){: .image-resize .image-center}
+
+There are many resources online that teaches you how to interpret the FastQC Report, like [this site](https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/). Although not all parameters need to have a green checkmark for you to run breseq, it is always a good idea to make sure and check any parameters that are flagged to see if you can proceed with aligning the reads against a reference sequence.
 
 <br>
 
@@ -254,6 +259,28 @@ squeue
 
 Congrats! You have now successfully ran your first breseq run!
 
+Once your run is over, you can view your results by looking at the "index.html" file which is located in the "output" folder of your breseq run.
+
 ## Convert breseq output into csv
 
 To be updated
+
+Now that you have your breseq outputs, you can view the results by opening the "index.html" file in your browser. However, if you have a lot of breseq outputs (and a lot of index.html files), it is sometimes easier to convert all your outputs into one csv file so that you can view all your breseq output files as a table on Excel.
+
+To do this, you will first need to download Chris Marshall's breseq parser script which I have modified [here](https://drive.google.com/file/d/1nfBN4XErlajllpqJqTLWgBuY_zGA3y8-/view?usp=sharing).
+
+You will also want all your breseq output folders in one master folder (for example, in a folder named "breseq_master") like so:
+
+![](/images/breseq_filepath.png){: .image-resize .image-center}
+
+Then you can run the script on the master folder, and it should be able to locate all your breseq output files and gather all the outputs in one table.
+
+Then you can run the script using the following commands:
+```bash
+module load miniconda/miniconda-3
+python3 /home/nak177/scripts/breseq_parser_symbol_out.py -d /home/nak177/wgs/pa14/breseq_master/ -f csv -o /home/nak177/wgs/pa14/breseq_master/bre_out
+
+module purge
+```
+
+Download the csv files (there should be three: one for SNPs, one for missing coverage, and one for new junction). You can now open it in Excel and view the table to better analyze your results.
