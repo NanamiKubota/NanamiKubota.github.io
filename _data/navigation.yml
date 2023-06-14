@@ -3,7 +3,10 @@ main:
     url: / # /posts/
   - title: "Tutorials" # "Categories"
     url: /tutorials/ # /categories/
-  - title: "CV"
-    url: /cv/
-  - title: "Misc" # "Tags"
-    url: /misc/ # /tags/
+  # - title: "CV"
+  #   url: /cv/
+  # - title: "Misc" # "Tags"
+  #   url: /misc/ # /tags/
+  - title: "Dry Lab Notes"
+    url: /drylabnotes/
+  
