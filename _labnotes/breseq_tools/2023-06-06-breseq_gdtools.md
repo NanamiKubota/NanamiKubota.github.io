@@ -7,7 +7,7 @@ categories:
 #     - gdtools
 #     - bioinformatics
 #     - script
-layout: single_center
+_layout: single_center_labnotes
 excerpt: gdtool commands for outputting variant call table
 ---
 

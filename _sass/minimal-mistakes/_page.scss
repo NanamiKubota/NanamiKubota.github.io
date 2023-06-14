@@ -299,6 +299,7 @@ body {
 
 .page__meta {
   margin-top: 2em;
+  margin-bottom: 1em;
   color: $muted-text-color;
   font-family: $sans-serif;
   font-size: $type-size-6;
@@ -636,7 +637,7 @@ body {
   }
 
   &__filter{
-    filter: invert(52%) sepia(6%) saturate(1475%) hue-rotate(159deg) brightness(99%) contrast(89%); //change this to change calendar icon color
+    filter: invert(45%) sepia(0%) saturate(1057%) hue-rotate(210deg) brightness(89%) contrast(99%); //change this to change calendar icon color
     color: $muted-text-color;
     margin-right: 5px;
     height: 20px;
@@ -656,3 +657,4 @@ body {
     text-decoration: underline;
   }
 }
+

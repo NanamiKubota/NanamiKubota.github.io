@@ -7,7 +7,7 @@ categories:
 #     - gdtools
 #     - bioinformatics
 #     - script
-layout: single_center
+layout: single_center_labnotes
 excerpt: breseq MPAO1 strains from Secor lab and translate to PAO1 locus tags using roary
 ---
 

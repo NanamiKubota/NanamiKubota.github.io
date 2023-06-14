@@ -8,4 +8,6 @@ classes: wide
 #collection: tutorial
 ---
 
-This page is intended for me to keep records of my dry lab work. 
+This page is intended for me to keep records of scripts that I've written.
+
+To be updated.

@@ -7,7 +7,7 @@ categories:
 #     - gdtools
 #     - bioinformatics
 #     - script
-layout: single_center
+layout: single_center_labnotes
 excerpt: creating new breseq parser script from gdtools
 ---
 
