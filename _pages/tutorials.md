@@ -2,13 +2,13 @@
 title: "Tutorials"
 # layout: categories
 permalink: /tutorials/
-layout: single
-author_profile: true
+layout: single_center
+author_profile: false
 classes: wide
 collection: tutorial
 ---
 
-This page contains a compilation of dry lab tutorials that I have written over the years. It is still under construction as I am taking a crash course on website building with Jekyll. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a relatively functioning website that may be useful to other lab members that need help with dry lab work.
+This page contains a compilation of dry lab tutorials that I have written over the years. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a directory that points to all my tutorials that may be useful to other lab members that need help with dry lab work.
 
 The list of currently available tutorials are below:
 
@@ -33,6 +33,10 @@ The list of currently available tutorials are below:
 > [DefenseFinder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
 
 > [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
+
+> [Updating breseq globally on beagle](/tutorials/update_breseq): Step-by-step instructions on how to update breseq on beagle for use for all users (must have sudo permission)
+
+> [Create a conda virtual environment](/tutorials/virtual_environment): Create a virtual environment in your beagle home directory to install packages that may have dependencies that conflict or are different version numbers than the ones on beagle.
 
 <br>
 

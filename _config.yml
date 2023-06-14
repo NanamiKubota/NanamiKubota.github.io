@@ -14,13 +14,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Nanami Kubota
+subtitle: Dry lab tutorial and notebook
 # email: nak177@pitt.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal website under construction.
+  Nanami Kubota's personal website for lab work. 
 # Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 twitter_username: "@NanamiKubota"
 github_username: "NanamiKubota"
-minimal_mistakes_skin: "contrast" # default
+minimal_mistakes_skin: "default" # contrast
 search: true
 
 # Build settings
@@ -38,10 +39,12 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+  parse_block_html: true
 
 include:
   - _pages
   - _layouts
+  - _labnotes
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -63,11 +66,12 @@ plugins:
  # - jekyll-feed
   - jemoji
   - jekyll-include-cache
+ # - jekyll-lunr-js-search
 
 author:
   name   : "Nanami Kubota"
   avatar : "/assets/images/bio-photo.jpeg"
-  bio    : "PhD student in the Cooper Lab at the University of Pittsburgh. Research on bacteria and phage coevolution. Lightly dabbles in game theory."
+  bio    : "PhD student in the Cooper Lab at the University of Pittsburgh. Research on bacteria and phage coevolution."
   location: "Pittsburgh, PA"
   links:
     - label: "Email"
@@ -114,7 +118,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: false
       comments: false
       share: false
@@ -136,7 +140,19 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
+  # _labnotes
+  - scope:
+      path: "_labnotes"
+      type: 
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      permalink: /:title/
 
 category_archive:
   type: liquid
@@ -152,6 +168,8 @@ github: [metadata]
 
 collections:
   tutorials:
+    output: true
+  labnotes:
     output: true
 
 # Sass/SCSS
