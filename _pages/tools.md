@@ -1,8 +1,8 @@
 ---
-title: "Dry Lab Notes"
+title: "Tools"
 # layout: categories
-permalink: /drylabnotes/
-layout: single
+permalink: /tools/
+layout: single_center
 author_profile: false
 classes: wide
 #collection: tutorial

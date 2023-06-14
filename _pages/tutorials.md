@@ -2,7 +2,7 @@
 title: "Tutorials"
 # layout: categories
 permalink: /tutorials/
-layout: single
+layout: single_center
 author_profile: false
 classes: wide
 collection: tutorial

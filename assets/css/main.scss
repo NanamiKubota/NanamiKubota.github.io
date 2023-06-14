@@ -5,67 +5,6 @@ search: false
 
 @charset "utf-8";
 
-$primary-color: #20A39E !default; //78c2ad
-$link-color: #E3655B !default;
-// $footer-background-color: #218380 !default;
-
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-
-
-//mexico light base16 theme
-// $base00: #f8f8f8;
-// $base01: #ab4642;
-// $base02: #538947;
-// $base03: #f79a0e;
-// $base04: #7cafc2;
-// $base05: #303030;// $base05: #96609e;
-// $base06: #4b8093;
-// $base07: #383838;
-// $base08: #b8b8b8;
-// $base09: #ab4642;
-// $base0a: #538947;
-// $base0b: #f79a0e;
-// $base0c: #7cafc2;
-// $base0d: #96609e;
-// $base0e: #4b8093;
-// $base0f: #181818;
-
-// $code-background-color: #fafafa;
-
-// classic base16 theme
-$base00: #F5F5F5;
-$base01: #E0E0E0;
-$base02: #D0D0D0;
-$base03: #B0B0B0;
-$base04: #505050;
-$base05: #303030;
-$base06: #202020;
-$base07: #151515;
-$base08: #AC4142;
-$base09: #D28445;
-$base0a: #F4BF75;
-$base0b: #90A959;
-$base0c: #75B5AA;
-$base0d: #6A9FB5;
-$base0e: #AA759F;
-$base0f: #8F5536;
-
-// github base16 theme
-// $base00: #fafafa;
-// $base01: #f5f5f5;
-// $base02: #c8c8fa;
-// $base03: #969896;
-// $base04: #e8e8e8;
-// $base05: #333333;
-// $base06: #ffffff;
-// $base07: #ffffff;
-// $base08: #ed6a43;
-// $base09: #0086b3;
-// $base0a: #795da3;
-// $base0b: #183691;
-// $base0c: #183691;
-// $base0d: #795da3;
-// $base0e: #a71d5d;
-// $base0f: #333333;
 
 @import "minimal-mistakes"; // main partials

@@ -7,6 +7,8 @@ main:
   #   url: /cv/
   # - title: "Misc" # "Tags"
   #   url: /misc/ # /tags/
-  - title: "Dry Lab Notes"
-    url: /drylabnotes/
+  - title: "Projects"
+    url: /projects/
+  - title: "Tools"
+    url: /tools/
   

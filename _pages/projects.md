@@ -1,0 +1,16 @@
+---
+title: "Projects"
+permalink: /projects/
+author_profile: false
+layout: project_main
+# collection: projects
+# classes: wide
+---
+
+This page is intended for me to keep records of my dry lab work. 
+
+Lab notes grouped by project:
+
+[Pf phage](./pf_phage)
+
+[breseq tools](./breseq_tools)

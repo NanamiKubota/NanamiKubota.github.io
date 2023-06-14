@@ -576,3 +576,83 @@ body {
     }
   }
 }
+
+.page_center {
+  margin: auto;
+  @include breakpoint($large) {
+    // float: right;
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    // padding-right: $right-sidebar-width-narrow;
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    // padding-right: $right-sidebar-width;
+  }
+
+  .page__inner-wrap {
+    float: left;
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    clear: both;
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      position: relative;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      clear: both;
+    }
+  }
+}
+
+.blog_icon {
+  color: $muted-text-color;
+  vertical-align: middle; 
+  display: flex; 
+  align-items: center;
+  font-size: 80%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.icon {
+  color: $muted-text-color;
+  font-size: 80%;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  margin-bottom: 0.25em;
+  padding-right: 20px;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__filter{
+    filter: invert(52%) sepia(6%) saturate(1475%) hue-rotate(159deg) brightness(99%) contrast(89%); //change this to change calendar icon color
+    color: $muted-text-color;
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+    max-width: none;
+  }
+
+  i {
+    margin-right: 5px;
+    color: #eaeaea;
+    font-size: 20px;
+    width: 1em;
+  }
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
