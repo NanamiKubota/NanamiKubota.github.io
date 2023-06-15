@@ -11,4 +11,6 @@ main:
     url: /projects/
   - title: "Tools"
     url: /tools/
+  - title: "Misc"
+    url: /misc/
   

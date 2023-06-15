@@ -6,4 +6,5 @@ author_profile: true
 classes: single
 ---
 
-To be updated
+Miscellaneous pages:
+- [CV](../cv/)

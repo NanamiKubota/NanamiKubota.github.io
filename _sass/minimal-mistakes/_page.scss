@@ -49,7 +49,7 @@ body {
 
   .page__inner-wrap {
     float: left;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -77,9 +77,9 @@ body {
     text-decoration: none;
   }
 
-  & + .page__meta {
-    margin-top: -0.5em;
-  }
+  // & + .page__meta {
+  //   margin-top: -0.5em;
+  // }
 }
 
 .page__lead {
@@ -579,7 +579,8 @@ body {
 }
 
 .page_center {
-  margin: auto;
+  margin: 2em auto 2em;
+
   @include breakpoint($large) {
     // float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
@@ -589,26 +590,6 @@ body {
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
     // padding-right: $right-sidebar-width;
-  }
-
-  .page__inner-wrap {
-    float: left;
-    margin-top: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    clear: both;
-
-    .page__content,
-    .page__meta,
-    .page__share {
-      position: relative;
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-      clear: both;
-    }
   }
 }
 
@@ -657,4 +638,3 @@ body {
     text-decoration: underline;
   }
 }
-
