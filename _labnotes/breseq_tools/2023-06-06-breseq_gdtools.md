@@ -7,9 +7,13 @@ categories:
 #     - gdtools
 #     - bioinformatics
 #     - script
-_layout: single_center_labnotes
+layout: single_center_labnotes
 excerpt: gdtool commands for outputting variant call table
 ---
+
+<div class="notice--info">
+  <b>Objective:</b> Compile gdtool help resource for future reference. 
+</div>
 
 Notes from gdtools help:
 

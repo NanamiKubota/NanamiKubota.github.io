@@ -28,6 +28,12 @@ The list of currently available tutorials are below:
 
 > [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
+> [Breseq parser](): To be updated
+
+> [Intro to gdtools](): To be updated
+
+> [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version on beagle. Requires sudo privilege 
+
 ## Other
 
 > [DefenseFinder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
