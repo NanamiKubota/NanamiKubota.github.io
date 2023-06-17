@@ -265,6 +265,10 @@ Once your run is over, you can view your results by looking at the "index.html" 
 
 To be updated
 
+<div class="notice--warning">
+  <b>Notice (2023-06-15):</b> I have created a new breseq parser using the gdtool function in breseq. Using gdtools is better as it gives you more information on the various variant calls. The following section goes over the usage for the older breseq parser that parses the index.html output file. Please go to the <a href="./breseq_parser_gdtools">breseq parser gdtools tutorial</a> for the updated tutorial.
+</div>
+
 Now that you have your breseq outputs, you can view the results by opening the "index.html" file in your browser. However, if you have a lot of breseq outputs (and a lot of index.html files), it is sometimes easier to convert all your outputs into one csv file so that you can view all your breseq output files as a table on Excel.
 
 To do this, you will first need to download Chris Marshall's breseq parser script which I have modified [here](https://drive.google.com/file/d/1nfBN4XErlajllpqJqTLWgBuY_zGA3y8-/view?usp=sharing).

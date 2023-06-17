@@ -2,9 +2,12 @@
 title: "Tutorials"
 # layout: categories
 permalink: /tutorials/
-layout: single_center
+layout: single
+toc: true
+toc_sticky: true
+toc_label: "Table of Contents"
 author_profile: false
-classes: wide
+# classes: wide
 collection: tutorial
 ---
 
@@ -12,11 +15,25 @@ This page contains a compilation of dry lab tutorials that I have written over t
 
 The list of currently available tutorials are below:
 
-## Getting started
+<br>
+
+***
+
+<br>
+
+# Getting started
 
 > [Basics in R](/tutorials/basics_in_R): Goes over how to install R and RStudio, as well as some basic functions.
 
-## Graphing
+> See also the section for [Resources for learning a new programming language](#resources-for-learning-a-new-programming-language) 
+
+<br>
+
+***
+
+<br>
+
+# Graphing
 
 > [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps using the gggenes package in R.
 
@@ -24,19 +41,41 @@ The list of currently available tutorials are below:
 
 >[Growth curves](/tutorials/growth_curve): Convert 96-well plate reader data to growth curves in R and calculate area under the curve, carrying capacity, and growth rate using the Growthcurver package.
 
-## breseq
+<br>
+
+***
+
+<br>
+
+# breseq
 
 > [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
-> [Breseq parser](): To be updated
+> [Breseq parser](/tutorials/breseq_parser_gdtools): To be updated
 
 > [Intro to gdtools](): To be updated
 
 > [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version on beagle. Requires sudo privilege 
 
-## Other
+<br>
+
+***
+
+<br>
+
+# Phage
 
 > [DefenseFinder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
+
+> [Cenote-Taker2](): To be updated
+
+<br>
+
+***
+
+<br>
+
+# Other
 
 > [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
 
@@ -48,7 +87,9 @@ The list of currently available tutorials are below:
 
 <hr style="height:5px;border:none;color:#B0B0B0;background-color:#B0B0B0;">
 
-## Resources for learning a new programming language
+<br>
+
+# Resources for learning a new programming language
 
 Below are a list of websites that may be useful for learning a new programming language. 
 

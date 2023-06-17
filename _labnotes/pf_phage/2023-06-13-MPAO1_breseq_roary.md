@@ -18,6 +18,14 @@ excerpt: breseq MPAO1 strains from Secor lab and translate to PAO1 locus tags us
   </ul>
 </div>
 
+<div class="notice--success">
+  <b>Results:</b> 
+  <ul>
+    <li>Pf6 deletion mutants have mutations between xisF4 and pf4r, making them a possible Pf repressor mutant.</li>
+    <li>Created rough pipeline from breseq gdtool parser output to roary</li>
+  </ul>
+</div>
+
 Link to helpful roary tutorial:
 [https://github.com/sanger-pathogens/pathogen-informatics-training/blob/master/Notebooks/ROARY/ROARY.pdf](https://github.com/sanger-pathogens/pathogen-informatics-training/blob/master/Notebooks/ROARY/ROARY.pdf)
 
@@ -33,3 +41,31 @@ roary -f output *.gff3
 ```
 
 This creates a directory called "output" in your current directory. The "gene_presence_absence.csv" should contain the translation of locus tags between different strains.
+
+***
+
+**2023-06-14**
+
+Tasks completed:
+- create an R script that translates locus tags using roary output
+
+To do:
+- modify it to include translations of gene product and JC calls
+
+***
+
+**2023-06-15**
+
+Tasks completed:
+- modified R script to translate JC calls and gene product
+- Ran breseq again MPAO1 + Pf5 combined genome to check for Pf5 contamination
+  - No contamination found
+
+
+***
+
+**2023-06-16**
+
+- read depth mapping of MPAO1 sequencing data (breseq output) against MPAO1 Pf4 and Pf6 genome using gggenes (R script)
+- translation table of MPAO1 Pf4 and Pf6 against PAO1 Pf4
+
