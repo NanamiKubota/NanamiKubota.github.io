@@ -1,5 +1,5 @@
 ---
-title:  "MPAO1 breseq and roary"
+title:  "MPAO1 breseq and Roary"
 date: 2023-06-13
 categories:
 # tags:
@@ -8,11 +8,11 @@ categories:
 #     - bioinformatics
 #     - script
 layout: single_center_labnotes
-excerpt: breseq MPAO1 strains from Secor lab and translate to PAO1 locus tags using roary
+excerpt: breseq MPAO1 strains and translate to PAO1 locus tags using Roary
 ---
 
 <div class="notice--info">
-  <b>Objective:</b> to whole genome sequence MPAO1 strains from the Secor lab and identify if potential concerning mutations exist. Use roary to translate MPAO1 locus tags into PAO1 locus tags. 
+  <b>Objective:</b> to whole genome sequence MPAO1 strains from the Secor lab and identify if potential concerning mutations exist. Use Roary to translate MPAO1 locus tags into PAO1 locus tags. 
   <ul>
     <li>Pf6 deletion mutants have different colony size so look for potential variant calls that may explain this.</li>
   </ul>
@@ -22,11 +22,11 @@ excerpt: breseq MPAO1 strains from Secor lab and translate to PAO1 locus tags us
   <b>Results:</b> 
   <ul>
     <li>Pf6 deletion mutants have mutations between xisF4 and pf4r, making them a possible Pf repressor mutant.</li>
-    <li>Created rough pipeline from breseq gdtool parser output to roary</li>
+    <li>Created rough pipeline from breseq gdtool parser output to Roary</li>
   </ul>
 </div>
 
-Link to helpful roary tutorial:
+Link to helpful Roary tutorial:
 [https://github.com/sanger-pathogens/pathogen-informatics-training/blob/master/Notebooks/ROARY/ROARY.pdf](https://github.com/sanger-pathogens/pathogen-informatics-training/blob/master/Notebooks/ROARY/ROARY.pdf)
 
 Roary uses gff files **with sequence information**. Make sure that gff files contain the sequence information as not all gff files do.
@@ -47,7 +47,7 @@ This creates a directory called "output" in your current directory. The "gene_pr
 **2023-06-14**
 
 Tasks completed:
-- create an R script that translates locus tags using roary output
+- create an R script that translates locus tags using Roary output
 
 To do:
 - modify it to include translations of gene product and JC calls

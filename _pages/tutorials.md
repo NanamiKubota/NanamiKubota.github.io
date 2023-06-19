@@ -13,7 +13,7 @@ collection: tutorial
 
 This page contains a compilation of dry lab tutorials that I have written over the years. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a directory that points to all my tutorials that may be useful to other lab members that need help with dry lab work.
 
-The list of currently available tutorials are below:
+The list of currently available tutorials are below (some tutorials may be under construction):
 
 <br>
 
@@ -24,6 +24,8 @@ The list of currently available tutorials are below:
 # Getting started
 
 > [Basics in R](/tutorials/basics_in_R): Goes over how to install R and RStudio, as well as some basic functions.
+
+> [Basics in Command Line](/tutorials/basics_in_command_line): A cheat sheet for command line functions and terminal customization that may be useful.
 
 > See also the section for [Resources for learning a new programming language](#resources-for-learning-a-new-programming-language) 
 
@@ -51,11 +53,25 @@ The list of currently available tutorials are below:
 
 > [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
-> [Breseq parser](/tutorials/breseq_parser_gdtools): To be updated
+> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel.
 
-> [Intro to gdtools](): To be updated
+> [Basics in gdtools](/tutorials/basics_in_gdtools): To be updated
 
 > [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version on beagle. Requires sudo privilege 
+
+<br>
+
+***
+
+<br>
+
+# Genomics
+
+> [Convert .gbk (GenBank files) to .csv](/tutorials/gbk_to_csv): Take GenBank files and covert into csv file to view gene table on Excel or other programs.
+
+> [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
+
+> [Roary](/tutorials/roary): Create a "translation" table for locus tags across different strains. 
 
 <br>
 
@@ -76,8 +92,6 @@ The list of currently available tutorials are below:
 <br>
 
 # Other
-
-> [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
 
 > [Updating breseq globally on beagle](/tutorials/update_breseq): Step-by-step instructions on how to update breseq on beagle for use for all users (must have sudo permission)
 
