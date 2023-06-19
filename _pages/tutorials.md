@@ -2,21 +2,40 @@
 title: "Tutorials"
 # layout: categories
 permalink: /tutorials/
-layout: single_center
+layout: single
+toc: true
+toc_sticky: true
+toc_label: "Table of Contents"
 author_profile: false
-classes: wide
+# classes: wide
 collection: tutorial
 ---
 
 This page contains a compilation of dry lab tutorials that I have written over the years. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a directory that points to all my tutorials that may be useful to other lab members that need help with dry lab work.
 
-The list of currently available tutorials are below:
+The list of currently available tutorials are below (some tutorials may be under construction):
 
-## Getting started
+<br>
+
+***
+
+<br>
+
+# Getting started
 
 > [Basics in R](/tutorials/basics_in_R): Goes over how to install R and RStudio, as well as some basic functions.
 
-## Graphing
+> [Basics in Command Line](/tutorials/basics_in_command_line): A cheat sheet for command line functions and terminal customization that may be useful.
+
+> See also the section for [Resources for learning a new programming language](#resources-for-learning-a-new-programming-language) 
+
+<br>
+
+***
+
+<br>
+
+# Graphing
 
 > [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps using the gggenes package in R.
 
@@ -24,21 +43,55 @@ The list of currently available tutorials are below:
 
 >[Growth curves](/tutorials/growth_curve): Convert 96-well plate reader data to growth curves in R and calculate area under the curve, carrying capacity, and growth rate using the Growthcurver package.
 
-## breseq
+<br>
+
+***
+
+<br>
+
+# breseq
 
 > [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
-> [Breseq parser](): To be updated
+> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel.
 
-> [Intro to gdtools](): To be updated
+> [Basics in gdtools](/tutorials/basics_in_gdtools): To be updated
 
 > [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version on beagle. Requires sudo privilege 
 
-## Other
+<br>
+
+***
+
+<br>
+
+# Genomics
+
+> [Convert .gbk (GenBank files) to .csv](/tutorials/gbk_to_csv): Take GenBank files and covert into csv file to view gene table on Excel or other programs.
+
+> [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
+
+> [Roary](/tutorials/roary): Create a "translation" table for locus tags across different strains. 
+
+<br>
+
+***
+
+<br>
+
+# Phage
 
 > [DefenseFinder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
 
-> [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
+> [Cenote-Taker2](): To be updated
+
+<br>
+
+***
+
+<br>
+
+# Other
 
 > [Updating breseq globally on beagle](/tutorials/update_breseq): Step-by-step instructions on how to update breseq on beagle for use for all users (must have sudo permission)
 
@@ -48,7 +101,9 @@ The list of currently available tutorials are below:
 
 <hr style="height:5px;border:none;color:#B0B0B0;background-color:#B0B0B0;">
 
-## Resources for learning a new programming language
+<br>
+
+# Resources for learning a new programming language
 
 Below are a list of websites that may be useful for learning a new programming language. 
 
