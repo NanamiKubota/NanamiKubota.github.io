@@ -15,7 +15,7 @@ excerpt: creating new breseq parser script from gdtools
   <b>Objective:</b> to create a better breseq parser that uses the breseq gdtool output rather than the html output to create a TSV file of variant calls.
 </div>
 
-Name of script: [breseq_parser_gdtools.py](/scripts/breseq_parser_gdtools.py)
+Name of script: [breseq_parser_gdtools.py](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/breseq_parser_gdtools.py)
 
 ***
 
