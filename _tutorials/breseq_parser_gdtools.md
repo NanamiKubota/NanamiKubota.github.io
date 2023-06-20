@@ -240,8 +240,7 @@ gene_name_split <- strsplit(gene_name, '/') #split string by slash
 
 gene_product <- bsub_all_f_t$gene_product
 gene_product <- gsub("\\[|\\]", "", gene_product) #remove brackets
-gene_product <- gsub("–", "/", gene_product) #replace dash with slash
-gene_product_split <- strsplit(gene_product, ',') #split string by slash
+gene_product_split <- strsplit(gene_product, ',') #split string by comma
 ```
 
 <br>
@@ -262,26 +261,25 @@ Now run the following loop which will compare the MPAO1 locus tags in your brese
 
 ```R
 for (i in 1:length(gene_name_split)) {
-  temp <- c()
-  temp2 <- c() #find roary gene name
+  temp <- c() #temp dataframe for pao1 locus tags
+  temp2 <- c() #temp dataframe for roary gene names
   for (j in 1:length(gene_name_split[[i]])){
     mpao1_gene <- which(r$Gene == gene_name_split[[i]][j]) #which roary gene matches
     mpao1_locus <- which(r$mpao1 == gene_name_split[[i]][j]) #which mpao1 locus tag matches
     if (length(mpao1_gene) == 1) { #if there's a roary gene match
-      temp <- c(temp, r$pao1[mpao1_gene]) 
-      temp2 <- c(temp2, r$Gene[mpao1_gene])
+      temp <- c(temp, r$pao1[mpao1_gene]) #save pao1 locus tag
+      temp2 <- c(temp2, r$Gene[mpao1_gene]) #save roary gene name
     } else if (length(mpao1_locus) == 1){ #if there's a locus tag match
-      temp <- c(temp, r$pao1[mpao1_locus])
-      temp2 <- c(temp2, r$Gene[mpao1_locus])
+      temp <- c(temp, r$pao1[mpao1_locus]) #save pao1 locus tag
+      temp2 <- c(temp2, r$Gene[mpao1_locus]) #save roary gene name
     } else { #otherwise, populate with original value
       temp <- c(temp, gene_name_split[[i]][j])
       temp2 <- c(temp2, gene_name_split[[i]][j])
     }
   }
   temp3 <- c() #translate gene product column
-  for (k in 1:length(gene_product_split)) {
+  for (k in 1:length(gene_product_split[[i]])) {
     product <- gene_product_split[[i]][k]
-    if (is.na(product)) next #if product=NA, skip iteration
     if (substr(product, 1, 5) == "MPAO1"){ #if value starts with "MPAO1"
       mpao1_locus <- which(r$mpao1 == product) #which row in roary mpao1 locus tag matches product
       if (length(mpao1_locus)==1) { #if roary gene match found
@@ -289,7 +287,9 @@ for (i in 1:length(gene_name_split)) {
       } else {
         temp3 <- c(temp3, product)
       }
-    }else{next} #if value doesn't start with "MPAO1", skip
+    }else{ #otherwise, populate with original value
+      temp3 <- c(temp3, gene_product_split[[i]][k])
+      } 
   }
   bsub_all_f_t$pao1[i] <- paste(temp, collapse = ", ")
   bsub_all_f_t$roary[i] <- paste(temp2, collapse = ", ")
