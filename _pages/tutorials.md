@@ -53,7 +53,7 @@ The list of currently available tutorials are below (some tutorials may be under
 
 > [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
-> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel.
+> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Optional functionality to remove ancestor strain variant calls from other samples.
 
 > [Basics in gdtools](/tutorials/basics_in_gdtools): To be updated
 

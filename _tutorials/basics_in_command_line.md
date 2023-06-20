@@ -194,7 +194,7 @@ If you have multiple files you want to upload at once, you can use a wildcard (*
 For example, if I want to upload all files with the .txt extension from my Downloads folder, then I would do:
 
 ```bash
-scp -r /Users/kubotan/Downloads/*.txt nak177@beagle.mmg.pitt.edu://home/nak177/
+scp -r /Users/kubotan/Downloads/\*.txt nak177@beagle.mmg.pitt.edu://home/nak177/
 ```
 
 This will upload all files with the .txt file extension from my local directory to my home directory on beagle.

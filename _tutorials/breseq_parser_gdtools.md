@@ -214,7 +214,7 @@ r <- read.csv("/Users/kubotan/Documents/PMI/Cooper Lab/Prophage/sequences/data/M
 
 We will create an identical dataframe from our previous dataframe:
 ```r
-bsub_all_f_t <- b_subtract_all_filter
+bsub_all_f_t <- b_all_filter
 ```
 
 <br>
@@ -308,9 +308,9 @@ write.csv(bsub_all_f_t, "/Users/kubotan/Documents/PMI/Cooper Lab/Prophage/sequen
 
 <br>
 
-If you only want to save a subset of the columns, you can create a new dataframe with only the columns that you want and save that as a csv file. In my case, I only want the columns "breseq", "position", "gene_position", "size", "type", "gene_name", "locus_tag", "pao1", "roary", "gene_product",  "roary_gene_product":
+If you only want to save a subset of the columns, you can create a new dataframe with only the columns that you want and save that as a csv file. In my case, I only want the columns "breseq", "position", "gene_position", "size", "type", "gene_name", "locus_tag", "pao1", "roary", "gene_product",  "roary_gene_product", "new_junction_read_count", "side_1_strand", "side_2_strand", "new_read_count" ,"new_cov":
 ```r
-bsub_all_f_t_sub <- bsub_all_f_t[c("breseq", "position", "gene_position", "size", "type", "gene_name", "locus_tag", "pao1", "roary", "gene_product",  "roary_gene_product")]
+bsub_all_f_t_sub <- bsub_all_f_t[c("breseq", "position", "gene_position", "size", "type", "gene_name", "locus_tag", "pao1", "roary", "gene_product",  "roary_gene_product", "new_junction_read_count", "side_1_strand", "side_2_strand", "new_read_count" ,"new_cov")]
 
 write.csv(bsub_all_f_t_sub, "/Users/kubotan/Documents/PMI/Cooper Lab/Prophage/sequences/data/MPAO1/breseq_roary_edit_sub.csv", row.names = F)
 ```
