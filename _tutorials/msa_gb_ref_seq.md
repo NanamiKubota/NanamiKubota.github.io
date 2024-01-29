@@ -19,15 +19,15 @@ hidden: false
 
 <br>
 
-When you create an assembly and use that as a reference sequence, breseq may fail to pick up on any variants that were already present in the reference sequence. For example, if your isolate you used to make the reference sequence already has truncated efflux gene, you may be blind to this truncation as breseq will only pick up on differences between the reference sequence and reads. But since both reference and newly sequence reads have this mutation, breseq will not call this as a variant and you will be blind to the fact that the isolate has a truncated efflux. 
+When using a newly assembled genome as a reference sequence in breseq, breseq may not pick up on any variants that were already present in the reference sequence. 
 
-Similarly, if you use this reference sequence with the truncated efflux to map reads from a population sample, any isolates that have the non-truncated efflux will have reads that do not map to the reference, as the reference will be missing part of the gene. Therefore, any variation in the truncated region will be lost.
+For example, if the isolate used to make the reference sequence already has a truncated efflux gene, you may be unaware of this truncation as breseq will only pick up on differences between the reference sequence and reads. If both reference and newly sequence reads share this truncation, breseq will not see a difference between the two and you will be blind to the fact that the isolates have a truncated efflux. 
 
-As such, it is important to compare newly assembled genomes between each other and other lab and/or environmental strains.
+Additionally, using this reference sequence with a truncated efflux to map reads from a population sample can lead to further issues. Any isolates that have the non-truncated efflux will have reads that do not map to the reference, as the reference will be missing part of the gene. Consequently, any variation in the truncated region will be undetectable.
 
-One way to do this is to align the genomes against each other and check for differences manually on software like Geneious. However, this method is tedious especially if you have multiple genomes and many loci to compare.
+As such, it is important to compare newly assembled genomes between each other and other lab and/or environmental strains. One way to do this is to align the genomes against each other and check for differences manually on software like Geneious. However, this method is tedious especially if you have multiple genomes and many loci to compare.
 
-The purpose of the msa_comparison tool is to quickly compare multiple genomes across multiple loci and create a table that summarizes the differences in amino acid. The script will also generate FASTA files of the multiple sequence alignment (MSA) for each locus. You can use these FASTA files to then visualize the alignment in R or other programs. To plot MSA in R, refer to my [multiple sequence alignment tutorial](/tutorials/multiple_sequence_alignment#visualize-multiple-alignment-using-ggmsa-r).
+To address this, my msa_comparison tool can quickly compare multiple genomes across multiple loci, generating a table summarizing amino acid differences. The script also generates FASTA files of the multiple sequence alignment (MSA) for each locus. You can use these FASTA files to then visualize the alignment in R or other programs. To plot MSA in R, refer to my [multiple sequence alignment tutorial](/tutorials/multiple_sequence_alignment#visualize-multiple-alignment-using-ggmsa-r).
 
 <br>
 
