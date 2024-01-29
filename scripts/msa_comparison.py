@@ -25,10 +25,10 @@ parser = argparse.ArgumentParser(
                     "Also outputs a MSA file in fasta format for each locus. ")
 
 parser.add_argument(
-	'-g', '--genbank',
-	action = "store",
+    '-g', '--genbank',
+    action = "store",
     metavar = '',
-	help = "Location of your directory that contains the Genbank file (gbk or gbff) of each strain to be aligned. Required.",
+    help = "Location of your directory that contains the Genbank file (gbk or gbff) of each strain to be aligned. Required.",
     required = True
 )
 
@@ -41,34 +41,34 @@ parser.add_argument(
 )
 
 parser.add_argument(
-	'-r', '--roary',
-	action = "store",
-    metavar = '',
-	help = "Filepath to your roary gene_presence_absence.csv output file. Required.",
-    required = True
-)
-
-parser.add_argument(
-	'-ref', '--reference',
-    type=str,
-    metavar = '',
-	help = "The name of your reference strain",
-    required = True
-)
-
-parser.add_argument(
-	'-l', '--loci',
+    '-r', '--roary',
     action = "store",
     metavar = '',
-	help = "The csv file containing a list of loci to MSA",
+    help = "Filepath to your roary gene_presence_absence.csv output file. Required.",
     required = True
 )
 
 parser.add_argument(
-	'-o', '--output',
-	action = "store",
+    '-ref', '--reference',
+    type=str,
     metavar = '',
-	help = "Path of the output file. Required.",
+    help = "The name of your reference strain",
+    required = True
+)
+
+parser.add_argument(
+    '-l', '--loci',
+    action = "store",
+    metavar = '',
+    help = "The csv file containing a list of loci to MSA",
+    required = True
+)
+
+parser.add_argument(
+    '-o', '--output',
+    action = "store",
+    metavar = '',
+    help = "Path of the output file. Required.",
     required = True
 )
 
