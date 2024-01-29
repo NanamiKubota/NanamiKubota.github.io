@@ -60,3 +60,5 @@ roary -f output *.gff3
 <br>
 
 The wildcard (*) indicates to grab all gff files in my current directory with a gff3 file extension. Running this creates a directory called "output" in your current directory. The "gene_presence_absence.csv" should contain the translation of locus tags between different strains.
+
+Note: if you also have miniconda loaded at the same time, you can run into an error when you use the wildcard (*). Make sure that you only have roary loaded when running it.
