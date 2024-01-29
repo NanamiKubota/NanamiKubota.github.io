@@ -53,11 +53,11 @@ The list of currently available tutorials are below (some tutorials may be under
 
 > [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
-> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Optional functionality to remove ancestor strain variant calls from other samples.
+> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Also goes over how to "translate" locus tags using Roary. Optional function to remove ancestor strain variant calls from other samples.
 
 > [Basics in gdtools](/tutorials/basics_in_gdtools): To be updated
 
-> [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version on beagle. Requires sudo privilege 
+> [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version globally on beagle. Requires sudo privilege 
 
 <br>
 
@@ -71,7 +71,9 @@ The list of currently available tutorials are below (some tutorials may be under
 
 > [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
 
-> [Roary](/tutorials/roary): Create a "translation" table for locus tags across different strains. 
+> [Roary](/tutorials/roary): Create a "Rosetta stone" (i.e. translation table) for locus tags of homologous genes across different strains. 
+
+> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq): Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
 
 <br>
 
@@ -93,9 +95,9 @@ The list of currently available tutorials are below (some tutorials may be under
 
 # Other
 
-> [Updating breseq globally on beagle](/tutorials/update_breseq): Step-by-step instructions on how to update breseq on beagle for use for all users (must have sudo permission)
-
 > [Create a conda virtual environment](/tutorials/virtual_environment): Create a virtual environment in your beagle home directory to install packages that may have dependencies that conflict or are different version numbers than the ones on beagle.
+
+> [Zotero-Obsidian reference manager pipeline](/tutorials/ref_manager): Coming soon. Link up Zotero and Obsidian to work together to cluster notes by topics rather than by paper. Includes templates for importing metadata from Zotero to Obsidian. Find relevant papers using ResearchRabbit. (My favorite way of finding papers and organizing my reference manager/notes.)
 
 <br>
 

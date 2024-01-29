@@ -23,7 +23,7 @@ article.page {
 @import "minimal-mistakes/reset";
 @import "minimal-mistakes/base";
 @import "minimal-mistakes/forms";
-@import "minimal-mistakes/tables";
+// @import "minimal-mistakes/tables";
 @import "minimal-mistakes/animations";
 
 /* Components */
@@ -227,12 +227,17 @@ article.cv-page {
 }
 
 table {
-    display: flex;
-    justify-content:center;
+    // display: block;
+    // justify-content: center;
+    // border-collapse: collapse;
+    margin-bottom: 1em;
+    font-family: $global-font-family;
+    font-size: $type-size-6;
     border-collapse: collapse;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
+    
 }
 
 td, th {

@@ -13,10 +13,14 @@ Note: I have recently begun moving my notes onto github so older labnotes may ta
 
 ***
 
-Lab notes grouped by project:
+Lab notebook is currently under construction.
+
+<!-- Lab notes grouped by project:
 
 [Pf phage](./pf_phage)
 
 [breseq tools](./breseq_tools)
 
 [website](./website)
+
+[other](./other) -->

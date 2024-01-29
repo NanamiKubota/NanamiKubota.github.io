@@ -29,6 +29,12 @@ For more information go [here](https://jekyllrb.com/docs/configuration/options/#
 
 ***
 
+To do:
+- tutorial for reference manager and notes pipeline
+- 
+
+***
+
 **2023-06-18**
 
 Tasks
@@ -48,3 +54,10 @@ git fetch origin
 git branch -u origin/main main
 git remote set-head origin -a
 ```
+
+***
+
+**2023-07-13**
+
+Tasks
+- begin adding Zotero-Obsidian pipeline

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #script to extract locus tags, gene name, product name, and start/end sites of ORFs from .gbk file
+#written by Nanami Kubota
 
 import os
 from Bio import SeqIO
