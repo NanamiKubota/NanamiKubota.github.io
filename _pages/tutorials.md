@@ -43,23 +43,10 @@ The list of currently available tutorials are below (some tutorials may be under
 
 >[Growth curves](/tutorials/growth_curve): Convert 96-well plate reader data to growth curves in R and calculate area under the curve, carrying capacity, and growth rate using the Growthcurver package.
 
-<br>
-
-***
+>[Plot Geographical Data on a Map](/tutorials/mapping_in_R): Create maps in R to show geographical data (not to be confused with mapping in genomics!)
 
 <br>
 
-# breseq
-
-> [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
-
-> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Also goes over how to "translate" locus tags using Roary. Optional function to remove ancestor strain variant calls from other samples.
-
-> [Basics in gdtools](/tutorials/basics_in_gdtools): To be updated
-
-> [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version globally on beagle. Requires sudo privilege 
-
-<br>
 
 ***
 
@@ -74,6 +61,18 @@ The list of currently available tutorials are below (some tutorials may be under
 > [Roary](/tutorials/roary): Create a "Rosetta stone" (i.e. translation table) for locus tags of homologous genes across different strains. 
 
 > [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq): Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
+
+## breseq
+
+> [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
+
+> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Also goes over how to "translate" locus tags using Roary. Optional function to remove ancestor strain variant calls from other samples.
+
+> [Basics in gdtools](/tutorials/basics_in_gdtools): To be updated
+
+> [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version globally on beagle. Requires sudo privilege 
+
+<br>
 
 <br>
 

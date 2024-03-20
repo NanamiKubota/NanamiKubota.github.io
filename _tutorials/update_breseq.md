@@ -61,7 +61,7 @@ sudo autoreconf -i
 ```
 
 ```bash
-sudo ./configure --prefix=/opt/breseq/
+sudo ./configure --prefix=/opt/breseq/breseq-0.38.1/
 ```
 
 ```bash

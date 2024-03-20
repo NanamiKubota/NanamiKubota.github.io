@@ -36,18 +36,18 @@ def gbk2roarygff3(input, output):
         for record in SeqIO.parse(gbk_handle, "genbank"):
             genome_size = len(record.seq)
             # Write GFF3 header
-            gff3_handle.write("##gff-version 3\n")s
-            gff3_handle.write(f"##sequence-region\s{record.id}\t1\t{genome_size}\n")
+            gff3_handle.write("##gff-version 3\n")
+            gff3_handle.write(f"##sequence-region\t{record.id}\t1\t{genome_size}\n")
 
             # Write sequence region line with custom format
             gff3_handle.write(f"{record.id}\tgbk2roarygff3\tregion\t1\t{genome_size}\t.\t"
                               f"{'+' if record.features[0].strand == 1 else '-'}\t.\t"
-                              f"ID={record.id};Name={record.id};Is_circular=true\n")
+                              f"ID={record.id};Name={record.id}\n")
 
 
             # Write GFF3 features (excluding 'gene')
             for feature in record.features:
-                if feature.type != 'gene':
+                if feature.type not in ['gene', 'source']:
                     gene_name = feature.qualifiers.get('gene', [''])[0]
                     locus_tag = feature.qualifiers.get('locus_tag', [''])[0]
                     product = feature.qualifiers.get('product', [''])[0]

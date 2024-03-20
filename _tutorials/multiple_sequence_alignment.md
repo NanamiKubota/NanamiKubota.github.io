@@ -5,7 +5,7 @@ permalink: /tutorials/multiple_sequence_alignment
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2022-08-22
+last_modified_at: 2024-02-16
 #classes: wide
 ---
 
@@ -61,6 +61,15 @@ You can download the package by doing:
 if (!requireNamespace("devtools", quietly=TRUE))
     install.packages("devtools")
 devtools::install_github("YuLab-SMU/ggmsa")
+```
+
+<br>
+
+If the above does not work, try the following:
+```R
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("ggmsa")
 ```
 
 Once downloaded, load the ggmsa and ggplot2 package:

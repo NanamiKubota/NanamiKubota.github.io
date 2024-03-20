@@ -17,9 +17,9 @@ Disclaimer: Setting up this pipeline is a bit tedious which is why I have decide
 <div class="notice--info">
   <b>Version control:</b> The following are the versions that I have installed for Zotero, Obsidian, and their respective add-ons/plugins. The bolded ones are required or highly recommended for this tutorial. The others are optional and my personal preference (they are still nice to have but not required).
   <ul>
-    <li><b>Zotero v6.0.26</b></li>
+    <li><b>Zotero v6.0.31</b></li>
         <ul>
-            <li><b>Better BibTex for Zotero v6.7.86</b></li>
+            <li><b>Better BibTex for Zotero v6.7.148</b></li>
             <li><b>DOI Manager v1.4.2</b></li>
             <li><b>Mdnotes for Zotero v0.2.3</b></li>
             <li><b>ZotFile 5.1.2</b></li>
@@ -27,21 +27,21 @@ Disclaimer: Setting up this pipeline is a bit tedious which is why I have decide
         </ul>
     <li><b>Obsidian v1.1.9 (Installer v1.0.3)</b></li>
         <ul>
-            <li><b>Admonition v9.3.1</b></li>
-            <li>Advanced Tables v0.18.1</li>
+            <li><b>Admonition v10.1.1</b></li>
+            <li>Advanced Tables v0.19.1</li>
             <li>Calendar v1.5.10</li>
             <li><b>Citations v0.4.5</b></li>
-            <li>Dataview v0.5.56</li>
+            <li>Dataview v0.5.64</li>
             <li><b>Editor Syntax Highlight v0.1.3</b></li>
-            <li>Find orphaned files and broken links v1.9.0</li>
+            <li>Find orphaned files and broken links v1.9.2</li>
             <li><b>Highlightr v1.2.2</b></li>
-            <li>Icon Folder v2.0.2</li>
-            <li>Minimal Theme Settings v6.3.1</li>
-            <li>Recent Files v1.3.6</li>
-            <li>Spaced Repetition v1.10.1</li>
-            <li><b>Style Settings v1.0.6</b></li>
-            <li><b>Templater v1.16.0</b></li>
-            <li><b>Zotero Integration v2.3.9</b></li>
+            <li>Icon Folder v2.8.0</li>
+            <li>Minimal Theme Settings v7.3.1</li>
+            <li>Recent Files v1.3.8</li>
+            <li>Spaced Repetition v1.10.5</li>
+            <li><b>Style Settings v1.0.7</b></li>
+            <li><b>Templater v1.18.4</b></li>
+            <li><b>Zotero Integration v3.1.7</b></li>
         </ul>
   </ul>
 </div>
@@ -64,13 +64,15 @@ However, once you have many papers to keep track of, linking ideas across differ
 
 TBU
 
+There are many YouTube and blog posts on the Zettelkasten method. I recommend looking it up as this is the note-taking method that I will be employing for the following tutorial.
+
 ## ResearchRabbit to find papers
 
 Once you have your Zotero set up and have at least a few papers on there, I recommend using ResearchRabbit and link your Zotero library to this service. ResearchRabbit will be able to take a look at all of your references in your library or folder, and create a list of relevant papers that are not in your library. 
 
 [Read more about ResearchRabbit on their official website here.](https://www.researchrabbit.ai/)
 
-Note: there is a limit to how many papers ResearchRabbit will look at so breaking down your library into smaller subfolders by category may be helpful if you have a large collection. In my case, I currently have a folder for Pf phage papers, a folder for evolutionary game theory papers, a folder for cheater viruses, and a folder for clinically-relevant mutations in Pseudomonas aeruginosa. There is overlap between all folders but this helps cut down the number of papers ResearchRabbit can look through.
+Note: there is a limit to how many papers ResearchRabbit will look at so breaking down your library into smaller subfolders by category may be helpful if you have a large collection. In my case, I currently have a folder for Pf phage papers, a folder for evolutionary game theory papers, a folder for cheater viruses, and a folder for clinically-relevant mutations in <i>Pseudomonas aeruginosa</i>. There is overlap between all folders but this helps cut down the number of papers ResearchRabbit can look through.
 
 # Download Zotero
 
@@ -84,8 +86,8 @@ Zotero is made by a nonprofit and is open-source, which means users can voluntee
 
 The following are the plugins that I have installed on Zotero:
 
-Zotero v6.0.26:
-- Better BibTex for Zotero v6.7.86
+Zotero v6.0.31:
+- Better BibTex for Zotero v6.7.148
 - DOI Manager v1.4.2
 - Mdnotes for Zotero v0.2.3
 - ZotFile 5.1.2
@@ -102,21 +104,21 @@ Obsidian can be downloaded for free from the [official Obsidian website](https:/
 The following are the community plugins that I have installed into Obsidian.
 
 <b>Obsidian v1.1.9 (Installer v1.0.3)</b>
-- <b>Admonition v9.3.1</b>
-- Advanced Tables v0.18.1
+- <b>Admonition v10.1.1</b>
+- Advanced Tables v0.19.1
 - Calendar v1.5.10</li>
 - <b>Citations v0.4.5</b>
-- Dataview v0.5.56
+- Dataview v0.5.64
 - <b>Editor Syntax Highlight v0.1.3</b>
-- Find orphaned files and broken links v1.9.0
+- Find orphaned files and broken links v1.9.2
 - <b>Highlightr v1.2.2</b>
-- Icon Folder v2.0.2
-- Minimal Theme Settings v6.3.1
-- Recent Files v1.3.6
-- Spaced Repetition v1.10.1
-- <b>Style Settings v1.0.6</b>
-- <b>Templater v1.16.0</b>
-- <b>Zotero Integration v2.3.9</b>
+- Icon Folder v2.8.0
+- Minimal Theme Settings v7.3.1
+- Recent Files v1.3.8
+- Spaced Repetition v1.10.5
+- <b>Style Settings v1.0.7</b>
+- <b>Templater v1.18.4</b>
+- <b>Zotero Integration v3.1.7</b>
 
 The bolded plugins are required or highly recommended. The other plugins are optional and not necessary for the purposes of this tutorial.
 

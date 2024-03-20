@@ -113,6 +113,9 @@ def msa_comparison(genbank, format, roary, reference, loci, output):
         #check if reference is in roary column name
         if reference in roary_csv.columns:
             #if reference if in roary csv column name, loop through desired reference locus tags and find homolog in other strains using roary csv
+            
+            data_to_append = [] #create empty list to append msa dataframe for csv conversion later
+
             for ref_locus_tag in ref_locus_tags:
                 row_index = roary_csv[roary_csv[reference] == ref_locus_tag].index[0] #find index of first locus tag in roary csv
                 matching_rows = roary_csv.loc[row_index, selected_columns] #grab locus tags of all strains from index row
@@ -156,11 +159,9 @@ def msa_comparison(genbank, format, roary, reference, loci, output):
 
                     print("finished writing output clustal omega file for " + ref_locus_tag)
                     
-                    data_to_append = [] #create empty list to append msa dataframe for csv conversion later
+                    
 
                     msa = AlignIO.read(output_aln, "fasta") #read msa alignment fasta file
-
-                    data = [] #empty list for single msa comparison, append this to data_to_append at the end
 
                     # find reference sequence
                     reference_seq = None
@@ -168,14 +169,17 @@ def msa_comparison(genbank, format, roary, reference, loci, output):
                         if record.id == reference:
                             reference_seq = record.seq
                             break
-
+                    
+                    data = [] #empty list for single msa comparison, append this to data_to_append at the end
+                    
                     # loop through each sequence and find base changes from reference strain
                     for record in msa:
                         # Skip the reference strain itself
                         if record.id == reference:
                             continue
                         compared_seq = record.seq
-                        base_changes = []
+                        
+                        # base_changes = []
 
                         # find base changes
                         for position, (a, b) in enumerate(zip(reference_seq, compared_seq)):
@@ -187,17 +191,19 @@ def msa_comparison(genbank, format, roary, reference, loci, output):
                                     "Ref_AA": f"{a}",
                                     "Strain_AA": f"{b}"
                                 })
+                        
+                        # data.append(base_changes)# append base changes to data_to_append
 
                     data_to_append.append(data)# append base changes to data_to_append
 
-                    # Create a DataFrame from the list of data
-                    flattened_data = [item for sublist in data_to_append for item in sublist]
-                    data_all = pd.DataFrame(flattened_data)
+            # create dataframe from the list of data
+            flattened_data = [item for sublist in data_to_append for item in sublist]
+            data_all = pd.DataFrame(flattened_data)
 
-                    # Save the DataFrame to a table (e.g., CSV)
-                    output_csv = os.path.join(output, "output_data.csv")
-                    data_all.to_csv(output_csv, index=False)
-                    print(f"Results saved to: {output_csv}")
+            # save dataframe as csv
+            output_csv = os.path.join(output, "output_data.csv")
+            data_all.to_csv(output_csv, index=False)
+            print(f"Results saved to: {output_csv}")
             
 
         else:

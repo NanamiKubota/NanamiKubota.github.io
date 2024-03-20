@@ -64,54 +64,73 @@ icon: sticky-note
 
 {% endif %}
 
+{%-
+    set zoteroColors = {
+        "#2ea8e5": "blue",
+        "#5fb236": "green",
+        "#a28ae5": "purple",
+        "#ffd400": "yellow",
+        "#ff6666": "red",
+        "#f19837": "orange",
+        "#e56eee": "pink",
+        "#aaaaaa": "grey"
+    }
+-%}
+
 {%- macro calloutHeader(color) -%}
 	{%- switch color -%}
-		{%- case "#ffd400" -%} 
+		{%- case "yellow" -%}
 			Interesting
-		{%- case "#ff6666" -%} 
+		{%- case "red" -%}
 			Important
-		{%- case "#5fb236" -%} 
+		{%- case "green" -%}
 			Terminology
-		{%- case "#2ea8e5" -%} 
+		{%- case "blue" -%}
 			Study-specific
-		{%- case "#a28ae5" -%} 
+		{%- case "purple" -%}
 			Misc
-		{%- case "#e56eee" -%} 
-			Magenta
-		{%- case "#f19837" -%} 
-			Orange
-		{%- case "#aaaaaa" -%} 
-			Grey
-	{%- endswitch -%} 
+		{%- case "orange" -%}
+			Misc
+		{%- case "pink" -%}
+			Misc
+		{%- case "grey" -%}
+			Misc
+	{%- endswitch -%}
 {%- endmacro %}
 
-## Annotations 
+## Annotations
 {% persist "annotations" %}
 {% set annots = annotations | filterby("date", "dateafter", lastImportDate) -%}
-{% if annots.length > 0 %} 
+{% if annots.length > 0 %}
+
 ### Imported on {{importDate | format("YYYY-MM-DD h:mm a")}}
 
-{% for color, annots in annots | groupby("color") -%} 
+{% for color, annots in annots | groupby("color") -%}
 
-{% for annot in annots -%} 
-> [!quote{% if annot.color %}|{{annot.color}}{% endif %}] {{calloutHeader(annot.color)}} 
-{%- if annot.annotatedText %} 
-> {{annot.annotatedText | nl2br}} 
+{% for annot in annots -%}
+
+{%- if color in zoteroColors -%}
+{%- set customColor = zoteroColors[color] -%}
 {%- endif -%}
-{%- if annot.imageRelativePath %} 
-> ![[{{annot.imageRelativePath}}]] 
-{%- endif %} 
-{%- if annot.ocrText %} 
-> {{annot.ocrText}} 
-{%- endif %} 
-{%- if annot.comment %} 
-> 
->> {{annot.comment | nl2br}} 
-{%- endif %} 
-> 
+
+> [!{{customColor if customColor != "other"}}]+ {{calloutHeader(customColor)}}
+{%- if annot.annotatedText %}
+> {{annot.annotatedText | nl2br}}
+{%- endif -%}
+{%- if annot.imageRelativePath %}
+> ![[{{annot.imageRelativePath}}]]
+{%- endif %}
+{%- if annot.ocrText %}
+> {{annot.ocrText}}
+{%- endif %}
+{%- if annot.comment %}
+>
+>> {{annot.comment | nl2br}}
+{%- endif %}
+>
 > [Page {{annot.page}}](zotero://open-pdf/library/items/{{annot.attachment.itemKey}}?page={{annot.page}}) {{annot.date | format("YYYY-MM-DD h:mm a")}}
 
-{% endfor -%} 
-{% endfor -%} 
-{% endif %} 
+{% endfor -%}
+{% endfor -%}
+{% endif %}
 {% endpersist %}

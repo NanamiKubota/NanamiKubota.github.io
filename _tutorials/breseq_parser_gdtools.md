@@ -99,6 +99,8 @@ module load breseq/breseq-0.38.1
 module load miniconda/miniconda-3
 ```
 
+<mark>Please make sure to load breseq v0.38.1 and miniconda-3 or else beagle will use the default breseq which may lead to errors!</mark>
+
 <br>
 
 Miniconda 3 is required to run the breseq parser as it is a python script. You will also need breseq to use the latest gdtools function. If you are using a different version of breseq, your mileage for this tutorial may vary.
@@ -176,7 +178,7 @@ We are going to clean the dataframe a bit as some of the columns may just be pop
 not_all_na <- function(x) any(!is.na(x)) #function to remove columns with just NAs in every row
 b_all_filter <- b %>% 
   filter(type != "UN") %>% #filters out UN (unknown base evidence)
-  filter(is.na(consensus_reject) & is.na(reject) & is.na(ignore)) %>% #filters out marginal calls
+  filter(is.na(consensus_reject) & is.na(reject) & is.na(ignore)) %>% #filters out marginal calls; you may need to remove the is.na(consensus_reject) if you don't have this column in your dataframe
   select(where(not_all_na)) #removes columns with just NAs
 ```
 
