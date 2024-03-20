@@ -80,9 +80,9 @@ author:
 #    - label: "Website"
 #      icon: "fas fa-fw fa-link"
 #      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/NanamiKubota"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/NanamiKubota"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/NanamiKubota"
@@ -92,15 +92,18 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/nanami-kubota/"
+    # - label: "Bluesky"
+    #   icon: /images/icons/bluesky_media_kit_logo.svg
+    #   url: "https://bsky.app/profile/nanamikubota.bsky.social"
 
 footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:nak177@pitt.edu"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/NanamiKubota"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/NanamiKubota"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/NanamiKubota"
@@ -110,6 +113,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/nanami-kubota/"
+    - label: "Bluesky"
+      icon: /images/icons/bluesky_media_kit_logo.svg
+      url: "https://bsky.app/profile/nanamikubota.bsky.social"
 
 defaults:
   # _posts

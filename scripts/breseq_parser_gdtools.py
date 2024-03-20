@@ -1,8 +1,9 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 
+#Employs gdtools to convert breseq output to CSV file
+#Written by Nanami Kubota
 
-###edit to add option to remove ancestor variant calls
 
 import pathlib
 from pathlib import Path

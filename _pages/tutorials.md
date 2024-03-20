@@ -11,7 +11,7 @@ author_profile: false
 collection: tutorial
 ---
 
-This page contains a compilation of dry lab tutorials that I have written over the years. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a directory that points to all my tutorials that may be useful to other lab members that need help with dry lab work.
+This page contains a compilation of dry lab tutorials that I have written over the years. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a directory that points to all my tutorials that may be useful to other lab members who need help with dry lab work.
 
 The list of currently available tutorials are below (some tutorials may be under construction):
 
@@ -21,7 +21,7 @@ The list of currently available tutorials are below (some tutorials may be under
 
 <br>
 
-# Getting started
+# Basics
 
 > [Basics in R](/tutorials/basics_in_R): Goes over how to install R and RStudio, as well as some basic functions.
 
@@ -35,11 +35,7 @@ The list of currently available tutorials are below (some tutorials may be under
 
 <br>
 
-# Graphing
-
-> [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps using the gggenes package in R.
-
->[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
+# Graphs
 
 >[Growth curves](/tutorials/growth_curve): Convert 96-well plate reader data to growth curves in R and calculate area under the curve, carrying capacity, and growth rate using the Growthcurver package.
 
@@ -54,13 +50,19 @@ The list of currently available tutorials are below (some tutorials may be under
 
 # Genomics
 
-> [Convert .gbk (GenBank files) to .csv](/tutorials/gbk_to_csv): Take GenBank files and covert into csv file to view gene table on Excel or other programs.
+<br>
 
-> [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
+Tutorials on running analyses and graphing genomic data.
 
-> [Roary](/tutorials/roary): Create a "Rosetta stone" (i.e. translation table) for locus tags of homologous genes across different strains. 
+<br>
 
-> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq): Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
+## Annotate
+
+> [bakta](/tutorials/bakta): Under construction. Annotate bacterial genomes. To be updated.
+
+> [Cenote-Taker3](/tutorials/cenote-taker): Still under construction. Identify and annotate virus genomes and genes. To be updated.
+
+<br>
 
 ## breseq
 
@@ -68,23 +70,47 @@ The list of currently available tutorials are below (some tutorials may be under
 
 > [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Also goes over how to "translate" locus tags using Roary. Optional function to remove ancestor strain variant calls from other samples.
 
-> [Basics in gdtools](/tutorials/basics_in_gdtools): To be updated
+> [Basics in gdtools](/tutorials/basics_in_gdtools): Under construction. Use gdtools to manipulate and export breseq variant call data. To be updated.
 
-> [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version globally on beagle. Requires sudo privilege 
-
-<br>
+> [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version globally on beagle. Requires sudo privilege.
 
 <br>
 
-***
+## Plot
+
+> [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps using the gggenes package in R.
+
+>[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
 
 <br>
 
-# Phage
+## Multiple Sequence Alignment (MSA)
+
+>[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
+
+> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq): Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
+
+<br>
+
+## Roary
+
+> [Roary](/tutorials/roary): Create a "Rosetta stone" (i.e. translation table) for locus tags of homologous genes across different strains. 
+
+<br>
+
+## Phage
 
 > [DefenseFinder](/tutorials/defense_finder): Tool that finds antiviral systems in prokaryotic genomes.
 
-> [Cenote-Taker2](): To be updated
+> [Cenote-Taker3](/tutorials/cenote-taker): Still under construction. Identify and annotate virus genomes and genes. To be updated.
+
+<br>
+
+## Other
+
+> [Convert .gbk (GenBank files) to .csv](/tutorials/gbk_to_csv): Take GenBank files and covert into csv file to view gene table on Excel or other programs.
+
+> [Retrieving old locus tags](/tutorials/old_locus_tag): Extract old locus tags from GenBank files.
 
 <br>
 
@@ -92,11 +118,11 @@ The list of currently available tutorials are below (some tutorials may be under
 
 <br>
 
-# Other
+# Miscellaneous
 
 > [Create a conda virtual environment](/tutorials/virtual_environment): Create a virtual environment in your beagle home directory to install packages that may have dependencies that conflict or are different version numbers than the ones on beagle.
 
-> [Zotero-Obsidian reference manager pipeline](/tutorials/ref_manager): Coming soon. Link up Zotero and Obsidian to work together to cluster notes by topics rather than by paper. Includes templates for importing metadata from Zotero to Obsidian. Find relevant papers using ResearchRabbit. (My favorite way of finding papers and organizing my reference manager/notes.)
+> [Zotero-Obsidian reference manager pipeline](/404): Under construction. Link up Zotero and Obsidian to work together to cluster notes by topics rather than by paper. Includes templates for importing metadata from Zotero to Obsidian. Find relevant papers using ResearchRabbit. (My favorite way of finding papers and organizing my reference manager/notes.)
 
 <br>
 

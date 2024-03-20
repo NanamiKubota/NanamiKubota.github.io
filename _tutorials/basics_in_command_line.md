@@ -372,11 +372,15 @@ Your email and type of email notification so beagle can send you an email once y
 
 ## sbatch, squeue, and scancel
 
+
+To run your bash script, use the sbatch function:
 ```
 sbatch your_script.sh
 ```
 
-The squeue function will show you all the jobs that are currently running (including other people in the lab using beagle), how long the job is running for, the job name, and the job ID number.
+You can then view if your job is successfully running by using the squeue function.
+
+The squeue function will also show you all the jobs that are currently running (including other people in the lab using beagle), how long the job is running for, the job name, and the job ID number.
 
 ```
 squeue

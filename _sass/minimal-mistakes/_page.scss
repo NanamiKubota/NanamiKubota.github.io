@@ -638,3 +638,15 @@ body {
     text-decoration: underline;
   }
 }
+
+.footer-icon {
+  filter: invert(41%) sepia(100%) saturate(2854%) hue-rotate(195deg) brightness(100%) contrast(103%);
+  display: inline-block;
+  fill: #1185fe;
+  width: 1em;
+  margin-right: 0.25em;
+  height: 1.1em;
+  line-height: 1;
+  position: relative;
+  top: -0.1em;
+}

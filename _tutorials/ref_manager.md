@@ -46,13 +46,23 @@ Disclaimer: Setting up this pipeline is a bit tedious which is why I have decide
   </ul>
 </div>
 
+***
+
+<br>
+
 # Preface
+
+<br>
 
 The motivation for this tutorial stems from the problem that I ran into while reading papers and writing notes in just a reference manager. Too many times would I read a paper and forget the content of the paper after a few days, often times being unable to recall the experiments, findings, or even the background information of a paper. In addition to this, there were many times where I will remember a piece of information but not be able to recall from which paper I read it from. The most difficult issue to solve was how I had trouble connecting ideas from different papers, especially if I couldn't remember the author name or title that the ideas originated from.
 
 The Zotero-Obsidian pipeline helps fix many of these issues. While tedious in its setup, not to mention writing up notes is more time-consuming than just highlighting a PDF file, I can say it is worthwhile in the long run. I find it helpful that I am making my own Wikipedia where I can search by topic and find relevant notes from various papers, rather than having to sift through papers to read notes.
 
+<br>
+
 ## Why you should have a reference manager
+
+<br>
 
 This section is more tailored to students (like high school students and undergrads) who are just getting into hitting the books and reading more papers that cover specialized topics. Hopefully, students who are further along in their research career will already have a reference manager to keep track of their notes. 
 
@@ -60,13 +70,21 @@ But if you don't have one, having a reference manager is a starting point to kee
 
 However, once you have many papers to keep track of, linking ideas across different papers or even remembering the contents of a paper may become more difficult. This is where using Obsidian and implementing the Zettelkasten system
 
+<br>
+
 ## Obsidian to organize notes (Zettelkasten Method)
+
+<br>
 
 TBU
 
 There are many YouTube and blog posts on the Zettelkasten method. I recommend looking it up as this is the note-taking method that I will be employing for the following tutorial.
 
+<br>
+
 ## ResearchRabbit to find papers
+
+<br>
 
 Once you have your Zotero set up and have at least a few papers on there, I recommend using ResearchRabbit and link your Zotero library to this service. ResearchRabbit will be able to take a look at all of your references in your library or folder, and create a list of relevant papers that are not in your library. 
 
@@ -74,7 +92,15 @@ Once you have your Zotero set up and have at least a few papers on there, I reco
 
 Note: there is a limit to how many papers ResearchRabbit will look at so breaking down your library into smaller subfolders by category may be helpful if you have a large collection. In my case, I currently have a folder for Pf phage papers, a folder for evolutionary game theory papers, a folder for cheater viruses, and a folder for clinically-relevant mutations in <i>Pseudomonas aeruginosa</i>. There is overlap between all folders but this helps cut down the number of papers ResearchRabbit can look through.
 
+<br>
+
+***
+
+<br>
+
 # Download Zotero
+
+<br>
 
 TBU
 
@@ -82,7 +108,11 @@ You can download Zotero for free from the [Zotero website](https://www.zotero.or
 
 Zotero is made by a nonprofit and is open-source, which means users can volunteer to contribute and provide add-ons that enhance your experience. This includes add-ons that makes it easier to import notes and metadata into Obsidian.
 
+<br>
+
 ## Settings
+
+<br>
 
 The following are the plugins that I have installed on Zotero:
 
@@ -95,18 +125,30 @@ Zotero v6.0.31:
 
 These plugins help me import metadata from Zotero, including but not limited to author names, journal name, year published, abstract, etc. The plugins also help me import any highlights that I made on the PDF file. These include words highlighted using the highter (including the color that I used), as well as figures that I've circled with the "Area" tool and notes I've written with the "Post-it" tool.
 
+<br>
+
+***
+
+<br>
+
 # Download Obsidian
+
+<br>
 
 Obsidian can be downloaded for free from the [official Obsidian website](https://obsidian.md/). Once you have that downloaded, I put my Obsidian folder under my Documents folder and created a vault called "Literature Notes". You can name your vault anything. I keep ALL of my reference notes in one vault.
 
+<br>
+
 ## Settings
+
+<br>
 
 The following are the community plugins that I have installed into Obsidian.
 
 <b>Obsidian v1.1.9 (Installer v1.0.3)</b>
 - <b>Admonition v10.1.1</b>
 - Advanced Tables v0.19.1
-- Calendar v1.5.10</li>
+- Calendar v1.5.10
 - <b>Citations v0.4.5</b>
 - Dataview v0.5.64
 - <b>Editor Syntax Highlight v0.1.3</b>
@@ -122,7 +164,11 @@ The following are the community plugins that I have installed into Obsidian.
 
 The bolded plugins are required or highly recommended. The other plugins are optional and not necessary for the purposes of this tutorial.
 
+<br>
+
 ## Scripts and templates
+
+<br>
 
 Under your vault folder (in my case, it will be "Literature Notes"), make a folder named "templates" and add the following markdown files in the templates folder:
 
@@ -136,6 +182,8 @@ The template above will help extract and format your reference metadata and your
 
 TBU
 
+The reference template will allow you to seamlessly import metadata and your notes (including text that you highlighted) from Zotero into Obsidian.
+
 #### highlighter
 
 I like to use different highlighter colors in Zotero to signify different things as I am reading a paper. For example, for general portions of the text that I find important, I will use the yellow highlighter. For really important information, I use the red highlighter. For terminology or explanation of abbreviations, I use green. Blue is reserved for methods or hypotheses that the authors used for the paper. And the purple color is for miscellaneous pieces of information, such as cited references that I would like to go back and read further. 
@@ -148,7 +196,7 @@ The CSS allows Obsidian to take your Zotero highlights and highlight color from 
 
 The css file needs to be within a hidden folder in your vault named, ".obsidian" > "snippets". In your snippets folder, create a "callouts.css" with the following in the css file:
 
-```CSS
+```css
 /* Yellow */
 .research-note .callout[data-callout-metadata="#ffd400"] {
   --callout-color: 255, 204, 0;
@@ -190,7 +238,13 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 ```
 
+<br>
+
 ### Notes templates
+
+TBU
+
+<br>
 
 ## Links and tags
 
