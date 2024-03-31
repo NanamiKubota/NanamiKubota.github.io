@@ -179,8 +179,6 @@ def msa_comparison(genbank, format, roary, reference, loci, output):
                             continue
                         compared_seq = record.seq
                         
-                        # base_changes = []
-
                         # find base changes
                         for position, (a, b) in enumerate(zip(reference_seq, compared_seq)):
                             if a != b:
@@ -192,8 +190,6 @@ def msa_comparison(genbank, format, roary, reference, loci, output):
                                     "Strain_AA": f"{b}"
                                 })
                         
-                        # data.append(base_changes)# append base changes to data_to_append
-
                     data_to_append.append(data)# append base changes to data_to_append
 
             # create dataframe from the list of data

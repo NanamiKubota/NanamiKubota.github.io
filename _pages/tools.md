@@ -33,7 +33,7 @@ To be updated.
 
 <br>
 
-Working Progress:
+Work in Progress:
 
 > **Convert Genbank (gbk) files to Roary-acceptable gff3 file:**
 - Coming soon. You can use this tool to convert a gbk file to Roary-acceptable gff3 file without having to run Prokka.

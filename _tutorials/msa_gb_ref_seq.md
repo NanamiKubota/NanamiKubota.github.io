@@ -5,7 +5,7 @@ permalink: /tutorials/msa_gb_ref_seq
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2024-01-29
+last_modified_at: 2024-03-26
 hidden: false
 ---
 
@@ -86,7 +86,13 @@ You can [download my example by clicking here](/sample_data/locus_list.csv) (cli
 
 <br>
 
-## Load necessary files onto beagle and create a virtual environment
+## Load necessary files and modules onto beagle
+
+<br>
+
+> <mark><b>UPDATE: You do not need to make a virtual environment anymore as clustal omega and its dependencies have been globally installed onto beagle.</b></mark> Information on how to install clustal omega has moved to the section, [Misc (Download Clustal Omega and dependencies)](#misc-download-clustal-omega-and-dependencies), in case you want to install it locally onto your computer.
+
+<br>
 
 You can find my python script (msa_comparison.py) on my GitHub page [here](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/msa_comparison.py). 
 
@@ -100,23 +106,69 @@ We will need python 3 so load miniconda3:
 ```
 module load miniconda/miniconda-3
 ```
-
 <br>
 
-The msa_comparison script requires a few python libraries that are not on beagle. Because installing these directly into beagle may interfere with other libraries, we will make a virtual environment and install dependent libraries there.
-
-To get more information on how to create a virtual environment, refer to [my tutorial on virtual environments](/tutorials/virtual_environment).
-
-
-I created my virtual environment by running to following code (note that your filepath will be different from mine):
+Load clustal omega too:
 ```
-source /opt/miniconda/miniconda3/etc/profile.d/conda.sh
-conda activate /home/nak177/msa_comparison_tutorial/msa_comparison_env
+module load clustal-omega/clustal-omega-1.2.4
 ```
 
 <br>
 
-## Install dependencies (argtable and Clustal Omega)
+# Run the msa_comparison script
+
+<br>
+
+These are the following arguments for the msa_comparison script:
+
+- '-g', '--genbank': Location of your directory that contains the Genbank file (gbk or gbff) of each strain to be aligned. Required.
+- '-f', '--format': format of the genbank input file (gbk or gbff). Optional. Defaults to gbk.
+- '-r', '--roary': Path to your roary gene_presence_absence.csv output file. Required.
+- '-ref', '--reference': Name of your reference strain which must match its respective column name in roary. Required.
+- '-l', '--loci': Path to the csv file containing a list of loci to MSA. Required.
+-  '-o', '--output': Path of the output file. Required.
+
+<br>
+
+Since I have all of my files in my home directory, the following filepaths will be for my use. Please change the filepaths to your own directory when you run the following code.
+
+Then run msa_comparison.py via:
+```
+python3 /home/nak177/scripts/msa_temp.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/
+```
+
+<br>
+
+If you're using gbff instead of gbk, you will need to indicate this using the -f or --format argument (the default it gbk):
+```
+python3 /home/nak177/scripts/msa_temp.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/ -f gbff
+```
+
+<br>
+
+Again, you might need to replace the file paths in the above line of code to the filepaths of where your files and directories are located.
+
+Running the above code should produce the following:
+- alignment directory that contains fasta files of your MSA. You can [use these files to plot MSA in R](/tutorials/multiple_sequence_alignment).
+- output_data.csv which will contain information in your different strains relative to your reference strain. Amino acids are denoted with their respective one letter code, unless there is a deletion or unaligned amino acid in which case a dash (-) is used to denote the mismatch.
+  - First column (AA_Position): denotes the amino acid position where the difference is found
+  - Second column (Ref_AA): the amino acid in your reference sequence
+  - Third column (Ref_locus): the locus tag in your reference sequence
+  - Fourth column (Strain_AA): the amino acid in your other strain(s)
+  - Fifth column (Strain_ID): the name of your strain where the amino acid change is found
+
+<br>
+
+***
+***
+
+<br>
+
+# Misc (Download Clustal Omega and dependencies)
+
+<br>
+
+> Note: This is not necessary on beagle as I have installed Clustal Omega and argtable globally on beagle. However, I will leave this section available in case anyone needs to install packages locally.
 
 <br>
 
@@ -204,45 +256,3 @@ clustalo --version
 If you don't see an output of the version number into the console, then something went wrong. Please carefully review that all the filepaths were entered correctly.
 
 <br>
-
-# Run the msa_comparison script
-
-<br>
-
-These are the following arguments for the msa_comparison script:
-
-- '-g', '--genbank': Location of your directory that contains the Genbank file (gbk or gbff) of each strain to be aligned. Required.
-- '-f', '--format': format of the genbank input file (gbk or gbff). Optional. Defaults to gbk.
-- '-r', '--roary': Path to your roary gene_presence_absence.csv output file. Required.
-- '-ref', '--reference': Name of your reference strain which must match its respective column name in roary. Required.
-- '-l', '--loci': Path to the csv file containing a list of loci to MSA. Required.
--  '-o', '--output': Path of the output file. Required.
-
-<br>
-
-Since I have all of my files in my home directory, the following filepaths will be for my use. Please change the filepaths to your own directory when you run the following code.
-
-Then run msa_comparison.py via:
-```
-python3 /home/nak177/scripts/msa_temp.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/
-```
-
-<br>
-
-If you're using gbff instead of gbk, you will need to indicate this using the -f or --format argument (the default it gbk):
-```
-python3 /home/nak177/scripts/msa_temp.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/ -f gbff
-```
-
-<br>
-
-Again, you might need to replace the file paths in the above line of code to the filepaths of where your files and directories are located.
-
-Running the above code should produce the following:
-- alignment directory that contains fasta files of your MSA. You can [use these files to plot MSA in R](/tutorials/multiple_sequence_alignment).
-- output_data.csv which will contain information in your different strains relative to your reference strain. Amino acids are denoted with their respective one letter code, unless there is a deletion or unaligned amino acid in which case a dash (-) is used to denote the mismatch.
-  - First column (AA_Position): denotes the amino acid position where the difference is found
-  - Second column (Ref_AA): the amino acid in your reference sequence
-  - Third column (Ref_locus): the locus tag in your reference sequence
-  - Fourth column (Strain_AA): the amino acid in your other strain(s)
-  - Fifth column (Strain_ID): the name of your strain where the amino acid change is found

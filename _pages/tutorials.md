@@ -27,6 +27,8 @@ The list of currently available tutorials are below (some tutorials may be under
 
 > [Basics in Command Line](/tutorials/basics_in_command_line): A cheat sheet for command line functions and terminal customization that may be useful.
 
+> [Kaggle: Intro to machine learning](https://www.kaggle.com/learn/intro-to-machine-learning): Free course to get your hands wet in machine learning. Recommended to have at least some prior knowledge in python. Kaggle also have some free machine learning competitions (some with cash prizes) where you can test out your skills.
+
 > See also the section for [Resources for learning a new programming language](#resources-for-learning-a-new-programming-language) 
 
 <br>
