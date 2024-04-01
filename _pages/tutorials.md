@@ -90,7 +90,7 @@ Tutorials on running analyses and graphing genomic data.
 
 >[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
 
-> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq): Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
+> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/404): (Under construction) Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
 
 <br>
 

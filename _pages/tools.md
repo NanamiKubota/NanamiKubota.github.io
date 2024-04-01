@@ -28,8 +28,10 @@ To be updated.
 <br>
 
 > **Compare amino acid sequence of homologous loci (i.e. multiple sequence align; MSA) across several Genbank files and output summary of differences as a csv:**
-- Tutorial: [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq)
-- Python script: [msa_comparison.py](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/msa_comparison.py)
+- Under construction
+  
+<!-- - Tutorial: [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq)
+- Python script: [msa_comparison.py](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/msa_comparison.py) -->
 
 <br>
 
