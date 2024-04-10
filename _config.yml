@@ -93,7 +93,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/nanami-kubota/"
     # - label: "Bluesky"
-    #   icon: /images/icons/bluesky_media_kit_logo.svg
+    #   icon: /images/icons/bluesky.svg
     #   url: "https://bsky.app/profile/nanamikubota.bsky.social"
 
 footer:
@@ -114,7 +114,7 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/nanami-kubota/"
     - label: "Bluesky"
-      icon: /images/icons/bluesky_media_kit_logo.svg
+      icon: /images/icons/bluesky.svg
       url: "https://bsky.app/profile/nanamikubota.bsky.social"
 
 defaults:

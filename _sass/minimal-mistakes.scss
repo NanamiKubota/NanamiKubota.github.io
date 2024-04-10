@@ -12,6 +12,10 @@ article.page {
 /* Variables */
 @import "minimal-mistakes/variables";
 
+/* External */
+// CSS from external sources
+@import 'external/font-awesome';
+
 /* Mixins and functions */
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);

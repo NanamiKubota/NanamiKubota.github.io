@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
 last_modified_at: 2024-03-26
-hidden: true
+hidden: false
 ---
 
 <br>
@@ -158,6 +158,13 @@ Running the above code should produce the following:
   - Fifth column (Strain_ID): the name of your strain where the amino acid change is found
 
 <br>
+
+<br>
+
+***
+***
+
+<b><mark>Ignore the section below unless you would like to know how to install clustal omega locally on your computer</mark></b>
 
 ***
 ***
