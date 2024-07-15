@@ -11,6 +11,8 @@ author_profile: false
 collection: tutorial
 ---
 
+<mark>(2024-07-15) Note: Many tutorials are currently undergoing updates and may not be available right now.</mark>
+
 This page contains a compilation of dry lab tutorials that I have written over the years. I am slowly integrating all of my tutorials onto the website so please let me know if you find an error anywhere. Hopefully by the end of this, I will have a directory that points to all my tutorials that may be useful to other lab members who need help with dry lab work.
 
 The list of currently available tutorials are below (some tutorials may be under construction):
@@ -39,7 +41,7 @@ The list of currently available tutorials are below (some tutorials may be under
 
 # Graphs
 
->[Growth curves](/tutorials/growth_curve): Convert 96-well plate reader data to growth curves in R and calculate area under the curve, carrying capacity, and growth rate using the Growthcurver package.
+>[Growth curves](/404): Convert 96-well plate reader data to growth curves in R and calculate area under the curve, carrying capacity, and growth rate using the Growthcurver package.
 
 >[Plot Geographical Data on a Map](/tutorials/mapping_in_R): Create maps in R to show geographical data (not to be confused with mapping in genomics!)
 
@@ -60,7 +62,7 @@ Tutorials on running analyses and graphing genomic data.
 
 ## Annotate
 
-> [bakta](/tutorials/bakta): Under construction. Annotate bacterial genomes. To be updated.
+> [bakta](/404): Under construction. Annotate bacterial genomes. To be updated.
 
 > [Cenote-Taker3](/tutorials/cenote-taker): Still under construction. Identify and annotate virus genomes and genes. To be updated.
 
@@ -68,11 +70,11 @@ Tutorials on running analyses and graphing genomic data.
 
 ## breseq
 
-> [Running breseq](/tutorials/breseq): Step-by-step tutorial on how to run breseq on the lab's beagle server.
+> [Running breseq](/404): Step-by-step tutorial on how to run breseq on the lab's beagle server.
 
-> [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Also goes over how to "translate" locus tags using Roary. Optional function to remove ancestor strain variant calls from other samples.
+> [breseq parser gdtools](/404): Converting breseq outputs to CSV format to view on programs like Excel. Also goes over how to "translate" locus tags using Roary. Optional function to remove ancestor strain variant calls from other samples.
 
-> [Basics in gdtools](/tutorials/basics_in_gdtools): Under construction. Use gdtools to manipulate and export breseq variant call data. To be updated.
+> [Basics in gdtools](/404): Under construction. Use gdtools to manipulate and export breseq variant call data. To be updated.
 
 > [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version globally on beagle. Requires sudo privilege.
 
@@ -82,21 +84,21 @@ Tutorials on running analyses and graphing genomic data.
 
 > [gbk to genome map](/tutorials/gbk_to_genome_map): Convert GenBank files (.gbk files) to linear genome maps using the gggenes package in R.
 
->[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
+>[Graph multiple sequence alignment](/404): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
 
 <br>
 
 ## Multiple Sequence Alignment (MSA)
 
->[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
+>[Graph multiple sequence alignment](/404): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
 
-> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/msa_gb_ref_seq): (Under construction) Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
+> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/404): (Under construction) Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
 
 <br>
 
 ## Roary
 
-> [Roary](/tutorials/roary): Create a "Rosetta stone" (i.e. translation table) for locus tags of homologous genes across different strains. 
+> [Roary](/404): Create a "Rosetta stone" (i.e. translation table) for locus tags of homologous genes across different strains. 
 
 <br>
 
@@ -122,7 +124,7 @@ Tutorials on running analyses and graphing genomic data.
 
 # Miscellaneous
 
-> [Create a conda virtual environment](/tutorials/virtual_environment): Create a virtual environment in your beagle home directory to install packages that may have dependencies that conflict or are different version numbers than the ones on beagle.
+> [Create a conda virtual environment](/404): Create a virtual environment in your beagle home directory to install packages that may have dependencies that conflict or are different version numbers than the ones on beagle.
 
 > [Zotero-Obsidian reference manager pipeline](/404): Under construction. Link up Zotero and Obsidian to work together to cluster notes by topics rather than by paper. Includes templates for importing metadata from Zotero to Obsidian. Find relevant papers using ResearchRabbit. (My favorite way of finding papers and organizing my reference manager/notes.)
 
