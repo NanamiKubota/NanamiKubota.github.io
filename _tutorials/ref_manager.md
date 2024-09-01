@@ -1,11 +1,11 @@
 ---
-title: "Zettelkasten Method: Zotero-Obsidian reference manager pipeline"
+title: "Managing papers and notes: Zotero-Obsidian pipeline"
 layout: single
 permalink: /tutorials/ref_manager
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2023-07-09
+last_modified_at: 2024-09-01
 hidden: true
 ---
 
@@ -17,31 +17,25 @@ Disclaimer: Setting up this pipeline is a bit tedious which is why I have decide
 <div class="notice--info">
   <b>Version control:</b> The following are the versions that I have installed for Zotero, Obsidian, and their respective add-ons/plugins. The bolded ones are required or highly recommended for this tutorial. The others are optional and my personal preference (they are still nice to have but not required).
   <ul>
-    <li><b>Zotero v6.0.31</b></li>
+    <li><b>Zotero v7.0.2</b></li>
         <ul>
-            <li><b>Better BibTex for Zotero v6.7.148</b></li>
-            <li><b>DOI Manager v1.4.2</b></li>
-            <li><b>Mdnotes for Zotero v0.2.3</b></li>
-            <li><b>ZotFile 5.1.2</b></li>
-            <li><b>Zutilo Utility for Zotero v3.10.0</b></li>
+            <li><b>Better BibTex for Zotero v6.7.225</b></li>
+            <li><b>DOI Manager v1.5.0</b></li>
         </ul>
-    <li><b>Obsidian v1.1.9 (Installer v1.0.3)</b></li>
+    <li><b>Obsidian v1.6.7 (Installer v1.6.7)</b></li>
         <ul>
             <li><b>Admonition v10.1.1</b></li>
-            <li>Advanced Tables v0.19.1</li>
-            <li>Calendar v1.5.10</li>
-            <li><b>Citations v0.4.5</b></li>
-            <li>Dataview v0.5.64</li>
+            <li>Advanced Tables v0.21.0</li>
+            <li><b>Dataview v0.5.67</b></li>
             <li><b>Editor Syntax Highlight v0.1.3</b></li>
-            <li>Find orphaned files and broken links v1.9.2</li>
+            <li>Find orphaned files and broken links v1.10.1</li>
             <li><b>Highlightr v1.2.2</b></li>
-            <li>Icon Folder v2.8.0</li>
-            <li>Minimal Theme Settings v7.3.1</li>
-            <li>Recent Files v1.3.8</li>
-            <li>Spaced Repetition v1.10.5</li>
-            <li><b>Style Settings v1.0.7</b></li>
-            <li><b>Templater v1.18.4</b></li>
-            <li><b>Zotero Integration v3.1.7</b></li>
+            <li><b>Iconize v2.14.3</b></li>
+            <li>Minimal Theme Settings v8.1.1</li>
+            <li>Recent Files v1.4.1</li>
+            <li><b>Style Settings v1.0.9</b></li>
+            <li><b>Templater v2.4.2</b></li>
+            <li><b>Zotero Integration v3.2.1</b></li>
         </ul>
   </ul>
 </div>
@@ -76,9 +70,7 @@ However, once you have many papers to keep track of, linking ideas across differ
 
 <br>
 
-TBU
-
-There are many YouTube and blog posts on the Zettelkasten method. I recommend looking it up as this is the note-taking method that I will be employing for the following tutorial.
+There are many YouTube and blog posts on the Zettelkasten method. I recommend looking it up as this is the note-taking method that I use for the following tutorial.
 
 <br>
 
@@ -102,8 +94,6 @@ Note: there is a limit to how many papers ResearchRabbit will look at so breakin
 
 <br>
 
-TBU
-
 You can download Zotero for free from the [Zotero website](https://www.zotero.org/). The first 300 MB of storage is free, then you can pay to further increase storage space. You don't necessarily need the extra storage if you are okay with saving everything on just your local computer and not have an online storage space as backup. The space quota is for the online sync storage space, which is nice to have as a safety net. 
 
 Zotero is made by a nonprofit and is open-source, which means users can volunteer to contribute and provide add-ons that enhance your experience. This includes add-ons that makes it easier to import notes and metadata into Obsidian.
@@ -116,14 +106,11 @@ Zotero is made by a nonprofit and is open-source, which means users can voluntee
 
 The following are the plugins that I have installed on Zotero:
 
-Zotero v6.0.31:
-- Better BibTex for Zotero v6.7.148
-- DOI Manager v1.4.2
-- Mdnotes for Zotero v0.2.3
-- ZotFile 5.1.2
-- Zutilo Utility for Zotero v3.10.0
+Zotero v7.0.2:
+- Better BibTex for Zotero v6.7.225
+- DOI Manager v1.5.0
 
-These plugins help me import metadata from Zotero, including but not limited to author names, journal name, year published, abstract, etc. The plugins also help me import any highlights that I made on the PDF file. These include words highlighted using the highter (including the color that I used), as well as figures that I've circled with the "Area" tool and notes I've written with the "Post-it" tool.
+These plugins help me import metadata from Zotero, including but not limited to author names, journal name, year published, abstract, etc. The plugins also help me import any highlights and notes that I made on the PDF file. These include words highlighted using the highter (including the color that I used), as well as figures that I've circled with the "Area" tool and notes I've written with the "Post-it" tool.
 
 <br>
 
@@ -145,24 +132,51 @@ Obsidian can be downloaded for free from the [official Obsidian website](https:/
 
 The following are the community plugins that I have installed into Obsidian.
 
-<b>Obsidian v1.1.9 (Installer v1.0.3)</b>
+<b>Obsidian v1.6.7 (Installer v1.6.7)</b>
 - <b>Admonition v10.1.1</b>
-- Advanced Tables v0.19.1
-- Calendar v1.5.10
-- <b>Citations v0.4.5</b>
-- Dataview v0.5.64
+- Advanced Tables v0.21.0
+- <b>Dataview v0.5.67</b>
 - <b>Editor Syntax Highlight v0.1.3</b>
-- Find orphaned files and broken links v1.9.2
+- Find orphaned files and broken links v1.10.1
 - <b>Highlightr v1.2.2</b>
-- Icon Folder v2.8.0
-- Minimal Theme Settings v7.3.1
-- Recent Files v1.3.8
-- Spaced Repetition v1.10.5
-- <b>Style Settings v1.0.7</b>
-- <b>Templater v1.18.4</b>
-- <b>Zotero Integration v3.1.7</b>
+- <b>Iconize v2.14.3</b>
+- Minimal Theme Settings v8.1.1
+- Recent Files v1.4.1
+- <b>Style Settings v1.0.9</b>
+- <b>Templater v2.4.2</b>
+- <b>Zotero Integration v3.2.1</b>
+
+<br>
 
 The bolded plugins are required or highly recommended. The other plugins are optional and not necessary for the purposes of this tutorial.
+
+In addition to this, make sure that under the "Core plugins" tab that the following plugins are turned on:
+- Backlinks
+- Command palette
+- File recovery
+- Graph view
+- Note composer
+- Outgoing links
+- Page preview
+- Quick switcher
+- Search
+- Templates
+
+<br>
+
+For the Templates core plugin, make sure to either click the gear icon next to it or click on the Templates tab on the left and type "templates" for "Template folder location":
+
+![](/images/template_obsidian.png){: .image-center}
+
+<br>
+
+For the Zotero Integration community plugin, make sure to set the following settings:
+
+![](/images/zotero_integrate1.png){: .image-center}
+
+![](/images/zotero_integrate2.png){: .image-center}
+
+![](/images/zotero_integrate3.png){: .image-center}
 
 <br>
 
@@ -178,17 +192,23 @@ Under your vault folder (in my case, it will be "Literature Notes"), make a fold
 
 The template above will help extract and format your reference metadata and your notes/idea into a standardized format. Feel free to customize the templates to suite your needs.
 
+To get the highlighter color to translate from Zotero to Obsidian, download the following CSS file and save it under "Literature Notes" > ".obsidian" > "snippets". The ".obsidian" folder is hidden folder at least on Mac, so make sure that you are able to see hidden folders by doing Command + Shift + . (period) in Finder. If there is no "snippets" folder, make sure that all Obsidian plugins are installed before proceeding.
+
+<br>
+
 ### Reference template
 
-TBU
-
 The reference template will allow you to seamlessly import metadata and your notes (including text that you highlighted) from Zotero into Obsidian.
+
+<br>
 
 #### highlighter
 
 I like to use different highlighter colors in Zotero to signify different things as I am reading a paper. For example, for general portions of the text that I find important, I will use the yellow highlighter. For really important information, I use the red highlighter. For terminology or explanation of abbreviations, I use green. Blue is reserved for methods or hypotheses that the authors used for the paper. And the purple color is for miscellaneous pieces of information, such as cited references that I would like to go back and read further. 
 
-Since setting up my Zotero-Obsidian pipeline, Zotero has increased the number of colors that can be used 
+Since setting up my Zotero-Obsidian pipeline, Zotero has increased the number of colors that can be used. To customize what each highlighter color means and its corresponding icon when importing to Obsidian, edit the callouts.css file as needed.
+
+<br>
 
 #### CSS
 
@@ -198,43 +218,83 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 
 ```css
 /* Yellow */
-.research-note .callout[data-callout-metadata="#ffd400"] {
-  --callout-color: 255, 204, 0;
+.research-note 
+.callout[data-callout-metadata="#ffd400"] {
+  --callout-color: 255, 212, 0 !important;
+}
+.callout[data-callout="yellow"] {
+  --callout-color: 255, 212, 0 !important;
+  --callout-icon: lucide-star;
 }
 
 /* Red */
-.research-note .callout[data-callout-metadata="#ff6666"] {
-  --callout-color: 255, 59, 48;
+.research-note 
+.callout[data-callout-metadata="#ff6666"] {
+  --callout-color: 255, 102, 102 !important;
 }
-
-/* Green */
-.research-note .callout[data-callout-metadata="#5fb236"] {
-  --callout-color: 40, 205, 65;
-}
-
-/* Blue */
-.research-note .callout[data-callout-metadata="#2ea8e5"] {
-  --callout-color: 0, 122, 255;
-}
-
-/* Purple */
-.research-note .callout[data-callout-metadata="#a28ae5"] {
-  --callout-color: 125, 84, 222;
-}
-
-/* Magenta */
-.research-note .callout[data-callout-metadata="#e56eee"] {
-  --callout-color: 229, 110, 238;
+.callout[data-callout="red"] {
+  --callout-color: 255, 102, 102 !important;
+  --callout-icon: lucide-alert-circle;
 }
 
 /* Orange */
-.research-note .callout[data-callout-metadata="#f19837"] {
-  --callout-color: 241, 152, 55;
+.research-note
+.callout[data-callout-metadata="#f19837"] {
+  --callout-color: 241, 152, 55 !important;
+}
+.callout[data-callout="orange"] {
+  --callout-color: 241, 152, 55 !important;
+  --callout-icon: lucide-quote;
+}
+
+/* Green */
+.research-note
+.callout[data-callout-metadata="#5fb236"] {
+  --callout-color: 95, 178, 54 !important;
+}
+.callout[data-callout="green"] {
+  --callout-color: 95, 178, 54 !important;
+  --callout-icon: lucide-book-open;
+}
+
+/* Blue */
+.research-note
+.callout[data-callout-metadata="#2ea8e5"] {
+  --callout-color: 46, 168, 229 !important;
+}
+.callout[data-callout="blue"] {
+  --callout-color: 46, 168, 229 !important;
+  --callout-icon: lucide-flask-conical;
+}
+
+/* Pink */
+.research-note
+.callout[data-callout-metadata="#e56eee"] {
+  --callout-color: 229, 110, 238 !important;
+}
+.callout[data-callout-metadata="pink"] {
+  --callout-color: 229, 110, 238 !important;
+  --callout-icon: lucide-quote;
+}
+
+/* Purple */
+.research-note
+.callout[data-callout-metadata="#a28ae5"] {
+  --callout-color: 162, 138, 229 !important;
+}
+.callout[data-callout="purple"] {
+  --callout-color: 162, 138, 229 !important;
+  --callout-icon: lucide-quote;
 }
 
 /* Grey */
-.research-note .callout[data-callout-metadata="#aaaaaa"] {
-  --callout-color: 170, 170, 170;
+.research-note
+.callout[data-callout-metadata="#aaaaaa"] {
+  --callout-color: 170, 170, 170 !important;
+}
+.callout[data-callout="grey"] {
+  --callout-color: 170, 170, 170 !important;
+  --callout-icon: lucide-quote;
 }
 ```
 
@@ -242,7 +302,19 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 
 ### Notes templates
 
-TBU
+I use the "Notes" template to create a file on a certain terminology. This is different from my "Idea" template which I use for more conceptual notes that are usually a sentence long. Think of a "Notes" file as an entry on Wikipedia. It is usually a webpage on a topic with various subsections and contains links to other pages.
+
+The notes files are especially useful if you quickly want to find relevant ideas/concepts on the topic or references on the topic.
+
+<br>
+
+### Idea templates
+
+The idea template is used to create more conceptual notes. For example, if I read a paper and wanted to write down a concept such as "Pyocyanin can function as an electron transfer facilitator to increase ATP production in an anoxic environment", I can use the idea template to create a file with this title and link it back to the paper that this concept came from. 
+
+This way, when I open the reference page that I created in Obsidian, I can quickly see the different notes and ideas discussed in the paper. Likewise, if I see the idea file, I can quickly figure out which paper this concept came from.
+
+Additionally, I can link other concepts and notes to this idea page so that this page will appear whenever I am on a related page.
 
 <br>
 
@@ -257,6 +329,8 @@ Tags are used to categorize documents by document type. For example, I categoriz
 - idea: a sentence that condenses a concept or idea or fact, either from literature or my own ideas/hypotheses
   - I further differentiate my ideas from others by adding a question mark emoji at the start of the document title and by adding a question mark tag. 
 
+<br>
+
 ## Graph view
 
 Once you start linking your references with your notes and ideas, as well as linking notes to ideas, Obsidian will begin making a web-like graph that shows the connections between linked documents (i.e. nodes). You can view your graph by opening "graph view" (there is a button located on the left).
@@ -270,3 +344,20 @@ To hide your template documents from showing up as nodes, add this to the search
 
 These will hide your documents under your templates folder.
 
+<br>
+
+# Import your first reference
+
+Now you are ready to import your first reference paper from Zotero to Obsidian! First, make sure that Zotero is also running. Then in Obsidian, open the Command palette by doing Command + P (you will need to toggle on the core plugin to use this shortcut). Then start typing "Zotero Integration", and you should hopefully see your reference template pop up as an option.
+
+Pick the paper that you want to import and hit enter. Your reference should be imported!
+
+<br>
+
+# Create a new note/idea page
+
+In Obsidian, create a new file via Command + N. Type in the title on the file and then open the Command palette (Command + P). Type in "templates: Inset template" and click on either the idea or note template.
+
+You can also make a new note by creating a new link within another file. To do so, write the note within two square brackets "[[Example title here]]". Then, click on the link and this should create a new file for you. Then in the Command palette, type in "templates: Inset template" and click on either the idea or note template.
+
+<br>

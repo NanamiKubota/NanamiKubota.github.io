@@ -5,13 +5,15 @@ permalink: /tutorials/growth_curve
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2022-08-23
+last_modified_at: 2024-09-01
 #classes: wide
 ---
 
 <br>
 
-This tutorial is for converting your plate reader data into growth curves in R. Since the Cooper lab has two different plate readers with difference version of the software, be sure to check which plate reader software you used before proceeding. I have divided the tutorial based on the old vs newer program.
+This tutorial is for converting your plate reader data into growth curves in R. Since the Cooper lab has two different plate readers with difference version of the software, be sure to check which plate reader software was used before proceeding. I have divided the tutorial based on the old vs newer program. 
+
+<b>Note: If doing growth curves on the Tecan, skip to the section on [data manipulation from Tecan](#tecan)</b>
 
 The plate reader with the newer program is located by the centrifuge next to the chemical hood while the plate reader with the older program is located by the entrance.
 
@@ -221,6 +223,44 @@ rownames(p) <- 1:97 #for 24 hr; use 1:193 for 48 hr
 p[,2:97] <- sapply(p[,2:97],as.numeric) 
 names(p)[names(p) == "Time(hh:mm:ss)"] <- "Time" #rename Time column
 p[1:4,which(colnames(p)%in%"Time")]  <- c("0:00:00","0:15:00","0:30:00","0:45:00")
+```
+
+## Tecan
+
+The Tecan outputs an Excel file in plate format (rather than column format) so you will need to convert this first before proceeding. 
+
+I wrote a python script to do this, and you can [download it from my Github](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/tecan_plate2column_v2.py). Just click the download button on the top right so start your download.
+
+You can run the script either on Beagle (i.e. Cooper Lab server) or locally on your computer. If you are doing the latter, make sure that you have the following python libraries as they are required to run the script:
+
+- os
+- pandas
+- numpy
+- argparse
+
+On Beagle, you may need to load miniconda-3 before running the script:
+```
+module load miniconda/miniconda-3
+```
+
+Then run the script by (make sure your filepath correctly points to the script and your input file):
+```
+python3 tecan_plate2column_v2.py -i your_tecan_file.xlsx
+```
+
+Optionally, you can designate the output file name by using the -o or --output parameter.
+
+For more info, run:
+```
+python3 tecan_plate2column_v2.py --help
+```
+
+Then make sure to remove the temperature (Temp) and cycle number (Cycle) column in R before moving onto the next section.
+
+```r
+file <- "/Users/kubotan/Downloads/tecan_plate2column.csv" #filepath of your csv file
+p <- read.csv(file,header=T) #read the csv as a dataframe
+p <- p[, !(names(df) %in% c("Temp", "Cycle"))]
 ```
 
 ## 96-well plate key

@@ -5,7 +5,7 @@ permalink: /tutorials/breseq
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2022-10-12
+last_modified_at: 2024-09-01
 #classes: wide
 ---
 
@@ -143,6 +143,8 @@ Using the same method, upload your whole genome sequence data onto beagle. For t
 ***
 
 # Trim reads
+
+<mark>Important: some sequencing companies trim adapters for you. Make sure to check if your raw reads already have their adapters trimmed before proceeding.</mark> 
 
 Trimming the reads is important, especially if your reads still have the adapters attached to them. Use the following script to trim your reads, making sure to change the filepath to your appropriate filepath:
 

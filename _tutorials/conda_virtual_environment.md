@@ -5,7 +5,7 @@ permalink: /tutorials/virtual_environment
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2022-12-16
+last_modified_at: 2024-09-01
 #classes: wide
 ---
 
@@ -21,7 +21,7 @@ Think of a virtual environment as a separate box from beagle's main conda enviro
 
 You may have noticed that when you load miniconda3 on beagle that the python version is at 3.6:
 ```bash
-module load miniconda3 #check full file name later
+module load miniconda/miniconda-3 
 python -V #V stands for version; equivalent of --version
 ```
 
@@ -53,7 +53,7 @@ mkdir /home/nak177/your_conda_package_name
 To set up a conda virtual environment, you will need python so load beagle's miniconda3:
 
 ```bash
-module load miniconda
+module load miniconda/miniconda-3 
 ```
 
 Make sure that miniconda3 (and not miniconda2) is loaded by using the following code:

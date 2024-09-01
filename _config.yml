@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Nanami Kubota
-subtitle: Dry lab tutorial and notebook
+subtitle: Personal website and dry lab tutorials
 # email: nak177@pitt.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Nanami Kubota's personal website for lab work. 

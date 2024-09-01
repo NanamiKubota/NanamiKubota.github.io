@@ -16,3 +16,11 @@ Add note here
 
 ***
 # References
+
+***
+## ⬅️ Backlink notes
+```dataview
+LIST
+FROM [[]] AND #notes AND !#💡 
+SORT file.name asc
+```

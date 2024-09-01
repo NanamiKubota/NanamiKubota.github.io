@@ -1,0 +1,100 @@
+/* Original Zotero Highlight Colours */
+/*
+ "#2ea8e5": "blue",
+ "#5fb236": "green",
+ "#a28ae5": "purple",
+ "#ffd400": "yellow",
+ "#ff6666": "red",
+ "#f19837": "orange",
+ "#e56eee": "pink",
+ "#aaaaaa": "grey"
+*/
+
+/*
+  Info:
+  You may uncomment the first line with .research-note for each colour 
+  if you want the CSS to only be a applied if a note has the
+  `cssclass: research-note` in its frontmatter
+*/
+
+
+/* Yellow */
+.research-note 
+.callout[data-callout-metadata="#ffd400"] {
+  --callout-color: 255, 212, 0 !important;
+}
+.callout[data-callout="yellow"] {
+  --callout-color: 255, 212, 0 !important;
+  --callout-icon: lucide-star;
+}
+
+/* Red */
+.research-note 
+.callout[data-callout-metadata="#ff6666"] {
+  --callout-color: 255, 102, 102 !important;
+}
+.callout[data-callout="red"] {
+  --callout-color: 255, 102, 102 !important;
+  --callout-icon: lucide-alert-circle;
+}
+
+/* Orange */
+.research-note
+.callout[data-callout-metadata="#f19837"] {
+  --callout-color: 241, 152, 55 !important;
+}
+.callout[data-callout="orange"] {
+  --callout-color: 241, 152, 55 !important;
+  --callout-icon: lucide-quote;
+}
+
+/* Green */
+.research-note
+.callout[data-callout-metadata="#5fb236"] {
+  --callout-color: 95, 178, 54 !important;
+}
+.callout[data-callout="green"] {
+  --callout-color: 95, 178, 54 !important;
+  --callout-icon: lucide-book-open;
+}
+
+/* Blue */
+.research-note
+.callout[data-callout-metadata="#2ea8e5"] {
+  --callout-color: 46, 168, 229 !important;
+}
+.callout[data-callout="blue"] {
+  --callout-color: 46, 168, 229 !important;
+  --callout-icon: lucide-flask-conical;
+}
+
+/* Pink */
+.research-note
+.callout[data-callout-metadata="#e56eee"] {
+  --callout-color: 229, 110, 238 !important;
+}
+.callout[data-callout-metadata="pink"] {
+  --callout-color: 229, 110, 238 !important;
+  --callout-icon: lucide-quote;
+}
+
+/* Purple */
+.research-note
+.callout[data-callout-metadata="#a28ae5"] {
+  --callout-color: 162, 138, 229 !important;
+}
+.callout[data-callout="purple"] {
+  --callout-color: 162, 138, 229 !important;
+  --callout-icon: lucide-quote;
+}
+
+
+/* Grey */
+.research-note
+.callout[data-callout-metadata="#aaaaaa"] {
+  --callout-color: 170, 170, 170 !important;
+}
+.callout[data-callout="grey"] {
+  --callout-color: 170, 170, 170 !important;
+  --callout-icon: lucide-quote;
+}

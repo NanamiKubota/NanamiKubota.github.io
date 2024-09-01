@@ -51,6 +51,14 @@ Enter summary of paper here.
 
 {% endpersist %}
 
+## All notes from this paper
+```dataview
+LIST
+FROM [[]] AND #notes
+SORT file.name asc
+```
+
+
 
 {% if abstractNote %}
 ```ad-note
@@ -112,7 +120,7 @@ icon: sticky-note
 {%- if color in zoteroColors -%}
 {%- set customColor = zoteroColors[color] -%}
 {%- endif -%}
-
+    
 > [!{{customColor if customColor != "other"}}]+ {{calloutHeader(customColor)}}
 {%- if annot.annotatedText %}
 > {{annot.annotatedText | nl2br}}

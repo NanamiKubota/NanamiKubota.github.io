@@ -5,7 +5,7 @@ permalink: /tutorials/roary
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2023-06-18
+last_modified_at: 2024-09-01
 #classes: wide
 ---
 
@@ -40,7 +40,7 @@ Luckily, gff3 files generated from breseq run (found in /data/reference.gff3) co
 
 Load the Roary module on beagle by:
 ```bash
-module load roary/roary-3.12.0
+module load roary/roary-3.13.0
 ```
 
 <br>
