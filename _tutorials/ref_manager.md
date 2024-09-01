@@ -184,15 +184,19 @@ For the Zotero Integration community plugin, make sure to set the following sett
 
 <br>
 
-Under your vault folder (in my case, it will be "Literature Notes"), make a folder named "templates" and add the following markdown files in the templates folder:
+Under your vault folder (in my case, it will be "Literature Notes"), make a folder named "templates" and add the following markdown files in the templates folder (make sure to remove the underscore in the filename when saving to your computer):
 
-- [idea_template.md](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/idea_template.md)
-- [notes_template.md](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/notes_template.md)
-- [refrences_template.md](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/references_template.md)
+- [idea_template.md](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/obsidian/_idea%20template.md)
+- [notes_template.md](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/obsidian/_notes%20template.md)
+- [refrences_template.md](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/obsidian/_references%20template.md)
 
 The template above will help extract and format your reference metadata and your notes/idea into a standardized format. Feel free to customize the templates to suite your needs.
 
-To get the highlighter color to translate from Zotero to Obsidian, download the following CSS file and save it under "Literature Notes" > ".obsidian" > "snippets". The ".obsidian" folder is hidden folder at least on Mac, so make sure that you are able to see hidden folders by doing Command + Shift + . (period) in Finder. If there is no "snippets" folder, make sure that all Obsidian plugins are installed before proceeding.
+To get the highlighter color to translate from Zotero to Obsidian, download the following CSS file (make sure to remove the underscore in the filename when saving to your computer):
+
+[callouts.css](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/obsidian/_callouts.css)
+
+Save the css file under "Literature Notes" > ".obsidian" > "snippets". The ".obsidian" folder is hidden folder at least on Mac, so make sure that you are able to see hidden folders by doing Command + Shift + . (period) in Finder. If there is no "snippets" folder, make sure that all Obsidian plugins are installed before proceeding.
 
 <br>
 
