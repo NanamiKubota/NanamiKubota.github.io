@@ -265,28 +265,6 @@ Once your run is over, you can view your results by looking at the "index.html" 
 
 ## Convert breseq output into csv
 
-To be updated
-
 <div class="notice--warning">
   <b>Notice (2023-06-15):</b> I have created a new breseq parser using the gdtool function in breseq. Using gdtools is better as it gives you more information on the various variant calls. The following section goes over the usage for the older breseq parser that parses the index.html output file. Please go to the <a href="./breseq_parser_gdtools">breseq parser gdtools tutorial</a> for the updated tutorial.
 </div>
-
-Now that you have your breseq outputs, you can view the results by opening the "index.html" file in your browser. However, if you have a lot of breseq outputs (and a lot of index.html files), it is sometimes easier to convert all your outputs into one csv file so that you can view all your breseq output files as a table on Excel.
-
-To do this, you will first need to download Chris Marshall's breseq parser script which I have modified [here](https://drive.google.com/file/d/1nfBN4XErlajllpqJqTLWgBuY_zGA3y8-/view?usp=sharing).
-
-You will also want all your breseq output folders in one master folder (for example, in a folder named "breseq_master") like so:
-
-![](/images/breseq_filepath.png){: .image-resize .image-center}
-
-Then you can run the script on the master folder, and it should be able to locate all your breseq output files and gather all the outputs in one table.
-
-Then you can run the script using the following commands:
-```bash
-module load miniconda/miniconda-3
-python3 /home/nak177/scripts/breseq_parser_symbol_out.py -d /home/nak177/wgs/pa14/breseq_master/ -f csv -o /home/nak177/wgs/pa14/breseq_master/bre_out
-
-module purge
-```
-
-Download the csv files (there should be three: one for SNPs, one for missing coverage, and one for new junction). You can now open it in Excel and view the table to better analyze your results.

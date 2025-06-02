@@ -58,15 +58,11 @@ The list of currently available tutorials are below (some tutorials may be under
 
 <br>
 
-Tutorials on running analyses and graphing genomic data.
-
-<br>
-
 ## Annotate
 
-> [bakta](/404): Under construction. Annotate bacterial genomes. To be updated.
+> [bakta](/tutorials/bakta): Annotate bacterial genomes.
 
-> [Cenote-Taker3](/tutorials/cenote-taker): Still under construction. Identify and annotate virus genomes and genes. To be updated.
+> [Cenote-Taker3](/tutorials/cenote-taker): Identify and annotate virus genomes and genes.
 
 <br>
 
@@ -76,7 +72,7 @@ Tutorials on running analyses and graphing genomic data.
 
 > [breseq parser gdtools](/tutorials/breseq_parser_gdtools): Converting breseq outputs to CSV format to view on programs like Excel. Also goes over how to "translate" locus tags using Roary. Optional function to remove ancestor strain variant calls from other samples.
 
-> [Basics in gdtools](/tutorials/basics_in_gdtools): Under construction. Use gdtools to manipulate and export breseq variant call data. To be updated.
+> [Basics in gdtools](/tutorials/basics_in_gdtools): Use gdtools to manipulate and export breseq variant call data. 
 
 > [Update breseq (need sudo privilege)](/tutorials/update_breseq/): Updating breseq version globally on beagle. Requires sudo privilege.
 
@@ -92,7 +88,7 @@ Tutorials on running analyses and graphing genomic data.
 
 ## Multiple Sequence Alignment (MSA)
 
->[Graph multiple sequence alignment](/404): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
+>[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
 
 > [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/404): (Under construction) Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
 

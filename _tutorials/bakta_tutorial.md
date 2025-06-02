@@ -66,7 +66,7 @@ For the input data, bakta can run on fasta format (zipped or unzipped).
 
 The general format is as follows. Make sure to change the file path for the database to where your bakta database is located:
 ```bash
-bakta --db /home/nak177/bakta/DB genome.fasta
+bakta --db /home/nak177/bakta/DB genome.fasta --output /output/file/path
 ```
 
 <br>
