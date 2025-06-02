@@ -79,7 +79,7 @@ article.cv-page {
 
 /* CV layout */
 .cv-section {
-    color: #218380;
+    color: $primary-color; //#218380;
     font-size: 125%;
     font-weight: bold;
     vertical-align: middle;
@@ -88,7 +88,7 @@ article.cv-page {
 }
 
 .filter-icon {
-    filter: invert(30%) sepia(17%) saturate(5345%) hue-rotate(155deg) brightness(93%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(66%) sepia(17%) saturate(4502%) hue-rotate(174deg) brightness(99%) contrast(81%); //invert(30%) sepia(17%) saturate(5345%) hue-rotate(155deg) brightness(93%) contrast(101%);
     margin-right: 20px;
     max-height: 40px;
     width: 40px;
@@ -183,8 +183,12 @@ article.cv-page {
     }
 }
 
+.cv-sidebar header {
+        color: $primary-color;//#218380;
+    }
+
 #cv_sidebar_format {
-    color:#218380;
+    color: $primary-color;//#218380;
     font-family: $sans-serif-narrow;
     font-size: 150%;
     line-height: 1.5;
@@ -193,12 +197,12 @@ article.cv-page {
 
 #cv_sidebar_format a:link, #cv_sidebar_format a:visited, #cv_sidebar_format a:hover {
     text-decoration: none;
-    color:#218380;
+    color: $primary-color;//#218380;
 }
 
 #cv_sidebar_format a:hover {
     text-decoration: underline;
-    color:#218380;
+    color: $primary-color;//#218380;
 }
 
 #toc_container {
@@ -252,7 +256,7 @@ th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #218380;
+    background-color: $primary-color;//#218380;
     color: white;
 }
 

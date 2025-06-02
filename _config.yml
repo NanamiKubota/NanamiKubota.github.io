@@ -48,6 +48,7 @@ include:
 exclude:
   - config
   - Gemfile
+  - Gemfile.lock
   - LICENSE
   - README
 encoding: "utf-8"

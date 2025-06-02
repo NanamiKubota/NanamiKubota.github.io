@@ -9,8 +9,9 @@ $text-color: #000 !default;
 $muted-text-color: $text-color !default;
 $border-color: mix(#fff, $text-color, 75%) !default;
 // $footer-background-color: #000 !default;
-$primary-color: #20A39E !default; //78c2ad
-$link-color: #E3655B !default;
+$primary-color: #4aaae6 !default; //#20A39E
+// $primary-shade-color: #4aaae6;
+$link-color: #EF6F6C !default; //#3E3655B
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $primary-color !default;
 // $masthead-link-color-hover: $text-color !default;
