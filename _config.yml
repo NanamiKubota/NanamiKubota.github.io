@@ -43,8 +43,15 @@ kramdown:
 
 include:
   - _pages
-  - _layouts
+  # - _layouts
   # - _labnotes
+exclude:
+  - config
+  - Gemfile
+  - LICENSE
+  - README
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
