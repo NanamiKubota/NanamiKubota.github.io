@@ -8,11 +8,13 @@ main:
   # - title: "Misc" # "Tags"
   #   url: /misc/ # /tags/
 
-  # Comment out projects for now
-  - title: "Projects"
-    url: /projects/
+
+  - title: "Publications"
+    url: https://scholar.google.com/citations?user=B1-vMZEAAAAJ&hl=en&oi=ao
   - title: "Tools"
     url: /tools/
+  - title: "CV"
+    url: /cv/
   - title: "Misc"
     url: /misc/
   

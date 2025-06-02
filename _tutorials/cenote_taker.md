@@ -58,4 +58,10 @@ conda env config vars set CENOTE_DBS=/home/nak177/cenote/cenote3/ct3_DBs
 
 # Run Cenote-Taker 3
 
-To be updated
+If you haven't done so already, activate your Cenote-Taker 3 virtual environment.
+
+Make sure that Cenote-Taker 3 is correctly installed by running:
+```
+cenotetaker3 -h
+```
+

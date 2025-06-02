@@ -11,46 +11,46 @@ import re
 import argparse
 
 def main():
-
     parser = argparse.ArgumentParser(
-		description = "This is program converts Genbank files (.gbk) to csv format.  Use the csv output with R gggenes package to plot genome maps.  ")
+        description = "This program converts Genbank files (.gbk) to csv format.  Use the csv output with R gggenes package to plot genome maps."
+    )
 
     parser.add_argument(
         '-i', '--input', 
         type=str, required=True, 
         help='a *.gbk file or similar file format'
     )
-    
+
     parser.add_argument(
-		'-o', '--output',
+        '-o', '--output',
         type=str,
-		help = "Name of the output filepath with file name. Defaults to './gbk_to_csv.csv' if no file name is assigned.",
-		default = 'gbk_to_csv.csv'
-	)
+        help="Name of the output filepath with file name. Defaults to './gbk_to_csv.csv' if no file name is assigned.",
+        default='gbk_to_csv.csv'
+    )
 
     args = parser.parse_args()
-    
-    gb = SeqIO.read(args.input, "genbank")
 
     file_name = args.output
-    
     record = []
-    
-    for feature in gb.features:
-        if feature.type == "CDS" or feature.type == "rRNA" or feature.type == "tRNA" or feature.type == "ncRNA":
-            record.append(
-                {
-                    'locus_tag': re.sub(r"[\['\]']", "", str(feature.qualifiers.get('locus_tag'))),
-                    'gene':  re.sub(r"[\['\]']", "", str(feature.qualifiers.get('gene'))),
-                    'product': re.sub(r"[\['\]']", "", str(feature.qualifiers.get('product'))),
-                    'start': feature.location.start,
-                    'end': feature.location.end,
-                    'strand': feature.location.strand
-                }
-            )
-    
+
+    # Use SeqIO.parse instead of SeqIO.read if there are multiple records
+    for gb in SeqIO.parse(args.input, "genbank"):
+        for feature in gb.features:
+            if feature.type in ["CDS", "rRNA", "tRNA", "ncRNA"]:
+                record.append(
+                    {
+                        'locus_tag': feature.qualifiers.get('locus_tag', [''])[0],
+                        'gene': feature.qualifiers.get('gene', [''])[0],
+                        'product': feature.qualifiers.get('product', [''])[0],
+                        'start': feature.location.start,
+                        'end': feature.location.end,
+                        'strand': feature.location.strand
+                    }
+                )
+
+    # Create DataFrame from collected records
     df = pd.DataFrame(record)
-    df.to_csv(file_name + ".csv")
+    df.to_csv(file_name, index=False)  # Write to CSV file without the index
 
 if __name__ == "__main__":
     main()
