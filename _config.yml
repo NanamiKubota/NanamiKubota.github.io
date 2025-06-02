@@ -44,7 +44,7 @@ kramdown:
 include:
   - _pages
   - _layouts
-  - _labnotes
+  # - _labnotes
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -70,7 +70,7 @@ plugins:
 
 author:
   name   : "Nanami Kubota"
-  avatar : "/assets/images/bio-photo.jpeg"
+  avatar : "/assets/images/IMG_20240428_152413985_HDR_crop.jpeg"
   bio    : "PhD student in the Cooper Lab at the University of Pittsburgh. Research on bacteria and phage coevolution."
   location: "Pittsburgh, PA"
   links:
@@ -148,17 +148,17 @@ defaults:
       layout: single
       author_profile: false
   # _labnotes
-  - scope:
-      path: "_labnotes"
-      type: 
-    values:
-      layout: single_center_labnotes
-      author_profile: false
-      read_time: false
-      comments: false
-      share: false
-      related: false
-      permalink: /:title/
+  # - scope:
+  #     path: "_labnotes"
+  #     type: 
+  #   values:
+  #     layout: single_center_labnotes
+  #     author_profile: false
+  #     read_time: false
+  #     comments: false
+  #     share: false
+  #     related: false
+  #     permalink: /:title/
 
 category_archive:
   type: liquid
