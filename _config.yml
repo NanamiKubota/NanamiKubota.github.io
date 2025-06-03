@@ -183,8 +183,8 @@ github: [metadata]
 collections:
   tutorials:
     output: true
-  labnotes:
-    output: true
+  # labnotes:
+  #   output: true
 
 # Sass/SCSS
 sass:

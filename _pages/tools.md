@@ -27,6 +27,17 @@ To be updated.
 
 <br>
 
+> **Convert tecan plate output to column format (Cooper lab specific):**
+- Python script: [tecan_plate2column.py](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/tecan_plate2column.py)
+
+<br>
+
+> **Calculate read depth after running breseq:**
+Note: Requires samtools and bedtools
+- Python script: [read_depth_calc.py](https://github.com/NanamiKubota/NanamiKubota.github.io/blob/main/scripts/read_depth_calc.py)
+
+<br>
+
 > **Compare amino acid sequence of homologous loci (i.e. multiple sequence align; MSA) across several Genbank files and output summary of differences as a csv:**
 - Under construction
   
