@@ -16,8 +16,7 @@ Add note here
 ***
 # People
 ```dataview
-LIST
-FROM [[]] AND #people
-SORT file.name asc
+TABLE last-name, institution, title FROM #people and [[]]
+SORT last-name
 ```
 
