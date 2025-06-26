@@ -360,8 +360,8 @@ Pick the paper that you want to import and hit enter. Your reference should be i
 
 # Create a new note/idea page
 
-In Obsidian, create a new file via Command + N. Type in the title on the file and then open the Command palette (Command + P). Type in "templates: Inset template" and click on either the idea or note template.
+In Obsidian, create a new file via Command + N. Type in the title on the file and then open the Command palette (Command + P). Type in "templates: Insert template" and click on either the idea or note template.
 
-You can also make a new note by creating a new link within another file. To do so, write the note within two square brackets "[[Example title here]]". Then, click on the link and this should create a new file for you. Then in the Command palette, type in "templates: Inset template" and click on either the idea or note template.
+You can also make a new note by creating a new link within another file. To do so, write the note within two square brackets "[[Example title here]]". Then, click on the link and this should create a new file for you. Then in the Command palette, type in "templates: Insert template" and click on either the idea or note template.
 
 <br>
