@@ -17,14 +17,14 @@ Disclaimer: Setting up this pipeline is a bit tedious which is why I have decide
 <div class="notice--info">
   <b>Version control:</b> The following are the versions that I have installed for Zotero, Obsidian, and their respective add-ons/plugins. The bolded ones are required or highly recommended for this tutorial. The others are optional and my personal preference (they are still nice to have but not required).
   <ul>
-    <li><b>Zotero v7.0.2</b></li>
+    <li><b>Zotero v7.0.15</b></li>
         <ul>
             <li><b>Better BibTex for Zotero v6.7.225</b></li>
             <li><b>DOI Manager v1.5.0</b></li>
         </ul>
-    <li><b>Obsidian v1.6.7 (Installer v1.6.7)</b></li>
+    <li><b>Obsidian v1.8.10 (Installer v1.6.7)</b></li>
         <ul>
-            <li><b>Admonition v10.1.1</b></li>
+            <li><b>Admonition v10.3.2</b></li>
             <li>Advanced Tables v0.21.0</li>
             <li><b>Dataview v0.5.67</b></li>
             <li><b>Editor Syntax Highlight v0.1.3</b></li>
@@ -106,7 +106,7 @@ Zotero is made by a nonprofit and is open-source, which means users can voluntee
 
 The following are the plugins that I have installed on Zotero:
 
-Zotero v7.0.2:
+Zotero v7.0.15:
 - Better BibTex for Zotero v6.7.225
 - DOI Manager v1.5.0
 
@@ -132,8 +132,8 @@ Obsidian can be downloaded for free from the [official Obsidian website](https:/
 
 The following are the community plugins that I have installed into Obsidian.
 
-<b>Obsidian v1.6.7 (Installer v1.6.7)</b>
-- <b>Admonition v10.1.1</b>
+<b>Obsidian v1.8.10 (Installer v1.6.7)</b>
+- <b>Admonition v10.3.2</b>
 - Advanced Tables v0.21.0
 - <b>Dataview v0.5.67</b>
 - <b>Editor Syntax Highlight v0.1.3</b>
