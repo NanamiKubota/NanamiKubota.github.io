@@ -271,12 +271,12 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
   --callout-icon: lucide-flask-conical;
 }
 
-/* Pink */
+/* Magenta */
 .research-note
 .callout[data-callout-metadata="#e56eee"] {
   --callout-color: 229, 110, 238 !important;
 }
-.callout[data-callout-metadata="pink"] {
+.callout[data-callout="magenta"] {
   --callout-color: 229, 110, 238 !important;
   --callout-icon: lucide-quote;
 }
