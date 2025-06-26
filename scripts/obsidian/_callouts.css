@@ -6,7 +6,7 @@
  "#ffd400": "yellow",
  "#ff6666": "red",
  "#f19837": "orange",
- "#e56eee": "pink",
+ "#e56eee": "magenta",
  "#aaaaaa": "grey"
 */
 
@@ -68,12 +68,12 @@
   --callout-icon: lucide-flask-conical;
 }
 
-/* Pink */
+/* Magenta */
 .research-note
 .callout[data-callout-metadata="#e56eee"] {
   --callout-color: 229, 110, 238 !important;
 }
-.callout[data-callout-metadata="pink"] {
+.callout[data-callout="magenta"] {
   --callout-color: 229, 110, 238 !important;
   --callout-icon: lucide-quote;
 }

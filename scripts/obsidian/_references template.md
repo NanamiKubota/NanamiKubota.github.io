@@ -26,7 +26,10 @@ title: Metadata
 
 **Link**: {{url}} 
 
-**Local**: [click to open in zotero](zotero://select/items/@{{citekey}})
+**Local**: Click to open attachments in zotero
+{%- for attachment in attachments | filterby("path", "endswith", ".pdf") %}
+- [PDF {{loop.index}}](zotero://open-pdf/library/items/{{attachment.itemKey}})
+{%- endfor %}
 
 **DOI**: [{{DOI}}](http://{{DOI}})
 
@@ -99,7 +102,7 @@ icon: sticky-note
 			Misc
 		{%- case "orange" -%}
 			Misc
-		{%- case "pink" -%}
+		{%- case "magenta" -%}
 			Misc
 		{%- case "grey" -%}
 			Misc
