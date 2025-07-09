@@ -24,3 +24,10 @@ LIST
 FROM [[]] AND #notes AND !#💡 
 SORT file.name asc
 ```
+
+## ⬅️ Backlink ideas💡
+```dataview
+LIST
+FROM [[]] AND #💡 AND #notes
+SORT file.name asc
+```
