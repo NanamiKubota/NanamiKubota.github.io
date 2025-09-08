@@ -41,6 +41,9 @@ kramdown:
   syntax_highlighter: rouge
   # parse_block_html: true
 
+markdown_extensions:
+  - pymdownx.superfences
+
 include:
   - _pages
   # - _layouts
