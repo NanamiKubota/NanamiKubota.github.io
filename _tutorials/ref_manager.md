@@ -224,8 +224,11 @@ For the references_template.md, go to this section and change the labels to your
 ```jinja
 {%- macro calloutHeader(color) -%}
 	{# 
-		Change the labels below so the highlight color aligns with your highlight scheme
-		For example, if your yellow highlight means "Question", change "Interesting" to "Question" below:
+		Change the labels below so the highlight color aligns 
+    with your highlight scheme.
+    
+		For example, if your yellow highlight means "Question", 
+    change "Interesting" to "Question" below:
 	#}
 	{%- switch color -%}
 		{%- case "yellow" -%}
