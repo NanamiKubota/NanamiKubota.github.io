@@ -5,7 +5,7 @@ permalink: /tutorials/ref_manager
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2024-09-01
+last_modified_at: 2025-09-03
 hidden: true
 ---
 
@@ -27,7 +27,7 @@ Disclaimer: Setting up this pipeline is a bit tedious which is why I have decide
             <li><b>Admonition v10.3.2</b></li>
             <li>Advanced Tables v0.21.0</li>
             <li><b>Dataview v0.5.67</b></li>
-            <li><b>Editor Syntax Highlight v0.1.3</b></li>
+            <li>Editor Syntax Highlight v0.1.3</li>
             <li>Find orphaned files and broken links v1.10.1</li>
             <li><b>Highlightr v1.2.2</b></li>
             <li><b>Iconize v2.14.3</b></li>
@@ -110,7 +110,9 @@ Zotero v7.0.15:
 - Better BibTex for Zotero v6.7.225
 - DOI Manager v1.5.0
 
-These plugins help me import metadata from Zotero, including but not limited to author names, journal name, year published, abstract, etc. The plugins also help me import any highlights and notes that I made on the PDF file. These include words highlighted using the highter (including the color that I used), as well as figures that I've circled with the "Area" tool and notes I've written with the "Post-it" tool.
+These plugins help me import metadata from Zotero, including but not limited to author names, journal name, year published, abstract, etc. The plugins also help me import any highlights and notes that I made on the PDF file. These include words highlighted using the highter (including the color that I used), as well as figures that I've circled with the "Area" tool.
+
+To download, go to the [Zotero plugin webpage](https://www.zotero.org/support/plugins) and search for the plugin. Follow the instructions for each plugin as written.
 
 <br>
 
@@ -136,7 +138,7 @@ The following are the community plugins that I have installed into Obsidian.
 - <b>Admonition v10.3.2</b>
 - Advanced Tables v0.21.0
 - <b>Dataview v0.5.67</b>
-- <b>Editor Syntax Highlight v0.1.3</b>
+- Editor Syntax Highlight v0.1.3
 - Find orphaned files and broken links v1.10.1
 - <b>Highlightr v1.2.2</b>
 - <b>Iconize v2.14.3</b>
@@ -198,6 +200,10 @@ To get the highlighter color to translate from Zotero to Obsidian, download the 
 
 Save the css file under "Literature Notes" > ".obsidian" > "snippets". The ".obsidian" folder is hidden folder at least on Mac, so make sure that you are able to see hidden folders by doing Command + Shift + . (period) in Finder. If there is no "snippets" folder, make sure that all Obsidian plugins are installed before proceeding.
 
+After saving the css file under snippets, make sure to go back to the Obsidian settings (click the gear icon) and go to Appearance. Scroll down to the "CSS snippets" section and make sure that the callouts is turned on. You may need to click the refresh button for the callouts to show up.
+
+![](/images/callouts_snippets.png){: .image-center}
+
 <br>
 
 ### Reference template
@@ -206,11 +212,41 @@ The reference template will allow you to seamlessly import metadata and your not
 
 <br>
 
-#### highlighter
+#### Highlighter
 
 I like to use different highlighter colors in Zotero to signify different things as I am reading a paper. For example, for general portions of the text that I find important, I will use the yellow highlighter. For really important information, I use the red highlighter. For terminology or explanation of abbreviations, I use green. Blue is reserved for methods or hypotheses that the authors used for the paper. And the purple color is for miscellaneous pieces of information, such as cited references that I would like to go back and read further. 
 
-Since setting up my Zotero-Obsidian pipeline, Zotero has increased the number of colors that can be used. To customize what each highlighter color means and its corresponding icon when importing to Obsidian, edit the callouts.css file as needed.
+Your highlighting scheme might be different than mine. To customize what each highlighter color means and its corresponding icon when importing to Obsidian, edit the references_template.md for the color and callouts.css file for the icon as needed.
+
+For the references_template.md, go to this section and change the labels to your scheme. For example, if your yellow highlight means "Question", change "Interesting" to "Question".
+
+```jinja
+{%- macro calloutHeader(color) -%}
+	{# 
+		Change the labels below so the highlight color aligns with your highlight scheme
+		For example, if your yellow highlight means "Question", change "Interesting" to "Question" below:
+	#}
+	{%- switch color -%}
+		{%- case "yellow" -%}
+			Interesting
+		{%- case "red" -%}
+			Important
+		{%- case "green" -%}
+			Terminology
+		{%- case "blue" -%}
+			Study-specific
+		{%- case "purple" -%}
+			Misc
+		{%- case "orange" -%}
+			Misc
+		{%- case "magenta" -%}
+			Misc
+		{%- case "grey" -%}
+			Misc
+	{%- endswitch -%}
+{%- endmacro %}
+```
+
 
 <br>
 
@@ -218,7 +254,15 @@ Since setting up my Zotero-Obsidian pipeline, Zotero has increased the number of
 
 The CSS allows Obsidian to take your Zotero highlights and highlight color from the PDF and convert them into text blocks with the appropriate color. This script is needed for the reference template to work properly. Otherwise, Obsidian will not know what color to make the text block based off of the highlighter color.
 
-The css file needs to be within a hidden folder in your vault named, ".obsidian" > "snippets". In your snippets folder, create a "callouts.css" with the following in the css file:
+The css file needs to be within a hidden folder in your vault named, ".obsidian" > "snippets". 
+
+If you want to change the associated icons to your highlight color, change them on the callout-icon lines.
+
+The list of possible icons can be found here: https://lucide.dev/icons/
+
+Put the icon name after "lucide-". Ex: for the "heart" icon, type "lucide-heart"
+
+More info on Obsidian and icons can be found here: https://docs.obsidian.md/Reference/CSS+variables/Foundations/Icons
 
 ```css
 /* Yellow */
@@ -228,7 +272,7 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="yellow"] {
   --callout-color: 255, 212, 0 !important;
-  --callout-icon: lucide-star;
+  --callout-icon: lucide-star; /* change icon here */
 }
 
 /* Red */
@@ -238,7 +282,7 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="red"] {
   --callout-color: 255, 102, 102 !important;
-  --callout-icon: lucide-alert-circle;
+  --callout-icon: lucide-alert-circle; /* change icon here */
 }
 
 /* Orange */
@@ -248,7 +292,7 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="orange"] {
   --callout-color: 241, 152, 55 !important;
-  --callout-icon: lucide-quote;
+  --callout-icon: lucide-quote; /* change icon here */
 }
 
 /* Green */
@@ -258,7 +302,7 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="green"] {
   --callout-color: 95, 178, 54 !important;
-  --callout-icon: lucide-book-open;
+  --callout-icon: lucide-book-open; /* change icon here */
 }
 
 /* Blue */
@@ -268,7 +312,7 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="blue"] {
   --callout-color: 46, 168, 229 !important;
-  --callout-icon: lucide-flask-conical;
+  --callout-icon: lucide-flask-conical; /* change icon here */
 }
 
 /* Magenta */
@@ -278,7 +322,7 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="magenta"] {
   --callout-color: 229, 110, 238 !important;
-  --callout-icon: lucide-quote;
+  --callout-icon: lucide-quote; /* change icon here */
 }
 
 /* Purple */
@@ -288,7 +332,7 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="purple"] {
   --callout-color: 162, 138, 229 !important;
-  --callout-icon: lucide-quote;
+  --callout-icon: lucide-quote; /* change icon here */
 }
 
 /* Grey */
@@ -298,9 +342,11 @@ The css file needs to be within a hidden folder in your vault named, ".obsidian"
 }
 .callout[data-callout="grey"] {
   --callout-color: 170, 170, 170 !important;
-  --callout-icon: lucide-quote;
+  --callout-icon: lucide-quote; /* change icon here */
 }
 ```
+
+
 
 <br>
 
@@ -356,6 +402,10 @@ Now you are ready to import your first reference paper from Zotero to Obsidian! 
 
 Pick the paper that you want to import and hit enter. Your reference should be imported!
 
+You can also assign keyboard shortcuts to make this process faster. Just go to Settings > Hotkeys. Then search "Zotero" and change the "Zotero Integration: references template" section. For me, I've set mine as Command + R. Make sure the shortcut isn't used by a different command.
+
+![](/images/obsidian_keyboard_shortcut.png){: .image-center}
+
 <br>
 
 # Create a new note/idea page
@@ -363,5 +413,10 @@ Pick the paper that you want to import and hit enter. Your reference should be i
 In Obsidian, create a new file via Command + N. Type in the title on the file and then open the Command palette (Command + P). Type in "templates: Insert template" and click on either the idea or note template.
 
 You can also make a new note by creating a new link within another file. To do so, write the note within two square brackets "[[Example title here]]". Then, click on the link and this should create a new file for you. Then in the Command palette, type in "templates: Insert template" and click on either the idea or note template.
+
+You can also create keyboard shortcuts for this too. As mentioned in the earlier section, just go to Settings > Hotkeys. Then search "templates" and assign the keyboard shortcut for "Templates: Insert template". For me, I've assigned mine as Command + =. Make sure the shortcut isn't used by a different command.
+
+![](/images/obsidian_keyboard_shortcut2.png){: .image-center}
+
 
 <br>
