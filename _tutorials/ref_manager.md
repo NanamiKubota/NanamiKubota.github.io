@@ -220,7 +220,8 @@ Your highlighting scheme might be different than mine. To customize what each hi
 
 For the references_template.md, go to this section and change the labels to your scheme. For example, if your yellow highlight means "Question", change "Interesting" to "Question".
 
-```
+{% raw %}
+```jinja
 {%- macro calloutHeader(color) -%}
 	{# 
 		Change the labels below so the highlight color aligns with your highlight scheme
@@ -246,7 +247,7 @@ For the references_template.md, go to this section and change the labels to your
 	{%- endswitch -%}
 {%- endmacro %}
 ```
-
+{% endraw %}
 
 <br>
 
