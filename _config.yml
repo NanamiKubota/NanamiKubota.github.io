@@ -27,8 +27,8 @@ search: true
 # Build settings
 markdown: kramdown
 highlighter: rouge
-# remote_theme: mmistakes/minimal-mistakes
-theme: "minimal-mistakes-jekyll"
+remote_theme: mmistakes/minimal-mistakes
+# theme: "minimal-mistakes-jekyll"
 # Outputting
 permalink: /
 #paginate: 5 # amount of posts to show
