@@ -140,14 +140,14 @@ Since I have all of my files in my home directory, the following filepaths will 
 
 Then run msa_comparison.py via:
 ```
-python3 /home/nak177/scripts/msa_temp.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/
+python3 /home/nak177/scripts/msa_comparison.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/
 ```
 
 <br>
 
 If you're using gbff instead of gbk, you will need to indicate this using the -f or --format argument (the default it gbk):
 ```
-python3 /home/nak177/scripts/msa_temp.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/ -f gbff
+python3 /home/nak177/scripts/msa_comparison.py -g /home/nak177/msa_comparison_tutorial/ref_seq/ -r /home/nak177/msa_comparison_tutorial/roary/gene_presence_absence.csv -ref PAO1 -l /home/nak177/msa_comparison_tutorial/locus_list.csv -o /home/nak177/msa_comparison_tutorial/ -f gbff
 ```
 
 <br>
