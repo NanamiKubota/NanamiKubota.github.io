@@ -67,14 +67,25 @@ def annotate_gd_file(gd_file, ref_file, tmpdir):
     subprocess.run(['gdtools', 'ANNOTATE', '-e', '-o', out, '-f', 'TSV', '-r', ref_file, gd_file], stdout=subprocess.DEVNULL)
     return out
 
+# def subtract_gd_file(gd_file, ancestor_file, ref_file, tmpdir):
+#     """Perform genome subtraction and annotate into tmpdir."""
+#     subout = os.path.join(tmpdir, f"{gd_file.stem}_subtract.gb")
+#     subprocess.run(['gdtools', 'SUBTRACT', '-o', subout, gd_file, ancestor_file], stdout=subprocess.DEVNULL)
+    
+#     out = os.path.join(tmpdir, f"{gd_file.stem}_subtract.tsv")
+#     subprocess.run(['gdtools', 'ANNOTATE', '-e', '-o', out, '-f', 'TSV', '-r', ref_file, subout], stdout=subprocess.DEVNULL)
+#     return out
+
 def subtract_gd_file(gd_file, ancestor_file, ref_file, tmpdir):
     """Perform genome subtraction and annotate into tmpdir."""
-    subout = os.path.join(tmpdir, f"{gd_file.stem}_subtract.gb")
+    sample_name = gd_file.parent.parent.name
+    subout = os.path.join(tmpdir, f"{sample_name}_{gd_file.stem}_subtract.gd")
     subprocess.run(['gdtools', 'SUBTRACT', '-o', subout, gd_file, ancestor_file], stdout=subprocess.DEVNULL)
     
-    out = os.path.join(tmpdir, f"{gd_file.stem}_subtract.tsv")
+    out = os.path.join(tmpdir, f"{sample_name}_{gd_file.stem}_subtract.tsv")
     subprocess.run(['gdtools', 'ANNOTATE', '-e', '-o', out, '-f', 'TSV', '-r', ref_file, subout], stdout=subprocess.DEVNULL)
     return out
+
 
 def collect_annotated_files(gd_file_map):
     """Collect and read all annotated TSV files in the given directory."""

@@ -1,13 +1,19 @@
 ---
-title: "Multiple Sequence Align (MSA) Genbank / Reference Sequences"
+title: "Rosetta Strain: Multiple Sequence Align (MSA) Genbank / Reference Sequences"
 layout: single
-permalink: /tutorials/msa_gb_ref_seq
+permalink: /tutorials/rosetta_strain
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
-last_modified_at: 2024-03-26
+last_modified_at: 2025-10-30
 hidden: false
 ---
+
+<br>
+
+<div class="notice--warning">
+  <b>This tutorial is only temporarily available.</b> I have made it visible for now but this page may go under construction again.
+</div>
 
 <br>
 

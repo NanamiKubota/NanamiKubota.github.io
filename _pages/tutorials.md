@@ -90,7 +90,7 @@ The list of currently available tutorials are below (some tutorials may be under
 
 >[Graph multiple sequence alignment](/tutorials/multiple_sequence_alignment): Take your FASTA sequence file and do multiple sequence alignment in Geneious before plotting it in R.
 
-> [Multiple Sequence Align (MSA) Genbank / Reference Sequences](/404): (Under construction) Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
+> [Rosetta Strain: Multiple Sequence Align (MSA) Genbank / Reference Sequences](/tutorials/rosetta_strain): (Under construction) Multiple sequence alignment (MSA) Genbank files or your reference/alignment sequence across multiple loci and output a csv file that summarizes all of the amino acid changes.
 
 <br>
 
